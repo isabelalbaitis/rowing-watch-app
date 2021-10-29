@@ -1,5 +1,5 @@
-##**iRow Apple Watch App**
-#*CIS 357 Semester project*:
+#**iRow Apple Watch App**
+*CIS 357 Semester project*:
 This Project has the main goal of giving rowers a better user experience when using rowing watch apps. 
 The current softwares and apps do not allow the user to achieve their best when rowing on the water. 
 Other apps are inefficient, and confusing to use. 
