@@ -1,0 +1,1147 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C8543767272C514D00793A10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8543766272C514D00793A10 /* AppDelegate.swift */; };
+		C8543769272C514D00793A10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8543768272C514D00793A10 /* SceneDelegate.swift */; };
+		C854376B272C514D00793A10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C854376A272C514D00793A10 /* ViewController.swift */; };
+		C854376E272C514D00793A10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C854376C272C514D00793A10 /* Main.storyboard */; };
+		C8543770272C515200793A10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C854376F272C515200793A10 /* Assets.xcassets */; };
+		C8543773272C515200793A10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8543771272C515200793A10 /* LaunchScreen.storyboard */; };
+		C854377E272C515200793A10 /* RowWatchAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C854377D272C515200793A10 /* RowWatchAppTests.swift */; };
+		C8543789272C515200793A10 /* RowWatchAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8543788272C515200793A10 /* RowWatchAppUITests.swift */; };
+		C854378E272C515200793A10 /* RowWatchApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C854378D272C515200793A10 /* RowWatchApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C8543794272C515300793A10 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8543792272C515300793A10 /* Interface.storyboard */; };
+		C8543796272C515700793A10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8543795272C515700793A10 /* Assets.xcassets */; };
+		C854379D272C515700793A10 /* RowWatchApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C854379C272C515700793A10 /* RowWatchApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C85437A2272C515700793A10 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85437A1272C515700793A10 /* InterfaceController.swift */; };
+		C85437A4272C515700793A10 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85437A3272C515700793A10 /* ExtensionDelegate.swift */; };
+		C85437A6272C515700793A10 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85437A5272C515700793A10 /* NotificationController.swift */; };
+		C85437A8272C515700793A10 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85437A7272C515700793A10 /* ComplicationController.swift */; };
+		C85437AA272C515800793A10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85437A9272C515800793A10 /* Assets.xcassets */; };
+		C85437B6272C515800793A10 /* RowWatchApp_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85437B5272C515800793A10 /* RowWatchApp_WatchKit_AppTests.swift */; };
+		C85437C1272C515800793A10 /* RowWatchApp_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85437C0272C515800793A10 /* RowWatchApp_WatchKit_AppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C854377A272C515200793A10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C854375B272C514C00793A10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8543762272C514C00793A10;
+			remoteInfo = RowWatchApp;
+		};
+		C8543785272C515200793A10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C854375B272C514C00793A10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8543762272C514C00793A10;
+			remoteInfo = RowWatchApp;
+		};
+		C854378F272C515200793A10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C854375B272C514C00793A10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C854378C272C515200793A10;
+			remoteInfo = "RowWatchApp WatchKit App";
+		};
+		C854379E272C515700793A10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C854375B272C514C00793A10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C854379B272C515700793A10;
+			remoteInfo = "RowWatchApp WatchKit Extension";
+		};
+		C85437B2272C515800793A10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C854375B272C514C00793A10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C854379B272C515700793A10;
+			remoteInfo = "RowWatchApp WatchKit Extension";
+		};
+		C85437BD272C515800793A10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C854375B272C514C00793A10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C854378C272C515200793A10;
+			remoteInfo = "RowWatchApp WatchKit App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C85437C8272C515800793A10 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C854379D272C515700793A10 /* RowWatchApp WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C85437CC272C515800793A10 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C854378E272C515200793A10 /* RowWatchApp WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C8543763272C514C00793A10 /* RowWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RowWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8543766272C514D00793A10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C8543768272C514D00793A10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C854376A272C514D00793A10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C854376D272C514D00793A10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C854376F272C515200793A10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C8543772272C515200793A10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C8543774272C515200793A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8543779272C515200793A10 /* RowWatchAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RowWatchAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C854377D272C515200793A10 /* RowWatchAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowWatchAppTests.swift; sourceTree = "<group>"; };
+		C854377F272C515200793A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8543784272C515200793A10 /* RowWatchAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RowWatchAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8543788272C515200793A10 /* RowWatchAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowWatchAppUITests.swift; sourceTree = "<group>"; };
+		C854378A272C515200793A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C854378D272C515200793A10 /* RowWatchApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RowWatchApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8543793272C515300793A10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		C8543795272C515700793A10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C8543797272C515700793A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C854379C272C515700793A10 /* RowWatchApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "RowWatchApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C85437A1272C515700793A10 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		C85437A3272C515700793A10 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		C85437A5272C515700793A10 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		C85437A7272C515700793A10 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		C85437A9272C515800793A10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C85437AB272C515800793A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C85437AC272C515800793A10 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		C85437B1272C515800793A10 /* RowWatchApp WatchKit AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RowWatchApp WatchKit AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C85437B5272C515800793A10 /* RowWatchApp_WatchKit_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowWatchApp_WatchKit_AppTests.swift; sourceTree = "<group>"; };
+		C85437B7272C515800793A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C85437BC272C515800793A10 /* RowWatchApp WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RowWatchApp WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C85437C0272C515800793A10 /* RowWatchApp_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowWatchApp_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
+		C85437C2272C515800793A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C8543760272C514C00793A10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8543776272C515200793A10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8543781272C515200793A10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8543799272C515700793A10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C85437AE272C515800793A10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C85437B9272C515800793A10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C854375A272C514C00793A10 = {
+			isa = PBXGroup;
+			children = (
+				C8543765272C514D00793A10 /* RowWatchApp */,
+				C854377C272C515200793A10 /* RowWatchAppTests */,
+				C8543787272C515200793A10 /* RowWatchAppUITests */,
+				C8543791272C515200793A10 /* RowWatchApp WatchKit App */,
+				C85437A0272C515700793A10 /* RowWatchApp WatchKit Extension */,
+				C85437B4272C515800793A10 /* RowWatchApp WatchKit AppTests */,
+				C85437BF272C515800793A10 /* RowWatchApp WatchKit AppUITests */,
+				C8543764272C514C00793A10 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C8543764272C514C00793A10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8543763272C514C00793A10 /* RowWatchApp.app */,
+				C8543779272C515200793A10 /* RowWatchAppTests.xctest */,
+				C8543784272C515200793A10 /* RowWatchAppUITests.xctest */,
+				C854378D272C515200793A10 /* RowWatchApp WatchKit App.app */,
+				C854379C272C515700793A10 /* RowWatchApp WatchKit Extension.appex */,
+				C85437B1272C515800793A10 /* RowWatchApp WatchKit AppTests.xctest */,
+				C85437BC272C515800793A10 /* RowWatchApp WatchKit AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8543765272C514D00793A10 /* RowWatchApp */ = {
+			isa = PBXGroup;
+			children = (
+				C8543766272C514D00793A10 /* AppDelegate.swift */,
+				C8543768272C514D00793A10 /* SceneDelegate.swift */,
+				C854376A272C514D00793A10 /* ViewController.swift */,
+				C854376C272C514D00793A10 /* Main.storyboard */,
+				C854376F272C515200793A10 /* Assets.xcassets */,
+				C8543771272C515200793A10 /* LaunchScreen.storyboard */,
+				C8543774272C515200793A10 /* Info.plist */,
+			);
+			path = RowWatchApp;
+			sourceTree = "<group>";
+		};
+		C854377C272C515200793A10 /* RowWatchAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				C854377D272C515200793A10 /* RowWatchAppTests.swift */,
+				C854377F272C515200793A10 /* Info.plist */,
+			);
+			path = RowWatchAppTests;
+			sourceTree = "<group>";
+		};
+		C8543787272C515200793A10 /* RowWatchAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C8543788272C515200793A10 /* RowWatchAppUITests.swift */,
+				C854378A272C515200793A10 /* Info.plist */,
+			);
+			path = RowWatchAppUITests;
+			sourceTree = "<group>";
+		};
+		C8543791272C515200793A10 /* RowWatchApp WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				C8543792272C515300793A10 /* Interface.storyboard */,
+				C8543795272C515700793A10 /* Assets.xcassets */,
+				C8543797272C515700793A10 /* Info.plist */,
+			);
+			path = "RowWatchApp WatchKit App";
+			sourceTree = "<group>";
+		};
+		C85437A0272C515700793A10 /* RowWatchApp WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C85437A1272C515700793A10 /* InterfaceController.swift */,
+				C85437A3272C515700793A10 /* ExtensionDelegate.swift */,
+				C85437A5272C515700793A10 /* NotificationController.swift */,
+				C85437A7272C515700793A10 /* ComplicationController.swift */,
+				C85437A9272C515800793A10 /* Assets.xcassets */,
+				C85437AB272C515800793A10 /* Info.plist */,
+				C85437AC272C515800793A10 /* PushNotificationPayload.apns */,
+			);
+			path = "RowWatchApp WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		C85437B4272C515800793A10 /* RowWatchApp WatchKit AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				C85437B5272C515800793A10 /* RowWatchApp_WatchKit_AppTests.swift */,
+				C85437B7272C515800793A10 /* Info.plist */,
+			);
+			path = "RowWatchApp WatchKit AppTests";
+			sourceTree = "<group>";
+		};
+		C85437BF272C515800793A10 /* RowWatchApp WatchKit AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C85437C0272C515800793A10 /* RowWatchApp_WatchKit_AppUITests.swift */,
+				C85437C2272C515800793A10 /* Info.plist */,
+			);
+			path = "RowWatchApp WatchKit AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C8543762272C514C00793A10 /* RowWatchApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C85437CD272C515800793A10 /* Build configuration list for PBXNativeTarget "RowWatchApp" */;
+			buildPhases = (
+				C854375F272C514C00793A10 /* Sources */,
+				C8543760272C514C00793A10 /* Frameworks */,
+				C8543761272C514C00793A10 /* Resources */,
+				C85437CC272C515800793A10 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8543790272C515200793A10 /* PBXTargetDependency */,
+			);
+			name = RowWatchApp;
+			productName = RowWatchApp;
+			productReference = C8543763272C514C00793A10 /* RowWatchApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C8543778272C515200793A10 /* RowWatchAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C85437D0272C515800793A10 /* Build configuration list for PBXNativeTarget "RowWatchAppTests" */;
+			buildPhases = (
+				C8543775272C515200793A10 /* Sources */,
+				C8543776272C515200793A10 /* Frameworks */,
+				C8543777272C515200793A10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C854377B272C515200793A10 /* PBXTargetDependency */,
+			);
+			name = RowWatchAppTests;
+			productName = RowWatchAppTests;
+			productReference = C8543779272C515200793A10 /* RowWatchAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C8543783272C515200793A10 /* RowWatchAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C85437D3272C515800793A10 /* Build configuration list for PBXNativeTarget "RowWatchAppUITests" */;
+			buildPhases = (
+				C8543780272C515200793A10 /* Sources */,
+				C8543781272C515200793A10 /* Frameworks */,
+				C8543782272C515200793A10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8543786272C515200793A10 /* PBXTargetDependency */,
+			);
+			name = RowWatchAppUITests;
+			productName = RowWatchAppUITests;
+			productReference = C8543784272C515200793A10 /* RowWatchAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		C854378C272C515200793A10 /* RowWatchApp WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C85437C9272C515800793A10 /* Build configuration list for PBXNativeTarget "RowWatchApp WatchKit App" */;
+			buildPhases = (
+				C854378B272C515200793A10 /* Resources */,
+				C85437C8272C515800793A10 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C854379F272C515700793A10 /* PBXTargetDependency */,
+			);
+			name = "RowWatchApp WatchKit App";
+			productName = "RowWatchApp WatchKit App";
+			productReference = C854378D272C515200793A10 /* RowWatchApp WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		C854379B272C515700793A10 /* RowWatchApp WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C85437C5272C515800793A10 /* Build configuration list for PBXNativeTarget "RowWatchApp WatchKit Extension" */;
+			buildPhases = (
+				C8543798272C515700793A10 /* Sources */,
+				C8543799272C515700793A10 /* Frameworks */,
+				C854379A272C515700793A10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RowWatchApp WatchKit Extension";
+			productName = "RowWatchApp WatchKit Extension";
+			productReference = C854379C272C515700793A10 /* RowWatchApp WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		C85437B0272C515800793A10 /* RowWatchApp WatchKit AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C85437D6272C515800793A10 /* Build configuration list for PBXNativeTarget "RowWatchApp WatchKit AppTests" */;
+			buildPhases = (
+				C85437AD272C515800793A10 /* Sources */,
+				C85437AE272C515800793A10 /* Frameworks */,
+				C85437AF272C515800793A10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C85437B3272C515800793A10 /* PBXTargetDependency */,
+			);
+			name = "RowWatchApp WatchKit AppTests";
+			productName = "RowWatchApp WatchKit AppTests";
+			productReference = C85437B1272C515800793A10 /* RowWatchApp WatchKit AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C85437BB272C515800793A10 /* RowWatchApp WatchKit AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C85437D9272C515800793A10 /* Build configuration list for PBXNativeTarget "RowWatchApp WatchKit AppUITests" */;
+			buildPhases = (
+				C85437B8272C515800793A10 /* Sources */,
+				C85437B9272C515800793A10 /* Frameworks */,
+				C85437BA272C515800793A10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C85437BE272C515800793A10 /* PBXTargetDependency */,
+			);
+			name = "RowWatchApp WatchKit AppUITests";
+			productName = "RowWatchApp WatchKit AppUITests";
+			productReference = C85437BC272C515800793A10 /* RowWatchApp WatchKit AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C854375B272C514C00793A10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					C8543762272C514C00793A10 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					C8543778272C515200793A10 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = C8543762272C514C00793A10;
+					};
+					C8543783272C515200793A10 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = C8543762272C514C00793A10;
+					};
+					C854378C272C515200793A10 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					C854379B272C515700793A10 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					C85437B0272C515800793A10 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = C854379B272C515700793A10;
+					};
+					C85437BB272C515800793A10 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = C854378C272C515200793A10;
+					};
+				};
+			};
+			buildConfigurationList = C854375E272C514C00793A10 /* Build configuration list for PBXProject "RowWatchApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C854375A272C514C00793A10;
+			productRefGroup = C8543764272C514C00793A10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8543762272C514C00793A10 /* RowWatchApp */,
+				C8543778272C515200793A10 /* RowWatchAppTests */,
+				C8543783272C515200793A10 /* RowWatchAppUITests */,
+				C854378C272C515200793A10 /* RowWatchApp WatchKit App */,
+				C854379B272C515700793A10 /* RowWatchApp WatchKit Extension */,
+				C85437B0272C515800793A10 /* RowWatchApp WatchKit AppTests */,
+				C85437BB272C515800793A10 /* RowWatchApp WatchKit AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C8543761272C514C00793A10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8543773272C515200793A10 /* LaunchScreen.storyboard in Resources */,
+				C8543770272C515200793A10 /* Assets.xcassets in Resources */,
+				C854376E272C514D00793A10 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8543777272C515200793A10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8543782272C515200793A10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C854378B272C515200793A10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8543796272C515700793A10 /* Assets.xcassets in Resources */,
+				C8543794272C515300793A10 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C854379A272C515700793A10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C85437AA272C515800793A10 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C85437AF272C515800793A10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C85437BA272C515800793A10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C854375F272C514C00793A10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C854376B272C514D00793A10 /* ViewController.swift in Sources */,
+				C8543767272C514D00793A10 /* AppDelegate.swift in Sources */,
+				C8543769272C514D00793A10 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8543775272C515200793A10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C854377E272C515200793A10 /* RowWatchAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8543780272C515200793A10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8543789272C515200793A10 /* RowWatchAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8543798272C515700793A10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C85437A6272C515700793A10 /* NotificationController.swift in Sources */,
+				C85437A8272C515700793A10 /* ComplicationController.swift in Sources */,
+				C85437A4272C515700793A10 /* ExtensionDelegate.swift in Sources */,
+				C85437A2272C515700793A10 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C85437AD272C515800793A10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C85437B6272C515800793A10 /* RowWatchApp_WatchKit_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C85437B8272C515800793A10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C85437C1272C515800793A10 /* RowWatchApp_WatchKit_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C854377B272C515200793A10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8543762272C514C00793A10 /* RowWatchApp */;
+			targetProxy = C854377A272C515200793A10 /* PBXContainerItemProxy */;
+		};
+		C8543786272C515200793A10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8543762272C514C00793A10 /* RowWatchApp */;
+			targetProxy = C8543785272C515200793A10 /* PBXContainerItemProxy */;
+		};
+		C8543790272C515200793A10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C854378C272C515200793A10 /* RowWatchApp WatchKit App */;
+			targetProxy = C854378F272C515200793A10 /* PBXContainerItemProxy */;
+		};
+		C854379F272C515700793A10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C854379B272C515700793A10 /* RowWatchApp WatchKit Extension */;
+			targetProxy = C854379E272C515700793A10 /* PBXContainerItemProxy */;
+		};
+		C85437B3272C515800793A10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C854379B272C515700793A10 /* RowWatchApp WatchKit Extension */;
+			targetProxy = C85437B2272C515800793A10 /* PBXContainerItemProxy */;
+		};
+		C85437BE272C515800793A10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C854378C272C515200793A10 /* RowWatchApp WatchKit App */;
+			targetProxy = C85437BD272C515800793A10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C854376C272C514D00793A10 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C854376D272C514D00793A10 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C8543771272C515200793A10 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8543772272C515200793A10 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C8543792272C515300793A10 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8543793272C515300793A10 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C85437C3272C515800793A10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C85437C4272C515800793A10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		C85437C6272C515800793A10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YWRVML48KX;
+				INFOPLIST_FILE = "RowWatchApp WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Albaitis.RowWatchApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		C85437C7272C515800793A10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YWRVML48KX;
+				INFOPLIST_FILE = "RowWatchApp WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Albaitis.RowWatchApp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		C85437CA272C515800793A10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YWRVML48KX;
+				IBSC_MODULE = RowWatchApp_WatchKit_Extension;
+				INFOPLIST_FILE = "RowWatchApp WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Albaitis.RowWatchApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		C85437CB272C515800793A10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YWRVML48KX;
+				IBSC_MODULE = RowWatchApp_WatchKit_Extension;
+				INFOPLIST_FILE = "RowWatchApp WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Albaitis.RowWatchApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		C85437CE272C515800793A10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YWRVML48KX;
+				INFOPLIST_FILE = RowWatchApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Albaitis.RowWatchApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C85437CF272C515800793A10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YWRVML48KX;
+				INFOPLIST_FILE = RowWatchApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Albaitis.RowWatchApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C85437D1272C515800793A10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YWRVML48KX;
+				INFOPLIST_FILE = RowWatchAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Albaitis.RowWatchAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RowWatchApp.app/RowWatchApp";
+			};
+			name = Debug;
+		};
+		C85437D2272C515800793A10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YWRVML48KX;
+				INFOPLIST_FILE = RowWatchAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Albaitis.RowWatchAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RowWatchApp.app/RowWatchApp";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C85437D4272C515800793A10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YWRVML48KX;
+				INFOPLIST_FILE = RowWatchAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Albaitis.RowWatchAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RowWatchApp;
+			};
+			name = Debug;
+		};
+		C85437D5272C515800793A10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YWRVML48KX;
+				INFOPLIST_FILE = RowWatchAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Albaitis.RowWatchAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RowWatchApp;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C85437D7272C515800793A10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YWRVML48KX;
+				INFOPLIST_FILE = "RowWatchApp WatchKit AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Albaitis.RowWatchApp-WatchKit-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RowWatchApp WatchKit Extension.appex/RowWatchApp WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		C85437D8272C515800793A10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YWRVML48KX;
+				INFOPLIST_FILE = "RowWatchApp WatchKit AppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Albaitis.RowWatchApp-WatchKit-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RowWatchApp WatchKit Extension.appex/RowWatchApp WatchKit Extension";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		C85437DA272C515800793A10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YWRVML48KX;
+				INFOPLIST_FILE = "RowWatchApp WatchKit AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Albaitis.RowWatchApp-WatchKit-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "RowWatchApp WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		C85437DB272C515800793A10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YWRVML48KX;
+				INFOPLIST_FILE = "RowWatchApp WatchKit AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Albaitis.RowWatchApp-WatchKit-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "RowWatchApp WatchKit App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C854375E272C514C00793A10 /* Build configuration list for PBXProject "RowWatchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C85437C3272C515800793A10 /* Debug */,
+				C85437C4272C515800793A10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C85437C5272C515800793A10 /* Build configuration list for PBXNativeTarget "RowWatchApp WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C85437C6272C515800793A10 /* Debug */,
+				C85437C7272C515800793A10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C85437C9272C515800793A10 /* Build configuration list for PBXNativeTarget "RowWatchApp WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C85437CA272C515800793A10 /* Debug */,
+				C85437CB272C515800793A10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C85437CD272C515800793A10 /* Build configuration list for PBXNativeTarget "RowWatchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C85437CE272C515800793A10 /* Debug */,
+				C85437CF272C515800793A10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C85437D0272C515800793A10 /* Build configuration list for PBXNativeTarget "RowWatchAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C85437D1272C515800793A10 /* Debug */,
+				C85437D2272C515800793A10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C85437D3272C515800793A10 /* Build configuration list for PBXNativeTarget "RowWatchAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C85437D4272C515800793A10 /* Debug */,
+				C85437D5272C515800793A10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C85437D6272C515800793A10 /* Build configuration list for PBXNativeTarget "RowWatchApp WatchKit AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C85437D7272C515800793A10 /* Debug */,
+				C85437D8272C515800793A10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C85437D9272C515800793A10 /* Build configuration list for PBXNativeTarget "RowWatchApp WatchKit AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C85437DA272C515800793A10 /* Debug */,
+				C85437DB272C515800793A10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C854375B272C514C00793A10 /* Project object */;
+}
