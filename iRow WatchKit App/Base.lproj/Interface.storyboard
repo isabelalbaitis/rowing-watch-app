@@ -15,14 +15,22 @@
                             <items>
                                 <group width="1" height="0.5" alignment="left" id="TFE-wX-6Bb">
                                     <items>
-                                        <button width="0.5" height="1" alignment="left" title="Button" id="3C6-Z3-we1"/>
-                                        <button width="0.5" height="1" alignment="left" title="Button" id="CvK-iL-CdF"/>
+                                        <button width="0.5" height="1" alignment="left" title="Just Row" id="3C6-Z3-we1">
+                                            <color key="backgroundColor" red="0.95224434140000003" green="0.40791964530000002" blue="0.5334054828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </button>
+                                        <button width="0.5" height="1" alignment="left" title="Set Workout" id="CvK-iL-CdF">
+                                            <color key="backgroundColor" red="0.99729770419999997" green="0.82012230159999999" blue="0.39803296329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </button>
                                     </items>
                                 </group>
                                 <group width="1" height="0.5" alignment="left" id="XRe-Qy-Q5l">
                                     <items>
-                                        <button width="0.5" height="1" alignment="left" title="Button" id="soX-LE-ch1"/>
-                                        <button width="0.5" height="1" alignment="left" title="Button" id="f1d-Md-Oer"/>
+                                        <button width="0.5" height="1" alignment="left" title="History" id="soX-LE-ch1">
+                                            <color key="backgroundColor" red="0.088603489100000002" green="0.8590475917" blue="0.63700461389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </button>
+                                        <button width="0.5" height="1" alignment="left" title="Rerow" id="f1d-Md-Oer">
+                                            <color key="backgroundColor" red="0.072652703489156992" green="0.65828251234006274" blue="0.84696881795666878" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </button>
                                     </items>
                                 </group>
                             </items>
