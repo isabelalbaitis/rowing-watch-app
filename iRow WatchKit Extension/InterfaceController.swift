@@ -11,6 +11,12 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var JustRowButton: WKInterfaceButton!
+    @IBOutlet weak var SetWorkoutButton: WKInterfaceButton!
+    @IBOutlet weak var HistoryButton: WKInterfaceButton!
+    @IBOutlet weak var RerowButton: WKInterfaceButton!
+    
+    
     override func awake(withContext context: Any?) {
         // Configure interface objects here.
     }
@@ -22,5 +28,7 @@ class InterfaceController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
     }
+    
+    
 
 }
