@@ -59,7 +59,7 @@
                                     <items>
                                         <label width="1" height="0.40000000000000002" alignment="left" text="Split:" id="GaX-ja-Dvu"/>
                                         <timer width="1" height="0.59999999999999998" alignment="left" textAlignment="right" id="qf8-e4-TSL">
-                                            <fontDescription key="font" type="system" pointSize="24"/>
+                                            <fontDescription key="font" type="system" weight="semibold" pointSize="24"/>
                                             <calendarUnit key="units" minute="YES" second="YES"/>
                                         </timer>
                                     </items>
@@ -75,14 +75,21 @@
                                 </group>
                             </items>
                         </group>
+                        <separator alignment="left" id="grW-DD-RAK"/>
                         <group width="1" height="0.10000000000000001" heightAdjustment="2" alignment="left" id="lM3-Ls-ezK" userLabel="IntervalCount">
                             <items>
                                 <label width="0.5" height="1" alignment="left" text="Interval:" id="ArC-80-q9f"/>
                                 <label width="0.5" height="1" alignment="left" text="0" textAlignment="right" id="gHI-A2-J2R"/>
                             </items>
                         </group>
+                        <group width="1" height="0.10000000000000001" alignment="left" id="8a7-5D-S4U" userLabel="DistanceTotal">
+                            <items>
+                                <label width="0.5" alignment="left" text="Meters:" id="X5O-BH-gJx"/>
+                                <label width="0.5" alignment="left" text="99,999" textAlignment="right" id="hRc-ri-r7P"/>
+                            </items>
+                        </group>
                         <separator alignment="left" id="JUT-1u-Uyh"/>
-                        <group width="1" height="0.59999999999999998" alignment="left" id="T4j-bq-ESa" userLabel="StrokeRate">
+                        <group width="1" height="0.5" alignment="left" id="T4j-bq-ESa" userLabel="StrokeRate">
                             <items>
                                 <label width="0.75" height="1" alignment="left" text="99" textAlignment="right" id="Rdf-sa-6Zh">
                                     <fontDescription key="font" type="system" pointSize="85"/>
@@ -93,7 +100,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="232" y="-60"/>
+            <point key="canvasLocation" x="224" y="-45"/>
         </scene>
     </scenes>
 </document>
