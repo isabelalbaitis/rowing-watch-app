@@ -36,9 +36,41 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="HistoryButton" destination="soX-LE-ch1" id="46H-Va-BqJ"/>
+                        <outlet property="JustRowButton" destination="3C6-Z3-we1" id="2C8-1m-LXZ"/>
+                        <outlet property="RerowButton" destination="f1d-Md-Oer" id="ddX-ms-nYL"/>
+                        <outlet property="SetWorkoutButton" destination="CvK-iL-CdF" id="hVx-Ai-6vh"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-26.153846153846157" y="-44.025641025641029"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="RNW-FF-peX">
+            <objects>
+                <controller id="JwQ-4E-wo4">
+                    <items>
+                        <group width="0.5" alignment="left" layout="vertical" id="Oor-nF-FdB">
+                            <items>
+                                <timer alignment="left" id="qf8-e4-TSL">
+                                    <calendarUnit key="units" minute="YES" second="YES"/>
+                                </timer>
+                                <label alignment="left" text="Split:" id="GaX-ja-Dvu"/>
+                            </items>
+                        </group>
+                        <group width="86" height="0.29999999999999999" alignment="left" contentMode="scaleAspectFill" layout="vertical" id="3Z3-Cd-Vod">
+                            <items>
+                                <label height="0.29999999999999999" alignment="left" text="Time:" id="pc9-md-DmZ"/>
+                                <timer width="55" height="0.59999999999999998" alignment="left" previewedSeconds="6603" id="X0o-fw-5JA">
+                                    <calendarUnit key="units" minute="YES" second="YES"/>
+                                </timer>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="233.56521739130434" y="-58.4375"/>
         </scene>
     </scenes>
 </document>
