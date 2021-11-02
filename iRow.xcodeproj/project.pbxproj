@@ -25,6 +25,10 @@
 		C85E91C1272C9032007FEA9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85E91C0272C9032007FEA9C /* Assets.xcassets */; };
 		C85E91CC272C9032007FEA9C /* iRow_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E91CB272C9032007FEA9C /* iRow_WatchKit_AppTests.swift */; };
 		C85E91D7272C9032007FEA9C /* iRow_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E91D6272C9032007FEA9C /* iRow_WatchKit_AppUITests.swift */; };
+		C86C566F2731A4D80012FC4D /* NewWorkoutRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C566E2731A4D80012FC4D /* NewWorkoutRowController.swift */; };
+		C86C56712731A5C90012FC4D /* NewWorkoutInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C56702731A5C90012FC4D /* NewWorkoutInterfaceController.swift */; };
+		C86C56732731ADE80012FC4D /* WorkoutScreenInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C56722731ADE80012FC4D /* WorkoutScreenInterfaceController.swift */; };
+		C86C56752731CFBD0012FC4D /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C56742731CFBD0012FC4D /* Workout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +132,10 @@
 		C85E91D2272C9032007FEA9C /* iRow WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iRow WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C85E91D6272C9032007FEA9C /* iRow_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRow_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
 		C85E91D8272C9032007FEA9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C86C566E2731A4D80012FC4D /* NewWorkoutRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutRowController.swift; sourceTree = "<group>"; };
+		C86C56702731A5C90012FC4D /* NewWorkoutInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutInterfaceController.swift; sourceTree = "<group>"; };
+		C86C56722731ADE80012FC4D /* WorkoutScreenInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutScreenInterfaceController.swift; sourceTree = "<group>"; };
+		C86C56742731CFBD0012FC4D /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +262,10 @@
 				C85E91BE272C902D007FEA9C /* ComplicationController.swift */,
 				C85E91C0272C9032007FEA9C /* Assets.xcassets */,
 				C85E91C2272C9032007FEA9C /* Info.plist */,
+				C86C566E2731A4D80012FC4D /* NewWorkoutRowController.swift */,
+				C86C56702731A5C90012FC4D /* NewWorkoutInterfaceController.swift */,
+				C86C56722731ADE80012FC4D /* WorkoutScreenInterfaceController.swift */,
+				C86C56742731CFBD0012FC4D /* Workout.swift */,
 			);
 			path = "iRow WatchKit Extension";
 			sourceTree = "<group>";
@@ -554,6 +566,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C85E91BD272C902D007FEA9C /* ExtensionDelegate.swift in Sources */,
+				C86C566F2731A4D80012FC4D /* NewWorkoutRowController.swift in Sources */,
+				C86C56752731CFBD0012FC4D /* Workout.swift in Sources */,
+				C86C56712731A5C90012FC4D /* NewWorkoutInterfaceController.swift in Sources */,
+				C86C56732731ADE80012FC4D /* WorkoutScreenInterfaceController.swift in Sources */,
 				C85E91BB272C902D007FEA9C /* InterfaceController.swift in Sources */,
 				C85E91BF272C902D007FEA9C /* ComplicationController.swift in Sources */,
 			);

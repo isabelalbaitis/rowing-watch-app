@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="18122" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38"/>
+    <device id="watch44"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="18022"/>
@@ -17,10 +17,16 @@
                                     <items>
                                         <button width="0.5" height="1" alignment="left" title="Just Row" id="3C6-Z3-we1">
                                             <color key="backgroundColor" red="0.95224434140000003" green="0.40791964530000002" blue="0.5334054828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="JwQ-4E-wo4" kind="push" identifier="WorkoutScreenFromJustRow" id="owh-yE-sW4"/>
+                                            </connections>
                                         </button>
-                                        <button width="0.5" height="1" alignment="left" title="Set Workout" id="CvK-iL-CdF">
+                                        <button width="0.5" height="1" alignment="left" title="New Workout" id="CvK-iL-CdF">
                                             <color key="backgroundColor" red="0.99729770419999997" green="0.82012230159999999" blue="0.39803296329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="font" type="system" pointSize="13"/>
+                                            <connections>
+                                                <segue destination="Lkr-9z-uhX" kind="push" id="njD-Sb-AN0"/>
+                                            </connections>
                                         </button>
                                     </items>
                                 </group>
@@ -48,17 +54,44 @@
             </objects>
             <point key="canvasLocation" x="-26.153846153846157" y="-44.025641025641029"/>
         </scene>
-        <!--Interface Controller-->
+        <!--NewWorkoutSelection-->
+        <scene sceneID="Gsx-W2-oFK">
+            <objects>
+                <controller identifier="NewWorkoutSelection" id="Lkr-9z-uhX" customClass="NewWorkoutInterfaceController" customModule="iRow_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="4Hc-kI-8dE">
+                            <items>
+                                <tableRow identifier="New Workout Row Controller" id="5UJ-1M-grN" customClass="NewWorkoutRowController" customModule="iRow_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="gAO-vg-4tw">
+                                        <items>
+                                            <label width="1" height="1" alignment="center" verticalAlignment="center" text="Label" id="AWJ-B9-yXt"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="typeLabel" destination="AWJ-B9-yXt" id="bnt-HL-U3U"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="workoutTypeTable" destination="4Hc-kI-8dE" id="gQO-wF-old"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="255" y="8"/>
+        </scene>
+        <!--WorkoutScreen-->
         <scene sceneID="RNW-FF-peX">
             <objects>
-                <controller id="JwQ-4E-wo4">
+                <controller identifier="WorkoutScreen" id="JwQ-4E-wo4" customClass="WorkoutScreenInterfaceController" customModule="iRow_WatchKit_Extension">
                     <items>
-                        <group width="1" height="0.25" alignment="left" id="PPx-pU-1Zg">
+                        <group width="1" height="0.28000000000000003" alignment="left" radius="0.0" id="PPx-pU-1Zg">
                             <items>
                                 <group width="0.5" height="1" alignment="left" contentMode="scaleAspectFill" layout="vertical" id="Oor-nF-FdB" userLabel="SplitTime">
                                     <items>
-                                        <label width="1" height="0.40000000000000002" alignment="left" text="Split:" id="GaX-ja-Dvu"/>
-                                        <timer width="1" height="0.59999999999999998" alignment="left" textAlignment="right" id="qf8-e4-TSL">
+                                        <label width="1" height="0.5" alignment="left" text="Split:" id="GaX-ja-Dvu"/>
+                                        <timer width="1" height="0.5" alignment="left" textAlignment="right" id="qf8-e4-TSL">
                                             <fontDescription key="font" type="system" weight="semibold" pointSize="24"/>
                                             <calendarUnit key="units" minute="YES" second="YES"/>
                                         </timer>
@@ -66,8 +99,8 @@
                                 </group>
                                 <group width="0.5" height="1" alignment="left" contentMode="scaleAspectFill" layout="vertical" id="3Z3-Cd-Vod" userLabel="ElapsedTime">
                                     <items>
-                                        <label width="1" height="0.40000000000000002" alignment="left" text="Time:" id="pc9-md-DmZ"/>
-                                        <timer width="1" height="0.59999999999999998" alignment="left" textAlignment="right" previewedSeconds="6603" id="X0o-fw-5JA">
+                                        <label width="1" height="0.5" alignment="left" text="Time:" id="pc9-md-DmZ"/>
+                                        <timer width="1" height="0.5" alignment="left" textAlignment="right" previewedSeconds="6603" id="X0o-fw-5JA">
                                             <fontDescription key="font" type="system" pointSize="20"/>
                                             <calendarUnit key="units" minute="YES" second="YES"/>
                                         </timer>
@@ -76,16 +109,20 @@
                             </items>
                         </group>
                         <separator alignment="left" id="grW-DD-RAK"/>
-                        <group width="1" height="0.10000000000000001" heightAdjustment="2" alignment="left" id="lM3-Ls-ezK" userLabel="IntervalCount">
+                        <group width="1" height="0.22" alignment="center" layout="vertical" radius="0.0" id="NK1-zb-JTu">
                             <items>
-                                <label width="0.5" height="1" alignment="left" text="Interval:" id="ArC-80-q9f"/>
-                                <label width="0.5" height="1" alignment="left" text="0" textAlignment="right" id="gHI-A2-J2R"/>
-                            </items>
-                        </group>
-                        <group width="1" height="0.10000000000000001" alignment="left" id="8a7-5D-S4U" userLabel="DistanceTotal">
-                            <items>
-                                <label width="0.5" alignment="left" text="Meters:" id="X5O-BH-gJx"/>
-                                <label width="0.5" alignment="left" text="99,999" textAlignment="right" id="hRc-ri-r7P"/>
+                                <group width="1" height="0.5" alignment="center" verticalAlignment="center" id="lM3-Ls-ezK" userLabel="IntervalCount">
+                                    <items>
+                                        <label width="0.5" height="1" alignment="left" text="Interval:" id="ArC-80-q9f"/>
+                                        <label width="0.5" height="1" alignment="left" text="0" textAlignment="right" id="gHI-A2-J2R"/>
+                                    </items>
+                                </group>
+                                <group width="1" height="0.5" alignment="center" verticalAlignment="center" id="8a7-5D-S4U" userLabel="DistanceTotal">
+                                    <items>
+                                        <label width="0.5" height="1" alignment="left" text="Meters:" id="X5O-BH-gJx"/>
+                                        <label width="0.5" height="1" alignment="left" text="99,999" textAlignment="right" id="hRc-ri-r7P"/>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                         <separator alignment="left" id="JUT-1u-Uyh"/>
@@ -98,9 +135,16 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="intervalCounter" destination="gHI-A2-J2R" id="u8U-hp-MhW"/>
+                        <outlet property="splitDisplay" destination="qf8-e4-TSL" id="AZk-Y9-eyo"/>
+                        <outlet property="strokeRate" destination="Rdf-sa-6Zh" id="nZk-qh-C0o"/>
+                        <outlet property="timerDisplay" destination="X0o-fw-5JA" id="jqv-yC-bIU"/>
+                        <outlet property="totalMeters" destination="hRc-ri-r7P" id="olq-wU-pcH"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="224" y="-45"/>
+            <point key="canvasLocation" x="255" y="-277"/>
         </scene>
     </scenes>
 </document>
