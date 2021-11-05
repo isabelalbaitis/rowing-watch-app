@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="18122" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch44"/>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19455" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="18022"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19454"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -59,20 +60,27 @@
             <objects>
                 <controller identifier="NewWorkoutSelection" id="Lkr-9z-uhX" customClass="NewWorkoutInterfaceController" customModule="iRow_WatchKit_Extension">
                     <items>
-                        <table alignment="left" id="4Hc-kI-8dE">
-                            <items>
-                                <tableRow identifier="New Workout Row Controller" id="5UJ-1M-grN" customClass="NewWorkoutRowController" customModule="iRow_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="gAO-vg-4tw">
-                                        <items>
-                                            <label width="1" height="1" alignment="center" verticalAlignment="center" text="Label" id="AWJ-B9-yXt"/>
-                                        </items>
-                                    </group>
-                                    <connections>
-                                        <outlet property="typeLabel" destination="AWJ-B9-yXt" id="bnt-HL-U3U"/>
-                                    </connections>
-                                </tableRow>
-                            </items>
-                        </table>
+                        <table alignment="left" id="4Hc-kI-8dE"/>
+                        <button width="1" alignment="left" title="Single Distance" id="ceZ-ro-jgY">
+                            <connections>
+                                <segue destination="h1i-33-2tm" kind="push" id="ZAy-St-hZt"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Single Time" id="fQG-N0-h3Q">
+                            <connections>
+                                <segue destination="hcr-iX-OG9" kind="push" id="bvh-4x-Giq"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Dstance Intervals" id="WCf-ze-Dy3">
+                            <connections>
+                                <segue destination="h1i-33-2tm" kind="push" id="3Gd-Uo-6Fl"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Time Intervals" id="qta-Wf-ade">
+                            <connections>
+                                <segue destination="hcr-iX-OG9" kind="push" id="kSy-2M-pOM"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="workoutTypeTable" destination="4Hc-kI-8dE" id="gQO-wF-old"/>
@@ -80,6 +88,13 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="255" y="8"/>
+        </scene>
+        <!--DistanceWorkoutSelector-->
+        <scene sceneID="gHf-ji-9QU">
+            <objects>
+                <controller identifier="DistanceWorkoutSelector" id="h1i-33-2tm"/>
+            </objects>
+            <point key="canvasLocation" x="595" y="131"/>
         </scene>
         <!--WorkoutScreen-->
         <scene sceneID="RNW-FF-peX">
@@ -146,5 +161,16 @@
             </objects>
             <point key="canvasLocation" x="255" y="-277"/>
         </scene>
+        <!--TimeWork-->
+        <scene sceneID="Dza-DV-sZ3">
+            <objects>
+                <controller identifier="TimeWorkoutSelector" title="TimeWork" id="hcr-iX-OG9"/>
+            </objects>
+            <point key="canvasLocation" x="594.56410256410265" y="-190.4871794871795"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bvh-4x-Giq"/>
+        <segue reference="ZAy-St-hZt"/>
+    </inferredMetricsTieBreakers>
 </document>
