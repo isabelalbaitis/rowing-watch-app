@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19455" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="18122" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch42"/>
     <dependencies>
-        <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="18022"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -71,14 +70,14 @@
                                 <segue destination="hcr-iX-OG9" kind="push" id="bvh-4x-Giq"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Dstance Intervals" id="WCf-ze-Dy3">
-                            <connections>
-                                <segue destination="h1i-33-2tm" kind="push" id="3Gd-Uo-6Fl"/>
-                            </connections>
-                        </button>
                         <button width="1" alignment="left" title="Time Intervals" id="qta-Wf-ade">
                             <connections>
                                 <segue destination="hcr-iX-OG9" kind="push" id="kSy-2M-pOM"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Dstance Intervals" id="WCf-ze-Dy3">
+                            <connections>
+                                <segue destination="h1i-33-2tm" kind="push" id="3Gd-Uo-6Fl"/>
                             </connections>
                         </button>
                     </items>
