@@ -7,6 +7,11 @@
 
 import WatchKit
 
+let BRIGHT_GREEN = UIColor.init(red: 0.1333, green: 0.8431, blue: 0.5647, alpha: 1.0)
+let SUPER_RED = UIColor.init(red: 0.9294, green: 0.3059, blue: 0.4588, alpha: 1.0)
+let PERFECT_YELLOW = UIColor.init(red: 0.9922, green: 0.7882, blue: 0.3255, alpha: 1.0)
+let BEST_BLUE = UIColor.init(red: 0.098, green: 0.5922, blue: 0.8118, alpha: 1.0)
+
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {

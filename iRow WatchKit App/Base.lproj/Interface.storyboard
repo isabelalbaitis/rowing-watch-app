@@ -84,10 +84,35 @@
         <!--DistanceWorkoutSelector-->
         <scene sceneID="gHf-ji-9QU">
             <objects>
-                <controller identifier="DistanceWorkoutSelector" id="h1i-33-2tm">
+                <controller identifier="DistanceWorkoutSelector" id="h1i-33-2tm" customClass="DistanceWOInterfaceController" customModule="iRow_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Distance workout selector" numberOfLines="2" id="7B8-8k-6r0"/>
+                        <label width="1" alignment="left" text="Distance Workout" numberOfLines="2" id="QhH-vD-uNE">
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="18"/>
+                        </label>
+                        <label alignment="left" text="Set Distance:" id="G5T-zg-Dis">
+                            <fontDescription key="font" type="system" pointSize="18"/>
+                        </label>
+                        <group width="1" alignment="left" verticalAlignment="center" id="9bG-f6-h9f" userLabel="Timer">
+                            <items>
+                                <picker width="0.17999999999999999" height="1" alignment="left" id="uSf-o3-fF2" userLabel="Minutes Hundreds"/>
+                                <picker width="0.17999999999999999" height="1" alignment="left" id="YSf-ox-fDy" userLabel="Minutes Tens"/>
+                                <picker width="0.17999999999999999" height="1" alignment="left" id="M2u-KJ-k4c" userLabel="Minutes Ones"/>
+                                <label width="0.10000000000000001" alignment="left" verticalAlignment="center" text=":" textAlignment="center" baselineAdjustment="alignCenters" id="BV1-qq-IAg">
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="34"/>
+                                </label>
+                                <picker width="0.17999999999999999" height="1" alignment="left" id="Whh-qB-43x" userLabel="Seconds Tens"/>
+                                <picker width="0.17999999999999999" height="1" alignment="left" id="u4L-rW-Xes" userLabel="Seconds Ones"/>
+                            </items>
+                            <color key="backgroundColor" red="0.73733064319999997" green="0.73733064319999997" blue="0.73733064319999997" alpha="0.34013418600000001" colorSpace="custom" customColorSpace="sRGB"/>
+                        </group>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Row/Set Rest" id="2nT-oU-vMa">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.95224434140000003" green="0.40791964530000002" blue="0.5334054828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="rowOrSetRestButton" destination="2nT-oU-vMa" id="QBM-kb-1dL"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="595" y="131"/>
@@ -160,14 +185,34 @@
         <!--TimeWorkoutSelector-->
         <scene sceneID="Dza-DV-sZ3">
             <objects>
-                <controller identifier="TimeWorkoutSelector" title="TimeWorkoutSelector" id="hcr-iX-OG9" customClass="WODetailsInterfaceController" customModule="iRow_WatchKit_Extension">
+                <controller identifier="TimeWorkoutSelector" title="TimeWorkoutSelector" id="hcr-iX-OG9" customClass="TimeWOInterfaceController" customModule="iRow_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="T/D" id="Z4K-f7-Yjv"/>
-                        <label height="18" alignment="left" text="S/I" id="gSR-VT-ObI"/>
+                        <label alignment="left" text="Timed Workout" id="HoN-kg-bVs">
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="18"/>
+                        </label>
+                        <label alignment="left" text="Set Time:" id="fB3-Wr-NoX">
+                            <fontDescription key="font" type="system" pointSize="18"/>
+                        </label>
+                        <group width="1" alignment="left" verticalAlignment="center" id="2zH-NX-MjL" userLabel="Timer">
+                            <items>
+                                <picker width="0.17999999999999999" height="1" alignment="left" id="CTJ-9o-oFL" userLabel="Minutes Hundreds"/>
+                                <picker width="0.17999999999999999" height="1" alignment="left" id="C4I-8m-7Ao" userLabel="Minutes Tens"/>
+                                <picker width="0.17999999999999999" height="1" alignment="left" id="96s-tp-2dM" userLabel="Minutes Ones"/>
+                                <label width="0.10000000000000001" alignment="left" verticalAlignment="center" text=":" textAlignment="center" baselineAdjustment="alignCenters" id="TEJ-2I-cd1">
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="34"/>
+                                </label>
+                                <picker width="0.17999999999999999" height="1" alignment="left" id="eC9-uj-sXK" userLabel="Seconds Tens"/>
+                                <picker width="0.17999999999999999" height="1" alignment="left" id="1aP-ip-40b" userLabel="Seconds Ones"/>
+                            </items>
+                            <color key="backgroundColor" red="0.73733064317211661" green="0.73733064317211661" blue="0.73733064317211661" alpha="0.34013418599861822" colorSpace="custom" customColorSpace="sRGB"/>
+                        </group>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Row/Set Rest" id="GZx-da-oWo">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="0.95224434140000003" green="0.40791964530000002" blue="0.5334054828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </button>
                     </items>
                     <connections>
-                        <outlet property="singleOrInterval" destination="gSR-VT-ObI" id="upf-Gr-QTP"/>
-                        <outlet property="timeOrDistance" destination="Z4K-f7-Yjv" id="olW-Ro-VA2"/>
+                        <outlet property="rowOrSetRestButton" destination="GZx-da-oWo" id="vTg-pO-gZe"/>
                     </connections>
                 </controller>
             </objects>
