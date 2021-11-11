@@ -8,15 +8,18 @@
 import UIKit
 import WatchKit
 
-class WODetailsInterfaceController: WKInterfaceController, WorkoutSelectionDelegate {
+class WODetailsInterfaceController: WKInterfaceController {
     
     @IBOutlet weak var timeOrDistance: WKInterfaceLabel!
     @IBOutlet weak var singleOrInterval: WKInterfaceLabel!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
+        if let selectedWorkout = context as? Int{
+            workoutSelected(selectdType: selectedWorkout)
+        }
     }
+ 
     
     func workoutSelected(selectdType: Int) {
         if selectdType == 0 {

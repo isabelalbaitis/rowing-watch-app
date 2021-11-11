@@ -69,7 +69,6 @@
                                     </group>
                                     <connections>
                                         <outlet property="typeLabel" destination="gXu-JG-PZV" id="EUL-zi-Far"/>
-                                        <segue destination="hcr-iX-OG9" kind="push" id="1yx-eK-Ekk"/>
                                     </connections>
                                 </tableRow>
                             </items>

@@ -8,13 +8,13 @@
 import UIKit
 import WatchKit
 
-protocol WorkoutSelectionDelegate{
-    func workoutSelected(selectdType: Int)
-}
+//protocol WorkoutSelectionDelegate{
+//    func workoutSelected(selectdType: Int)
+//}
 
 class WOSelectionInterfaceController: WKInterfaceController {
     
-    var delegate:WorkoutSelectionDelegate?
+//    var delegate:WorkoutSelectionDelegate?
     
     var selectedWorkoutIndex: Int = -1
     
@@ -39,9 +39,14 @@ class WOSelectionInterfaceController: WKInterfaceController {
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
         selectedWorkoutIndex = rowIndex
         
-        delegate?.workoutSelected(selectdType: selectedWorkoutIndex)
+        pushController(withName: "TimeWorkoutSelector", context: selectedWorkoutIndex)
+        
+        
+        
+        //if let del = delegate {
+        //    del.workoutSelected(selectdType: selectedWorkoutIndex)
+        //}
+        
     }
-    
-    
     
 }
