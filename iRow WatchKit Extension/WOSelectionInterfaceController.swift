@@ -8,7 +8,15 @@
 import UIKit
 import WatchKit
 
-class NewWorkoutInterfaceController: WKInterfaceController {
+protocol WorkoutSelectionDelegate{
+    func workoutSelected(selectdType: Int)
+}
+
+class WOSelectionInterfaceController: WKInterfaceController {
+    
+    var delegate:WorkoutSelectionDelegate?
+    
+    var selectedWorkoutIndex: Int = -1
     
     @IBOutlet weak var workoutTypeTable: WKInterfaceTable!
     
@@ -24,8 +32,16 @@ class NewWorkoutInterfaceController: WKInterfaceController {
         
         for (index, labelText) in types.enumerated(){
             let row = workoutTypeTable.rowController(at: index) as! NewWorkoutRowController
-            row.typeLabel.setText(labelText)
+            row.typeLabel?.setText(labelText)
         }
     }
+    
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        selectedWorkoutIndex = rowIndex
+        
+        delegate?.workoutSelected(selectdType: selectedWorkoutIndex)
+    }
+    
+    
     
 }

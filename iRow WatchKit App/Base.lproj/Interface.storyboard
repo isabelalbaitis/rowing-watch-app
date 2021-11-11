@@ -57,29 +57,23 @@
         <!--NewWorkoutSelection-->
         <scene sceneID="Gsx-W2-oFK">
             <objects>
-                <controller identifier="NewWorkoutSelection" id="Lkr-9z-uhX" customClass="NewWorkoutInterfaceController" customModule="iRow_WatchKit_Extension">
+                <controller identifier="NewWorkoutSelection" id="Lkr-9z-uhX" customClass="WOSelectionInterfaceController" customModule="iRow_WatchKit_Extension">
                     <items>
-                        <table alignment="left" id="4Hc-kI-8dE"/>
-                        <button width="1" alignment="left" title="Single Distance" id="ceZ-ro-jgY">
-                            <connections>
-                                <segue destination="h1i-33-2tm" kind="push" id="ZAy-St-hZt"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Single Time" id="fQG-N0-h3Q">
-                            <connections>
-                                <segue destination="hcr-iX-OG9" kind="push" id="bvh-4x-Giq"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Time Intervals" id="qta-Wf-ade">
-                            <connections>
-                                <segue destination="hcr-iX-OG9" kind="push" id="kSy-2M-pOM"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Dstance Intervals" id="WCf-ze-Dy3">
-                            <connections>
-                                <segue destination="h1i-33-2tm" kind="push" id="3Gd-Uo-6Fl"/>
-                            </connections>
-                        </button>
+                        <table alignment="left" id="4Hc-kI-8dE">
+                            <items>
+                                <tableRow identifier="New Workout Row Controller" id="lxV-mx-Up2" customClass="NewWorkoutRowController" customModule="iRow_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="opV-JE-P9h">
+                                        <items>
+                                            <label width="1" height="1" alignment="left" text="Workout Type" id="gXu-JG-PZV"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="typeLabel" destination="gXu-JG-PZV" id="EUL-zi-Far"/>
+                                        <segue destination="hcr-iX-OG9" kind="push" id="1yx-eK-Ekk"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
                     </items>
                     <connections>
                         <outlet property="workoutTypeTable" destination="4Hc-kI-8dE" id="gQO-wF-old"/>
@@ -91,7 +85,11 @@
         <!--DistanceWorkoutSelector-->
         <scene sceneID="gHf-ji-9QU">
             <objects>
-                <controller identifier="DistanceWorkoutSelector" id="h1i-33-2tm"/>
+                <controller identifier="DistanceWorkoutSelector" id="h1i-33-2tm">
+                    <items>
+                        <label alignment="left" text="Distance workout selector" numberOfLines="2" id="7B8-8k-6r0"/>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="595" y="131"/>
         </scene>
@@ -160,16 +158,21 @@
             </objects>
             <point key="canvasLocation" x="255" y="-277"/>
         </scene>
-        <!--TimeWork-->
+        <!--TimeWorkoutSelector-->
         <scene sceneID="Dza-DV-sZ3">
             <objects>
-                <controller identifier="TimeWorkoutSelector" title="TimeWork" id="hcr-iX-OG9"/>
+                <controller identifier="TimeWorkoutSelector" title="TimeWorkoutSelector" id="hcr-iX-OG9" customClass="WODetailsInterfaceController" customModule="iRow_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="T/D" id="Z4K-f7-Yjv"/>
+                        <label height="18" alignment="left" text="S/I" id="gSR-VT-ObI"/>
+                    </items>
+                    <connections>
+                        <outlet property="singleOrInterval" destination="gSR-VT-ObI" id="upf-Gr-QTP"/>
+                        <outlet property="timeOrDistance" destination="Z4K-f7-Yjv" id="olW-Ro-VA2"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="594.56410256410265" y="-190.4871794871795"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="bvh-4x-Giq"/>
-        <segue reference="ZAy-St-hZt"/>
-    </inferredMetricsTieBreakers>
 </document>
