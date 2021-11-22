@@ -14,6 +14,14 @@ class TimeWOInterfaceController: WKInterfaceController {
     
     @IBOutlet weak var rowOrSetRestButton: WKInterfaceButton!
     
+    @IBOutlet weak var minutesHundredsPicker: WKInterfacePicker!
+    @IBOutlet weak var minutesTensPicker: WKInterfacePicker!
+    @IBOutlet weak var minutesOnesPicker: WKInterfacePicker!
+    
+    @IBOutlet weak var secondsTensPicker: WKInterfacePicker!
+    @IBOutlet weak var secondsOnesPicker: WKInterfacePicker!
+    
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         if let selectedWorkout = context as? Int{

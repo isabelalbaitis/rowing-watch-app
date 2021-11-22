@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="18122" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19455" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch42"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="18022"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19454"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -92,18 +93,21 @@
                         <label alignment="left" text="Set Distance:" id="G5T-zg-Dis">
                             <fontDescription key="font" type="system" pointSize="18"/>
                         </label>
-                        <group width="1" alignment="left" verticalAlignment="center" id="9bG-f6-h9f" userLabel="Timer">
+                        <group width="1" height="35" alignment="left" verticalAlignment="center" id="pof-md-bdV">
                             <items>
-                                <picker width="0.17999999999999999" height="1" alignment="left" id="uSf-o3-fF2" userLabel="Minutes Hundreds"/>
-                                <picker width="0.17999999999999999" height="1" alignment="left" id="YSf-ox-fDy" userLabel="Minutes Tens"/>
-                                <picker width="0.17999999999999999" height="1" alignment="left" id="M2u-KJ-k4c" userLabel="Minutes Ones"/>
-                                <label width="0.10000000000000001" alignment="left" verticalAlignment="center" text=":" textAlignment="center" baselineAdjustment="alignCenters" id="BV1-qq-IAg">
-                                    <fontDescription key="font" type="system" weight="medium" pointSize="34"/>
+                                <picker width="0.14000000000000001" height="1" alignment="left" id="0s6-OY-uCi"/>
+                                <picker width="0.14000000000000001" height="1" alignment="left" id="pKa-NV-3Oa"/>
+                                <label width="0.070000000000000007" height="1" alignment="left" text="," id="jWS-Ho-eh8">
+                                    <fontDescription key="font" type="system" pointSize="23"/>
                                 </label>
-                                <picker width="0.17999999999999999" height="1" alignment="left" id="Whh-qB-43x" userLabel="Seconds Tens"/>
-                                <picker width="0.17999999999999999" height="1" alignment="left" id="u4L-rW-Xes" userLabel="Seconds Ones"/>
+                                <picker width="0.14000000000000001" height="1" alignment="left" id="FW6-sU-zBo"/>
+                                <picker width="0.14000000000000001" height="1" alignment="left" id="Gqg-AP-Xtz"/>
+                                <picker width="0.14000000000000001" height="1" alignment="left" id="FMg-Oz-AsI"/>
+                                <label width="0.17999999999999999" height="1" alignment="left" text="km" textAlignment="right" id="4lg-en-6cY">
+                                    <fontDescription key="font" type="system" pointSize="16"/>
+                                </label>
                             </items>
-                            <color key="backgroundColor" red="0.73733064319999997" green="0.73733064319999997" blue="0.73733064319999997" alpha="0.34013418600000001" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.25098311899999998" green="0.25097686050000001" blue="0.25097811219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </group>
                         <button width="1" alignment="left" verticalAlignment="bottom" title="Row/Set Rest" id="2nT-oU-vMa">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,11 +115,16 @@
                         </button>
                     </items>
                     <connections>
+                        <outlet property="hundredsPicker" destination="FW6-sU-zBo" id="F4J-VA-hPo"/>
+                        <outlet property="oneThousPicker" destination="pKa-NV-3Oa" id="DoD-Zk-kB4"/>
+                        <outlet property="onesPicker" destination="FMg-Oz-AsI" id="y2f-Gm-9mY"/>
                         <outlet property="rowOrSetRestButton" destination="2nT-oU-vMa" id="QBM-kb-1dL"/>
+                        <outlet property="tenThousPicker" destination="0s6-OY-uCi" id="tsa-BH-S2v"/>
+                        <outlet property="tensPicker" destination="Gqg-AP-Xtz" id="xVW-oN-dOo"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="595" y="131"/>
+            <point key="canvasLocation" x="594.56410256410265" y="130.33333333333334"/>
         </scene>
         <!--WorkoutScreen-->
         <scene sceneID="RNW-FF-peX">
@@ -204,7 +213,7 @@
                                 <picker width="0.17999999999999999" height="1" alignment="left" id="eC9-uj-sXK" userLabel="Seconds Tens"/>
                                 <picker width="0.17999999999999999" height="1" alignment="left" id="1aP-ip-40b" userLabel="Seconds Ones"/>
                             </items>
-                            <color key="backgroundColor" red="0.73733064317211661" green="0.73733064317211661" blue="0.73733064317211661" alpha="0.34013418599861822" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.25098311899999998" green="0.25097686050000001" blue="0.25097811219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </group>
                         <button width="1" alignment="left" verticalAlignment="bottom" title="Row/Set Rest" id="GZx-da-oWo">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -212,7 +221,12 @@
                         </button>
                     </items>
                     <connections>
+                        <outlet property="minutesHundredsPicker" destination="CTJ-9o-oFL" id="5rm-bY-tao"/>
+                        <outlet property="minutesOnesPicker" destination="96s-tp-2dM" id="d4N-oH-rTQ"/>
+                        <outlet property="minutesTensPicker" destination="C4I-8m-7Ao" id="psR-mb-H3n"/>
                         <outlet property="rowOrSetRestButton" destination="GZx-da-oWo" id="vTg-pO-gZe"/>
+                        <outlet property="secondsOnesPicker" destination="1aP-ip-40b" id="hjV-k3-HTs"/>
+                        <outlet property="secondsTensPicker" destination="eC9-uj-sXK" id="N5i-CE-xLl"/>
                     </connections>
                 </controller>
             </objects>

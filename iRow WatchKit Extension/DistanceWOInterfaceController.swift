@@ -14,6 +14,13 @@ class DistanceWOInterfaceController: WKInterfaceController {
     
     @IBOutlet weak var rowOrSetRestButton: WKInterfaceButton!
     
+    @IBOutlet weak var tenThousPicker: WKInterfacePicker!
+    @IBOutlet weak var oneThousPicker: WKInterfacePicker!
+    @IBOutlet weak var hundredsPicker: WKInterfacePicker!
+    @IBOutlet weak var tensPicker: WKInterfacePicker!
+    @IBOutlet weak var onesPicker: WKInterfacePicker!
+    
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         if let selectedWorkout = context as? Int{
