@@ -35,18 +35,22 @@ class WOSelectController: WKInterfaceController {
     
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
         selectedWorkoutIndex = rowIndex
+        print(selectedWorkoutIndex)
         if selectedWorkoutIndex == 0 {
             NewWorkout = Workout(isInterval: false, isDistance: false)
         }
-        if selectedWorkoutIndex == 1 {
+        else if selectedWorkoutIndex == 1 {
             NewWorkout = Workout(isInterval: false, isDistance: true)
         }
-        if selectedWorkoutIndex == 2 {
+        else if selectedWorkoutIndex == 2 {
             NewWorkout = Workout(isInterval: true, isDistance: false)
         }
-        if selectedWorkoutIndex == 3 {
+        else if selectedWorkoutIndex == 3 {
             NewWorkout = Workout(isInterval: true, isDistance: true)
         }
+        
+        print(String(describing: NewWorkout!.isInterval))
+        print(String(describing: NewWorkout!.isDistance))
         
         pushController(withName: "Configure Workout", context: NewWorkout)
         

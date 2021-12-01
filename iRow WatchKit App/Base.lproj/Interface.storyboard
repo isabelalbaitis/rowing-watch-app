@@ -208,12 +208,14 @@
                         <button width="1" alignment="center" verticalAlignment="bottom" hidden="YES" title="Set Rest" id="sgw-kq-Q0K">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="buttonPushed" destination="hcr-iX-OG9" id="daB-Nb-KT2"/>
-                                <segue destination="Enr-Tn-YiS" kind="push" identifier="config WO to set rest" id="qw2-bF-QVk"/>
+                                <segue destination="Enr-Tn-YiS" kind="push" identifier="Config to Set Rest" id="G3A-TG-eyo"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" verticalAlignment="bottom" hidden="YES" title="Row" id="s4a-vs-sdC">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="qA4-R3-5IF" kind="push" identifier="Config to WO Interface" id="BcN-m4-Zkv"/>
+                            </connections>
                         </button>
                     </items>
                     <connections>
@@ -302,7 +304,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="242" y="-612"/>
+            <point key="canvasLocation" x="256" y="-368"/>
         </scene>
         <!--Time-->
         <scene sceneID="Dza-DV-sZ3">
@@ -374,6 +376,36 @@
             </objects>
             <point key="canvasLocation" x="799" y="-510"/>
         </scene>
+        <!--Workout Interface-->
+        <scene sceneID="YxA-Y5-Tmj">
+            <objects>
+                <controller identifier="WO Interface" title="Workout Interface" id="qA4-R3-5IF" customClass="WOInterfaceController" customModule="iRow_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="center" text="Workout Type" id="HtB-sY-x9g">
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="22"/>
+                        </label>
+                        <timer width="1" height="0.20000000000000001" alignment="left" textAlignment="right" id="QB3-Lo-ghM">
+                            <fontDescription key="font" type="system" pointSize="20"/>
+                        </timer>
+                        <dateLabel width="1" alignment="left" id="D81-uU-Twp">
+                            <dateFormatterStyle key="dateStyle" short="YES"/>
+                            <dateFormatterStyle key="timeStyle" short="YES"/>
+                        </dateLabel>
+                        <separator alignment="left" id="oMt-hD-REF"/>
+                        <label width="1" height="0.5" alignment="center" verticalAlignment="bottom" text="32" textAlignment="center" id="zOV-0R-I5a">
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="89"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="date" destination="D81-uU-Twp" id="RG7-MU-4hO"/>
+                        <outlet property="strokeRate" destination="zOV-0R-I5a" id="gHu-ny-mcL"/>
+                        <outlet property="timer" destination="QB3-Lo-ghM" id="eLo-0h-ctc"/>
+                        <outlet property="workoutTitle" destination="HtB-sY-x9g" id="1co-GW-E3i"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1117" y="-164"/>
+        </scene>
         <!--Rest-->
         <scene sceneID="WGB-dH-sF3">
             <objects>
@@ -382,7 +414,7 @@
                         <label width="1" alignment="left" text="Interval Rest Time" numberOfLines="2" id="vzm-tH-fIW">
                             <fontDescription key="font" type="system" weight="semibold" pointSize="18"/>
                         </label>
-                        <group width="1" alignment="left" id="xT4-r3-fgq">
+                        <group width="1" alignment="left" radius="0.0" id="xT4-r3-fgq">
                             <items>
                                 <label width="0.5" alignment="left" text="Work:" id="ec7-FH-Ng6"/>
                                 <label width="0.5" alignment="left" text="999 m" id="JaE-QJ-N8S"/>
@@ -432,6 +464,7 @@
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="buttonPushed" destination="Enr-Tn-YiS" id="PNd-4N-s8r"/>
+                                <segue destination="qA4-R3-5IF" kind="push" identifier="Rest to WO Interface" id="NcF-OW-97E"/>
                             </connections>
                         </button>
                     </items>
@@ -448,7 +481,10 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="874" y="-44"/>
+            <point key="canvasLocation" x="858" y="102"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="NcF-OW-97E"/>
+    </inferredMetricsTieBreakers>
 </document>

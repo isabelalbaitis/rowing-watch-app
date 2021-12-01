@@ -10,6 +10,8 @@ import WatchKit
 
 class SetRestController: WKInterfaceController {
     
+    var NewWorkout : Workout?
+    
     var minutes: Int?
     var seconds: Int?
     var totalTimeInSeconds: Int?
@@ -20,7 +22,6 @@ class SetRestController: WKInterfaceController {
     @IBOutlet weak var minutesHundPicker: WKInterfacePicker!
     @IBOutlet weak var minutesTensPicker: WKInterfacePicker!
     @IBOutlet weak var minutesOnesPicker: WKInterfacePicker!
-    
     @IBOutlet weak var secondsTensPicker: WKInterfacePicker!
     @IBOutlet weak var secondsOnesPicker: WKInterfacePicker!
     
@@ -41,11 +42,18 @@ class SetRestController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         
+        NewWorkout! = (context as? Workout)!
+        
         super.awake(withContext: context)
         
         rowButton.setBackgroundColor(BRIGHT_GREEN)
-      //  intervalWorkLength = context as? Int
-      //  getWorkoutType(from: intervalWorkLength!)
+        
+        if NewWorkout!.isDistance == true{
+            workLengthLabel.setText(String(format: "%d m", NewWorkout!.distIntervalLength!))
+        }
+        else if NewWorkout!.isDistance == false{
+            workLengthLabel.setText(String(format: "%d:%02d", Int(NewWorkout!.timeIntervalLength! / 60), Int(NewWorkout!.timeIntervalLength!) % 60))
+        }
         
         let numItems: [WKPickerItem] = numberList.map{
             let pickerItem = WKPickerItem()
@@ -82,6 +90,14 @@ class SetRestController: WKInterfaceController {
     
     }
     
+    override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
+        if segueIdentifier == "Rest to WO Interface"{
+            return NewWorkout
+        }
+        
+        return nil
+    }
+    
 
     // MARK: - Functions
     /*
@@ -112,6 +128,7 @@ class SetRestController: WKInterfaceController {
         seconds = (SecondsTensDigit * 10) + SecondsOnesDigit
         totalTimeInSeconds = (minutes! * 60) + seconds!
 
+        NewWorkout?.intervalRestTime = Double(totalTimeInSeconds!)
         restSetLabel.setText(String(format: "%d:%02d", minutes!, seconds!))
     }
     

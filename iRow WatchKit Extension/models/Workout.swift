@@ -25,6 +25,10 @@ struct Workout {
     var strokeRate : Int?
     var dateTimeCompleted : Date?
     
+    var timeIntervalLength : TimeInterval?
+    var distIntervalLength : Int?
+    var intervalRestTime : TimeInterval?
+    
     init(isInterval: Bool, isDistance: Bool) {
         self.isInterval = isInterval
         self.isDistance = isDistance
@@ -46,6 +50,8 @@ struct Workout {
         }
         
     }
+    
+    
     
     /*
     init(distance: Double, totalTime: TimeInterval, strokeRate: Int, dateTimeCompleted: Date) {

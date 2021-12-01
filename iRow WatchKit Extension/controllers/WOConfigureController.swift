@@ -11,9 +11,6 @@ import WatchKit
 class WOConfigureController: WKInterfaceController {
     
     var NewWorkout: Workout?
-    
- //   var isInterval: Bool?
- //   var isDistance: Bool?
         
     var minutes: Int?
     var seconds: Int?
@@ -69,6 +66,7 @@ class WOConfigureController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
 
+        NewWorkout = context as? Workout
         super.awake(withContext: context)
         
         let numItems: [WKPickerItem] = numberList.map{
@@ -83,7 +81,6 @@ class WOConfigureController: WKInterfaceController {
             return pickerItem
         }
         
-      //  if let selectedWorkout = context as? Int{
         configForSelection()
             
             if NewWorkout?.isInterval == true {
@@ -151,8 +148,17 @@ class WOConfigureController: WKInterfaceController {
             }
         
         
-        //}
+    }
+    
+    override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
+        if segueIdentifier == "Config to Set Rest" {
+            return self.NewWorkout
+        }
+        else if segueIdentifier == "Config to WO Interface" {
+            return self.NewWorkout
+        }
         
+        return nil
     }
  
     // MARK: - Functions
@@ -202,7 +208,11 @@ class WOConfigureController: WKInterfaceController {
         seconds = (SecondsTensDigit * 10) + SecondsOnesDigit
         totalTimeInSeconds = (minutes! * 60) + seconds!
 
-        workSetLabel.setText(String(format: "%d:%02d", minutes!, seconds!))
+        NewWorkout?.timeIntervalLength = Double(totalTimeInSeconds!) as TimeInterval
+        let min:Int = Int(NewWorkout!.timeIntervalLength! / 60)
+        let sec:Int = Int(NewWorkout!.timeIntervalLength!) % 60
+        
+        workSetLabel.setText(String(format: "%d:%02d", min, sec))
     }
 
     
@@ -210,7 +220,10 @@ class WOConfigureController: WKInterfaceController {
     func configureDist(){
         totalDistanceInMeters = (DTenThousDigit * 10000) + (DOneThousDigit * 1000) + (DHundDigit * 100) + (DTensDigit * 10) + DOnesDigit
         
-        workSetLabel.setText(String(format: "%d", totalDistanceInMeters!))
+        NewWorkout?.distIntervalLength = totalDistanceInMeters
+        let distometers:Int = NewWorkout!.distIntervalLength!
+        
+        workSetLabel.setText(String(format: "%d", distometers))
     }
     
     

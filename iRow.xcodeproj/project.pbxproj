@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		811C4AF62757A916002B4AA4 /* WOInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811C4AF52757A916002B4AA4 /* WOInterfaceController.swift */; };
 		81EA1BFD27570A76001330AB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA1BFC27570A76001330AB /* HomeController.swift */; };
 		81EA1BFF27570CB5001330AB /* SetRestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA1BFE27570CB5001330AB /* SetRestController.swift */; };
 		81EA1C0327575710001330AB /* WOConfigureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA1C0227575710001330AB /* WOConfigureController.swift */; };
@@ -106,6 +107,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		811C4AF52757A916002B4AA4 /* WOInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOInterfaceController.swift; sourceTree = "<group>"; };
 		81EA1BFC27570A76001330AB /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		81EA1BFE27570CB5001330AB /* SetRestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRestController.swift; sourceTree = "<group>"; };
 		81EA1C0227575710001330AB /* WOConfigureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOConfigureController.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				C864AC3C273D8CE8006194D6 /* DistanceWOController.swift */,
 				81EA1BFE27570CB5001330AB /* SetRestController.swift */,
 				81EA1C0227575710001330AB /* WOConfigureController.swift */,
+				811C4AF52757A916002B4AA4 /* WOInterfaceController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C85E91BD272C902D007FEA9C /* ExtensionDelegate.swift in Sources */,
+				811C4AF62757A916002B4AA4 /* WOInterfaceController.swift in Sources */,
 				C86C566F2731A4D80012FC4D /* NewWORowController.swift in Sources */,
 				C86C56752731CFBD0012FC4D /* Workout.swift in Sources */,
 				C86C56712731A5C90012FC4D /* WOSelectController.swift in Sources */,
