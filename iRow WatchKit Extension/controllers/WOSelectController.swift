@@ -10,9 +10,7 @@ import WatchKit
 
 
 class WOSelectController: WKInterfaceController {
-    
-    var NewWorkout : Workout?
-    
+        
     var selectedWorkoutIndex: Int = -1
     
     @IBOutlet weak var workoutTypeTable: WKInterfaceTable!
@@ -34,25 +32,37 @@ class WOSelectController: WKInterfaceController {
     }
     
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        selectedWorkoutIndex = rowIndex
-        print(selectedWorkoutIndex)
-        if selectedWorkoutIndex == 0 {
-            NewWorkout = Workout(isInterval: false, isDistance: false)
-        }
-        else if selectedWorkoutIndex == 1 {
-            NewWorkout = Workout(isInterval: false, isDistance: true)
-        }
-        else if selectedWorkoutIndex == 2 {
-            NewWorkout = Workout(isInterval: true, isDistance: false)
-        }
-        else if selectedWorkoutIndex == 3 {
-            NewWorkout = Workout(isInterval: true, isDistance: true)
-        }
         
-        print(String(describing: NewWorkout!.isInterval))
-        print(String(describing: NewWorkout!.isDistance))
+        print(rowIndex)
         
-        pushController(withName: "Configure Workout", context: NewWorkout)
+        var workout: Workout
+        
+        if rowIndex == 0 {
+            // Single Time
+            workout = Workout(isInterval: false, isDistance: false)
+            pushController(withName: "Configure Workout", context: workout)
+        }
+        else if rowIndex == 1 {
+            // Single Distance
+            workout = Workout(isInterval: false, isDistance: true)
+            pushController(withName: "Configure Workout", context: workout)
+        }
+        else if rowIndex == 2 {
+            // Time Intervals
+            workout = Workout(isInterval: true, isDistance: false)
+            pushController(withName: "Configure Workout", context: workout)
+        }
+        else {
+        //else if rowIndex == 3 {
+            // Distance Intervals
+            workout = Workout(isInterval: true, isDistance: true)
+            pushController(withName: "Configure Workout", context: workout)
+        }
+                
+        print(String(describing: workout.isInterval))
+        print(String(describing: workout.isDistance))
+        
+        
         
         
     }

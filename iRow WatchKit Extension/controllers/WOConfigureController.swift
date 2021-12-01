@@ -66,7 +66,7 @@ class WOConfigureController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
 
-        NewWorkout = context as? Workout
+        NewWorkout = (context as! Workout)
         super.awake(withContext: context)
         
         let numItems: [WKPickerItem] = numberList.map{
@@ -150,16 +150,21 @@ class WOConfigureController: WKInterfaceController {
         
     }
     
+    /*
     override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
-        if segueIdentifier == "Config to Set Rest" {
-            return self.NewWorkout
+        if segueIdentifier == "configToSetRest" {
+            print("Config to Set Rest. Returning NewWorkout as context.\nNewWorkout:")
+            print(String(describing: NewWorkout))
+            return NewWorkout
         }
         else if segueIdentifier == "Config to WO Interface" {
-            return self.NewWorkout
+            return NewWorkout
         }
-        
+    
         return nil
     }
+     */
+    
  
     // MARK: - Functions
     
@@ -207,12 +212,14 @@ class WOConfigureController: WKInterfaceController {
         minutes = (MinutesHundDigit * 100) + (MinutesTensDigit * 10) + MinutesOnesDigit
         seconds = (SecondsTensDigit * 10) + SecondsOnesDigit
         totalTimeInSeconds = (minutes! * 60) + seconds!
-
-        NewWorkout?.timeIntervalLength = Double(totalTimeInSeconds!) as TimeInterval
-        let min:Int = Int(NewWorkout!.timeIntervalLength! / 60)
-        let sec:Int = Int(NewWorkout!.timeIntervalLength!) % 60
         
-        workSetLabel.setText(String(format: "%d:%02d", min, sec))
+        print(totalTimeInSeconds!)
+
+        NewWorkout?.pieceTotalSeconds! = Double(totalTimeInSeconds!) as TimeInterval
+       // let min:Int = Int(NewWorkout?.pieceTotalSeconds!) / 60
+       // let sec:Int = Int(NewWorkout!.pieceTotalSeconds!) % 60
+        
+      //  workSetLabel.setText(String(format: "%d:%02d", min, sec))
     }
 
     
@@ -220,8 +227,8 @@ class WOConfigureController: WKInterfaceController {
     func configureDist(){
         totalDistanceInMeters = (DTenThousDigit * 10000) + (DOneThousDigit * 1000) + (DHundDigit * 100) + (DTensDigit * 10) + DOnesDigit
         
-        NewWorkout?.distIntervalLength = totalDistanceInMeters
-        let distometers:Int = NewWorkout!.distIntervalLength!
+        NewWorkout!.pieceDistanceMeters = totalDistanceInMeters!
+        let distometers:Int = NewWorkout!.pieceDistanceMeters!
         
         workSetLabel.setText(String(format: "%d", distometers))
     }
@@ -280,6 +287,13 @@ class WOConfigureController: WKInterfaceController {
     @IBAction func distOnesChanged(_ value: Int) {
         DOnesDigit = value
         configureDist()
+    }
+    
+    
+    @IBAction func setRestButtonPushed() {
+        
+        pushController(withName: "Set Rest", context: NewWorkout)
+        
     }
     
     

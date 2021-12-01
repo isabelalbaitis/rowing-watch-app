@@ -53,7 +53,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-26.153846153846157" y="-44.025641025641029"/>
+            <point key="canvasLocation" x="-71" y="11"/>
         </scene>
         <!--NewWorkoutSelection-->
         <scene sceneID="Gsx-W2-oFK">
@@ -208,7 +208,8 @@
                         <button width="1" alignment="center" verticalAlignment="bottom" hidden="YES" title="Set Rest" id="sgw-kq-Q0K">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="Enr-Tn-YiS" kind="push" identifier="Config to Set Rest" id="G3A-TG-eyo"/>
+                                <action selector="setRestButtonPushed" destination="ix7-wm-Yrm" id="jwl-wJ-XMr"/>
+                                <segue destination="Enr-Tn-YiS" kind="push" identifier="configToSetRest" id="G3A-TG-eyo"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" verticalAlignment="bottom" hidden="YES" title="Row" id="s4a-vs-sdC">
@@ -409,7 +410,7 @@
         <!--Rest-->
         <scene sceneID="WGB-dH-sF3">
             <objects>
-                <controller identifier="Set Rest" title="Rest" id="Enr-Tn-YiS" customClass="SetRestController" customModule="iRow_WatchKit_App">
+                <controller identifier="Set Rest" title="Rest" id="Enr-Tn-YiS" customClass="SetRestController" customModule="iRow_WatchKit_Extension">
                     <items>
                         <label width="1" alignment="left" text="Interval Rest Time" numberOfLines="2" id="vzm-tH-fIW">
                             <fontDescription key="font" type="system" weight="semibold" pointSize="18"/>

@@ -10,7 +10,7 @@ import WatchKit
 
 class SetRestController: WKInterfaceController {
     
-    var NewWorkout : Workout?
+    var workout : Workout?
     
     var minutes: Int?
     var seconds: Int?
@@ -42,17 +42,23 @@ class SetRestController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         
-        NewWorkout! = (context as? Workout)!
+        print ("\nFrom SetRestController, context:")
+        print (String(describing: context))
+        
+        workout = context as! Workout?
+        
+        print ("\nFrom SetRestController, workout:")
+        print (String(describing: workout))
         
         super.awake(withContext: context)
         
         rowButton.setBackgroundColor(BRIGHT_GREEN)
         
-        if NewWorkout!.isDistance == true{
-            workLengthLabel.setText(String(format: "%d m", NewWorkout!.distIntervalLength!))
+        if workout!.isDistance == true{
+            workLengthLabel.setText(String(format: "%d m", workout!.pieceDistanceMeters!))
         }
-        else if NewWorkout!.isDistance == false{
-            workLengthLabel.setText(String(format: "%d:%02d", Int(NewWorkout!.timeIntervalLength! / 60), Int(NewWorkout!.timeIntervalLength!) % 60))
+        else if workout!.isDistance == false{
+            workLengthLabel.setText(String(format: "%d:%02d", Int(workout!.pieceTotalSeconds! / 60), Int(workout!.pieceTotalSeconds!) % 60))
         }
         
         let numItems: [WKPickerItem] = numberList.map{
@@ -92,7 +98,7 @@ class SetRestController: WKInterfaceController {
     
     override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
         if segueIdentifier == "Rest to WO Interface"{
-            return NewWorkout
+            return workout
         }
         
         return nil
@@ -128,7 +134,7 @@ class SetRestController: WKInterfaceController {
         seconds = (SecondsTensDigit * 10) + SecondsOnesDigit
         totalTimeInSeconds = (minutes! * 60) + seconds!
 
-        NewWorkout?.intervalRestTime = Double(totalTimeInSeconds!)
+        workout?.restTotalSeconds = Double(totalTimeInSeconds!)
         restSetLabel.setText(String(format: "%d:%02d", minutes!, seconds!))
     }
     

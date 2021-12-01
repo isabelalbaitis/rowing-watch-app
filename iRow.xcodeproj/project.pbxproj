@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8107F7762757D51E00058DA6 /* OnWaterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8107F7752757D51E00058DA6 /* OnWaterRow.swift */; };
 		811C4AF62757A916002B4AA4 /* WOInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811C4AF52757A916002B4AA4 /* WOInterfaceController.swift */; };
 		81EA1BFD27570A76001330AB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA1BFC27570A76001330AB /* HomeController.swift */; };
 		81EA1BFF27570CB5001330AB /* SetRestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA1BFE27570CB5001330AB /* SetRestController.swift */; };
@@ -107,6 +108,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8107F7752757D51E00058DA6 /* OnWaterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnWaterRow.swift; sourceTree = "<group>"; };
 		811C4AF52757A916002B4AA4 /* WOInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOInterfaceController.swift; sourceTree = "<group>"; };
 		81EA1BFC27570A76001330AB /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		81EA1BFE27570CB5001330AB /* SetRestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRestController.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				C86C56742731CFBD0012FC4D /* Workout.swift */,
+				8107F7752757D51E00058DA6 /* OnWaterRow.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				C86C566F2731A4D80012FC4D /* NewWORowController.swift in Sources */,
 				C86C56752731CFBD0012FC4D /* Workout.swift in Sources */,
 				C86C56712731A5C90012FC4D /* WOSelectController.swift in Sources */,
+				8107F7762757D51E00058DA6 /* OnWaterRow.swift in Sources */,
 				81EA1BFD27570A76001330AB /* HomeController.swift in Sources */,
 				C864AC3D273D8CE8006194D6 /* DistanceWOController.swift in Sources */,
 				81EA1BFF27570CB5001330AB /* SetRestController.swift in Sources */,
