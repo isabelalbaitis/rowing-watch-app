@@ -1,14 +1,14 @@
 //
-//  NewWorkoutRowController.swift
+//  NewWORowController.swift
 //  iRow WatchKit Extension
 //
-//  Created by Isabel Albaitis on 11/2/21.
+//  Created by Isabel Albaitis and Jacob Stone on 11/2/21.
 //
 
 import UIKit
 import WatchKit
 
-class NewWorkoutRowController: NSObject {
+class NewWORowController: NSObject {
     
     @IBOutlet weak var typeLabel: WKInterfaceLabel!
     

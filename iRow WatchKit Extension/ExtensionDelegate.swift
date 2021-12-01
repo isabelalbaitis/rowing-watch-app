@@ -2,7 +2,7 @@
 //  ExtensionDelegate.swift
 //  iRow WatchKit Extension
 //
-//  Created by Isabel Albaitis on 10/29/21.
+//  Created by Isabel Albaitis and Jacob Stone on 10/29/21.
 //
 
 import WatchKit

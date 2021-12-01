@@ -2,7 +2,7 @@
 //  iRow_WatchKit_AppUITests.swift
 //  iRow WatchKit AppUITests
 //
-//  Created by Isabel Albaitis on 10/29/21.
+//  Created by Isabel Albaitis and Jacob Stone on 10/29/21.
 //
 
 import XCTest

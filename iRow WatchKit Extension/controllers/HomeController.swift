@@ -1,15 +1,15 @@
 //
-//  InterfaceController.swift
+//  HomeController.swift
 //  iRow WatchKit Extension
 //
-//  Created by Isabel Albaitis on 10/29/21.
+//  Created by Isabel Albaitis and Jacob Stone on 10/29/21.
 //
 
 import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
+class HomeController: WKInterfaceController {
 
     @IBOutlet weak var JustRowButton: WKInterfaceButton!
     @IBOutlet weak var SetWorkoutButton: WKInterfaceButton!

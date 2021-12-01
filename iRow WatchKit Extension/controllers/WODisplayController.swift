@@ -1,8 +1,8 @@
 //
-//  WorkoutScreenInterfaceController.swift
+//  WODisplayController.swift
 //  iRow WatchKit Extension
 //
-//  Created by Isabel Albaitis on 11/2/21.
+//  Created by Isabel Albaitis and Jacob Stone on 11/2/21.
 //
 
 import UIKit
@@ -10,7 +10,7 @@ import WatchKit
 import CoreMotion
 import CoreLocation
 
-class WorkoutScreenInterfaceController: WKInterfaceController {
+class WODisplayController: WKInterfaceController {
    
     @IBOutlet weak var splitDisplay: WKInterfaceTimer!
     @IBOutlet weak var timerDisplay: WKInterfaceTimer!

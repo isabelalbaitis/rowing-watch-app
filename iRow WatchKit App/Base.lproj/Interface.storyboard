@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19455" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch42"/>
+    <device id="watch45"/>
     <dependencies>
         <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19454"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Home Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="iRow_WatchKit_App" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="HomeController" customModule="iRow_WatchKit_App" customModuleProvider="target">
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" id="qF3-PN-yG5">
                             <items>
@@ -58,11 +58,11 @@
         <!--NewWorkoutSelection-->
         <scene sceneID="Gsx-W2-oFK">
             <objects>
-                <controller identifier="NewWorkoutSelection" id="Lkr-9z-uhX" customClass="WOSelectionInterfaceController" customModule="iRow_WatchKit_Extension">
+                <controller identifier="NewWorkoutSelection" id="Lkr-9z-uhX" customClass="WOSelectController" customModule="iRow_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="4Hc-kI-8dE">
                             <items>
-                                <tableRow identifier="New Workout Row Controller" id="lxV-mx-Up2" customClass="NewWorkoutRowController" customModule="iRow_WatchKit_Extension">
+                                <tableRow identifier="New Workout Row Controller" id="lxV-mx-Up2" customClass="NewWORowController" customModule="iRow_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="opV-JE-P9h">
                                         <items>
                                             <label width="1" height="1" alignment="left" text="Workout Type" id="gXu-JG-PZV"/>
@@ -80,36 +80,35 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="255" y="8"/>
+            <point key="canvasLocation" x="242" y="-44"/>
         </scene>
-        <!--DistanceWorkoutSelector-->
+        <!--Distance-->
         <scene sceneID="gHf-ji-9QU">
             <objects>
-                <controller identifier="DistanceWorkoutSelector" id="h1i-33-2tm" customClass="DistanceWOInterfaceController" customModule="iRow_WatchKit_Extension">
+                <controller identifier="Set Distance" title="Distance" id="h1i-33-2tm" customClass="DistanceWOController" customModule="iRow_WatchKit_Extension">
                     <items>
                         <label width="1" alignment="left" text="Distance Workout" numberOfLines="2" id="QhH-vD-uNE">
                             <fontDescription key="font" type="system" weight="semibold" pointSize="18"/>
                         </label>
-                        <label alignment="left" text="Set Distance:" id="G5T-zg-Dis">
+                        <label width="1" alignment="left" text="Set Distance (m):" id="G5T-zg-Dis">
                             <fontDescription key="font" type="system" pointSize="18"/>
+                            <variation key="device=watch38mm">
+                                <fontDescription key="font" type="system" pointSize="17"/>
+                            </variation>
                         </label>
-                        <group width="1" height="35" alignment="left" verticalAlignment="center" id="pof-md-bdV">
+                        <group width="1" height="35" alignment="left" verticalAlignment="center" id="pof-md-bdV" userLabel="meter picker">
                             <items>
-                                <picker width="0.14000000000000001" height="1" alignment="left" id="0s6-OY-uCi"/>
-                                <picker width="0.14000000000000001" height="1" alignment="left" id="pKa-NV-3Oa"/>
-                                <label width="0.070000000000000007" height="1" alignment="left" text="," id="jWS-Ho-eh8">
+                                <picker width="0.17000000000000001" height="1" alignment="center" focusStyle="stack" id="0s6-OY-uCi"/>
+                                <picker width="0.17000000000000001" height="1" alignment="center" focusStyle="stack" id="pKa-NV-3Oa"/>
+                                <label width="0.050000000000000003" height="1" alignment="center" text="," id="jWS-Ho-eh8">
                                     <fontDescription key="font" type="system" pointSize="23"/>
                                 </label>
-                                <picker width="0.14000000000000001" height="1" alignment="left" id="FW6-sU-zBo"/>
-                                <picker width="0.14000000000000001" height="1" alignment="left" id="Gqg-AP-Xtz"/>
-                                <picker width="0.14000000000000001" height="1" alignment="left" id="FMg-Oz-AsI"/>
-                                <label width="0.17999999999999999" height="1" alignment="left" text="km" textAlignment="right" id="4lg-en-6cY">
-                                    <fontDescription key="font" type="system" pointSize="16"/>
-                                </label>
+                                <picker width="0.17000000000000001" height="1" alignment="center" focusStyle="stack" id="FW6-sU-zBo"/>
+                                <picker width="0.17000000000000001" height="1" alignment="center" focusStyle="stack" id="Gqg-AP-Xtz"/>
+                                <picker width="0.17000000000000001" height="1" alignment="center" focusStyle="stack" id="FMg-Oz-AsI"/>
                             </items>
-                            <color key="backgroundColor" red="0.25098311899999998" green="0.25097686050000001" blue="0.25097811219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </group>
-                        <button width="1" alignment="left" verticalAlignment="bottom" title="Row/Set Rest" id="2nT-oU-vMa">
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Row / Set Rest" id="2nT-oU-vMa">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="backgroundColor" red="0.95224434140000003" green="0.40791964530000002" blue="0.5334054828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </button>
@@ -124,12 +123,126 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="594.56410256410265" y="130.33333333333334"/>
+            <point key="canvasLocation" x="1043" y="-530"/>
+        </scene>
+        <!--New Workout-->
+        <scene sceneID="6MR-Jn-apd">
+            <objects>
+                <controller identifier="Configure Workout" title="New Workout" id="ix7-wm-Yrm" customClass="WOConfigureController" customModule="iRow_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Workout Title" id="H6T-wJ-tSw">
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="18"/>
+                        </label>
+                        <group width="1" alignment="left" id="ArH-O1-hdB">
+                            <items>
+                                <label width="0.5" alignment="left" text="Set Work:" id="9Yj-Rp-eZz">
+                                    <fontDescription key="font" type="system" pointSize="18"/>
+                                </label>
+                                <label width="0.5" alignment="left" text=" work" id="5yd-BD-Kkr"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" verticalAlignment="center" hidden="YES" id="2r0-Lv-ErS" userLabel="time picker">
+                            <items>
+                                <picker width="0.17999999999999999" widthAdjustment="1" height="1" alignment="center" focusStyle="stack" id="UUF-hd-Qg6" userLabel="Minutes Hundreds">
+                                    <connections>
+                                        <action selector="minHundrChanged:" destination="ix7-wm-Yrm" id="Mhr-8M-cRr"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.17999999999999999" widthAdjustment="1" height="1" heightAdjustment="1" alignment="center" focusStyle="stack" id="DuP-rt-thS" userLabel="Minutes Tens">
+                                    <connections>
+                                        <action selector="minTensChanged:" destination="ix7-wm-Yrm" id="P2x-9e-FA8"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.17999999999999999" widthAdjustment="1" height="1" heightAdjustment="1" alignment="center" focusStyle="stack" id="tze-yc-Lhs" userLabel="Minutes Ones">
+                                    <connections>
+                                        <action selector="minOnesChanged:" destination="ix7-wm-Yrm" id="Yds-Ai-Bkg"/>
+                                    </connections>
+                                </picker>
+                                <label width="0.070000000000000007" alignment="center" verticalAlignment="center" text=":" textAlignment="center" baselineAdjustment="alignCenters" id="ft5-RL-U8C">
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="30"/>
+                                </label>
+                                <picker width="0.17999999999999999" widthAdjustment="1" height="1" heightAdjustment="1" alignment="center" focusStyle="stack" id="fRv-CD-clX" userLabel="Seconds Tens">
+                                    <connections>
+                                        <action selector="secTensChanged:" destination="ix7-wm-Yrm" id="Crb-6s-wxg"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.17999999999999999" widthAdjustment="1" height="1" heightAdjustment="1" alignment="center" focusStyle="stack" id="5Um-eN-YW4" userLabel="Seconds Ones">
+                                    <connections>
+                                        <action selector="secOnesChanged:" destination="ix7-wm-Yrm" id="erH-b4-ojx"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <group width="1" height="35" alignment="left" verticalAlignment="center" hidden="YES" id="frl-t3-gkI" userLabel="meter picker">
+                            <items>
+                                <picker width="0.17000000000000001" widthAdjustment="1" height="1" heightAdjustment="1" alignment="center" focusStyle="stack" id="BsX-42-ZaN">
+                                    <connections>
+                                        <action selector="distTenThousChanged:" destination="ix7-wm-Yrm" id="F8N-qX-yfz"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.17000000000000001" widthAdjustment="1" height="1" heightAdjustment="1" alignment="center" focusStyle="stack" id="G9Q-U9-D3D">
+                                    <connections>
+                                        <action selector="distOneThousChanged:" destination="ix7-wm-Yrm" id="JVh-9t-z6c"/>
+                                    </connections>
+                                </picker>
+                                <label width="0.050000000000000003" height="1" alignment="center" text="," id="SzZ-Y7-w4h">
+                                    <fontDescription key="font" type="system" pointSize="23"/>
+                                </label>
+                                <picker width="0.17000000000000001" widthAdjustment="1" height="1" heightAdjustment="1" alignment="center" focusStyle="stack" id="YoE-1V-Z2p">
+                                    <connections>
+                                        <action selector="distHundChanged:" destination="ix7-wm-Yrm" id="FKT-hs-fbX"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.17000000000000001" widthAdjustment="1" height="1" heightAdjustment="1" alignment="center" focusStyle="stack" id="hBE-xu-Bto">
+                                    <connections>
+                                        <action selector="distTensChanged:" destination="ix7-wm-Yrm" id="ToJ-qk-ZD6"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.17000000000000001" widthAdjustment="1" height="1" heightAdjustment="1" alignment="center" focusStyle="stack" id="1L0-4s-9wk">
+                                    <connections>
+                                        <action selector="distOnesChanged:" destination="ix7-wm-Yrm" id="zC4-f4-Ww3"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <button width="1" alignment="center" verticalAlignment="bottom" hidden="YES" title="Set Rest" id="sgw-kq-Q0K">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="buttonPushed" destination="hcr-iX-OG9" id="daB-Nb-KT2"/>
+                                <segue destination="Enr-Tn-YiS" kind="push" identifier="config WO to set rest" id="qw2-bF-QVk"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" verticalAlignment="bottom" hidden="YES" title="Row" id="s4a-vs-sdC">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="DistPickerGroup" destination="frl-t3-gkI" id="rqM-D7-v2V"/>
+                        <outlet property="TimePickerGroup" destination="2r0-Lv-ErS" id="BGL-km-aYE"/>
+                        <outlet property="distHundPicker" destination="YoE-1V-Z2p" id="x4j-sn-kDH"/>
+                        <outlet property="distOneThousPicker" destination="G9Q-U9-D3D" id="i9S-8J-ElT"/>
+                        <outlet property="distOnesPicker" destination="1L0-4s-9wk" id="ysL-Hg-wRK"/>
+                        <outlet property="distTenThousPicker" destination="BsX-42-ZaN" id="rdy-lp-McJ"/>
+                        <outlet property="distTensPicker" destination="hBE-xu-Bto" id="Pgg-V4-Lsd"/>
+                        <outlet property="minutesHundPicker" destination="UUF-hd-Qg6" id="CmA-xn-tT2"/>
+                        <outlet property="minutesOnesPicker" destination="tze-yc-Lhs" id="U84-GE-6PX"/>
+                        <outlet property="minutesTensPicker" destination="DuP-rt-thS" id="JPy-ys-FNN"/>
+                        <outlet property="rowButton" destination="s4a-vs-sdC" id="QYk-TC-fC0"/>
+                        <outlet property="secondsOnesPicker" destination="5Um-eN-YW4" id="ond-y1-hxg"/>
+                        <outlet property="secondsTensPicker" destination="fRv-CD-clX" id="BdT-WD-6hr"/>
+                        <outlet property="setLabel" destination="9Yj-Rp-eZz" id="tjJ-OZ-boj"/>
+                        <outlet property="setRestButton" destination="sgw-kq-Q0K" id="EFs-Y3-Wy0"/>
+                        <outlet property="workSetLabel" destination="5yd-BD-Kkr" id="uq2-vT-Dek"/>
+                        <outlet property="workoutTitle" destination="H6T-wJ-tSw" id="xS9-4r-AJB"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="537" y="-44"/>
         </scene>
         <!--WorkoutScreen-->
         <scene sceneID="RNW-FF-peX">
             <objects>
-                <controller identifier="WorkoutScreen" id="JwQ-4E-wo4" customClass="WorkoutScreenInterfaceController" customModule="iRow_WatchKit_Extension">
+                <controller identifier="WorkoutScreen" id="JwQ-4E-wo4" customClass="WODisplayController" customModule="iRow_WatchKit_Extension">
                     <items>
                         <group width="1" height="0.28000000000000003" alignment="left" radius="0.0" id="PPx-pU-1Zg">
                             <items>
@@ -189,48 +302,153 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="255" y="-277"/>
+            <point key="canvasLocation" x="242" y="-612"/>
         </scene>
-        <!--TimeWorkoutSelector-->
+        <!--Time-->
         <scene sceneID="Dza-DV-sZ3">
             <objects>
-                <controller identifier="TimeWorkoutSelector" title="TimeWorkoutSelector" id="hcr-iX-OG9" customClass="TimeWOInterfaceController" customModule="iRow_WatchKit_Extension">
+                <controller identifier="Set Time" title="Time" id="hcr-iX-OG9" customClass="TimeWOController" customModule="iRow_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Timed Workout" id="HoN-kg-bVs">
+                        <label width="1" alignment="left" text="Timed Workout" id="HoN-kg-bVs">
                             <fontDescription key="font" type="system" weight="semibold" pointSize="18"/>
                         </label>
-                        <label alignment="left" text="Set Time:" id="fB3-Wr-NoX">
-                            <fontDescription key="font" type="system" pointSize="18"/>
-                        </label>
+                        <group width="1" alignment="left" id="ZBX-Rz-Wux">
+                            <items>
+                                <label width="0.5" alignment="left" text="Set Time:" id="fB3-Wr-NoX">
+                                    <fontDescription key="font" type="system" pointSize="18"/>
+                                </label>
+                                <label width="0.5" alignment="left" text=" " id="ofe-V1-y7a"/>
+                            </items>
+                        </group>
                         <group width="1" alignment="left" verticalAlignment="center" id="2zH-NX-MjL" userLabel="Timer">
                             <items>
-                                <picker width="0.17999999999999999" height="1" alignment="left" id="CTJ-9o-oFL" userLabel="Minutes Hundreds"/>
-                                <picker width="0.17999999999999999" height="1" alignment="left" id="C4I-8m-7Ao" userLabel="Minutes Tens"/>
-                                <picker width="0.17999999999999999" height="1" alignment="left" id="96s-tp-2dM" userLabel="Minutes Ones"/>
-                                <label width="0.10000000000000001" alignment="left" verticalAlignment="center" text=":" textAlignment="center" baselineAdjustment="alignCenters" id="TEJ-2I-cd1">
-                                    <fontDescription key="font" type="system" weight="medium" pointSize="34"/>
+                                <picker width="0.17999999999999999" height="1" alignment="center" focusStyle="stack" id="CTJ-9o-oFL" userLabel="Minutes Hundreds">
+                                    <connections>
+                                        <action selector="minHundrChanged:" destination="hcr-iX-OG9" id="UUH-G4-48I"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.17999999999999999" height="1" alignment="center" focusStyle="stack" id="C4I-8m-7Ao" userLabel="Minutes Tens">
+                                    <connections>
+                                        <action selector="minTensChanged:" destination="hcr-iX-OG9" id="JJd-sr-IFq"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.17999999999999999" height="1" alignment="center" focusStyle="stack" id="96s-tp-2dM" userLabel="Minutes Ones">
+                                    <connections>
+                                        <action selector="minOnesChanged:" destination="hcr-iX-OG9" id="FRx-XD-Xx6"/>
+                                    </connections>
+                                </picker>
+                                <label width="0.070000000000000007" alignment="center" verticalAlignment="center" text=":" textAlignment="center" baselineAdjustment="alignCenters" id="TEJ-2I-cd1">
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="30"/>
                                 </label>
-                                <picker width="0.17999999999999999" height="1" alignment="left" id="eC9-uj-sXK" userLabel="Seconds Tens"/>
-                                <picker width="0.17999999999999999" height="1" alignment="left" id="1aP-ip-40b" userLabel="Seconds Ones"/>
+                                <picker width="0.17999999999999999" height="1" alignment="center" focusStyle="stack" id="eC9-uj-sXK" userLabel="Seconds Tens">
+                                    <connections>
+                                        <action selector="secTensChanged:" destination="hcr-iX-OG9" id="lVV-E7-epg"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.17999999999999999" height="1" alignment="center" focusStyle="stack" id="1aP-ip-40b" userLabel="Seconds Ones">
+                                    <connections>
+                                        <action selector="secOnesChanged:" destination="hcr-iX-OG9" id="ycb-Rw-qqq"/>
+                                    </connections>
+                                </picker>
                             </items>
-                            <color key="backgroundColor" red="0.25098311899999998" green="0.25097686050000001" blue="0.25097811219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </group>
-                        <button width="1" alignment="left" verticalAlignment="bottom" title="Row/Set Rest" id="GZx-da-oWo">
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Row / Set Rest" id="GZx-da-oWo">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="backgroundColor" red="0.95224434140000003" green="0.40791964530000002" blue="0.5334054828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="buttonPushed" destination="hcr-iX-OG9" id="2rw-Dv-MJv"/>
+                            </connections>
                         </button>
                     </items>
                     <connections>
-                        <outlet property="minutesHundredsPicker" destination="CTJ-9o-oFL" id="5rm-bY-tao"/>
+                        <outlet property="minutesHundPicker" destination="CTJ-9o-oFL" id="5rm-bY-tao"/>
                         <outlet property="minutesOnesPicker" destination="96s-tp-2dM" id="d4N-oH-rTQ"/>
                         <outlet property="minutesTensPicker" destination="C4I-8m-7Ao" id="psR-mb-H3n"/>
                         <outlet property="rowOrSetRestButton" destination="GZx-da-oWo" id="vTg-pO-gZe"/>
                         <outlet property="secondsOnesPicker" destination="1aP-ip-40b" id="hjV-k3-HTs"/>
                         <outlet property="secondsTensPicker" destination="eC9-uj-sXK" id="N5i-CE-xLl"/>
+                        <outlet property="timeSetLabel" destination="ofe-V1-y7a" id="U1z-RP-Afb"/>
+                        <outlet property="workoutTitle" destination="HoN-kg-bVs" id="mdb-6h-wKQ"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="594.56410256410265" y="-190.4871794871795"/>
+            <point key="canvasLocation" x="799" y="-510"/>
+        </scene>
+        <!--Rest-->
+        <scene sceneID="WGB-dH-sF3">
+            <objects>
+                <controller identifier="Set Rest" title="Rest" id="Enr-Tn-YiS" customClass="SetRestController" customModule="iRow_WatchKit_App">
+                    <items>
+                        <label width="1" alignment="left" text="Interval Rest Time" numberOfLines="2" id="vzm-tH-fIW">
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="18"/>
+                        </label>
+                        <group width="1" alignment="left" id="xT4-r3-fgq">
+                            <items>
+                                <label width="0.5" alignment="left" text="Work:" id="ec7-FH-Ng6"/>
+                                <label width="0.5" alignment="left" text="999 m" id="JaE-QJ-N8S"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="paq-D2-2Lg">
+                            <items>
+                                <label width="0.59999999999999998" alignment="left" text="Set Rest:" id="yeo-vh-ZYE">
+                                    <fontDescription key="font" type="system" pointSize="18"/>
+                                </label>
+                                <label width="0.40000000000000002" alignment="left" text="rest" id="x4u-SC-fUq"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" verticalAlignment="center" id="J5e-oA-reO" userLabel="Timer">
+                            <items>
+                                <picker width="0.17999999999999999" widthAdjustment="1" height="1" heightAdjustment="1" alignment="center" focusStyle="stack" id="gBR-Nr-XUo" userLabel="Minutes Hundreds">
+                                    <connections>
+                                        <action selector="minHundrChanged:" destination="Enr-Tn-YiS" id="rv0-dl-0Gk"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.17999999999999999" widthAdjustment="1" height="1" heightAdjustment="1" alignment="center" focusStyle="stack" id="rdZ-HC-GTK" userLabel="Minutes Tens">
+                                    <connections>
+                                        <action selector="minTensChanged:" destination="Enr-Tn-YiS" id="GSq-JN-WUD"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.17999999999999999" widthAdjustment="1" height="1" heightAdjustment="1" alignment="center" focusStyle="stack" id="jVd-1M-HnK" userLabel="Minutes Ones">
+                                    <connections>
+                                        <action selector="minOnesChanged:" destination="Enr-Tn-YiS" id="vJa-Nc-Xk3"/>
+                                    </connections>
+                                </picker>
+                                <label width="0.070000000000000007" alignment="center" verticalAlignment="center" text=":" textAlignment="center" baselineAdjustment="alignCenters" id="dOO-yi-InU">
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="30"/>
+                                </label>
+                                <picker width="0.17999999999999999" widthAdjustment="1" height="1" alignment="center" focusStyle="stack" id="LvN-iU-j5i" userLabel="Seconds Tens">
+                                    <connections>
+                                        <action selector="secTensChanged:" destination="Enr-Tn-YiS" id="cmD-w3-2kd"/>
+                                    </connections>
+                                </picker>
+                                <picker width="0.17999999999999999" widthAdjustment="1" height="1" alignment="center" focusStyle="stack" id="sHJ-dK-e9w" userLabel="Seconds Ones">
+                                    <connections>
+                                        <action selector="secOnesChanged:" destination="Enr-Tn-YiS" id="Xst-zX-EOb"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Row" id="tDM-YI-ykX">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="buttonPushed" destination="Enr-Tn-YiS" id="PNd-4N-s8r"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="minutesHundPicker" destination="gBR-Nr-XUo" id="UR0-CS-l7T"/>
+                        <outlet property="minutesOnesPicker" destination="jVd-1M-HnK" id="AYd-AC-uSx"/>
+                        <outlet property="minutesTensPicker" destination="rdZ-HC-GTK" id="ILo-EB-Yu8"/>
+                        <outlet property="restSetLabel" destination="x4u-SC-fUq" id="NnD-wC-kbu"/>
+                        <outlet property="rowButton" destination="tDM-YI-ykX" id="P2t-Ri-V8O"/>
+                        <outlet property="secondsOnesPicker" destination="sHJ-dK-e9w" id="WVg-7j-ZQ6"/>
+                        <outlet property="secondsTensPicker" destination="LvN-iU-j5i" id="wbf-0B-goT"/>
+                        <outlet property="workLengthLabel" destination="JaE-QJ-N8S" id="hLw-Nb-6gK"/>
+                        <outlet property="workoutTitle" destination="vzm-tH-fIW" id="9AB-6j-RTL"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="874" y="-44"/>
         </scene>
     </scenes>
 </document>

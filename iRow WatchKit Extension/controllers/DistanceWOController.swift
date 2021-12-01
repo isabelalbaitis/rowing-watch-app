@@ -2,13 +2,13 @@
 //  DistanceWOInterfaceController.swift
 //  iRow WatchKit Extension
 //
-//  Created by Isabel Albaitis on 11/11/21.
+//  Created by Isabel Albaitis and Jacob Stone on 11/11/21.
 //
 
 import UIKit
 import WatchKit
 
-class DistanceWOInterfaceController: WKInterfaceController {
+class DistanceWOController: WKInterfaceController {
     
     var isInterval: Bool?
     
@@ -20,12 +20,25 @@ class DistanceWOInterfaceController: WKInterfaceController {
     @IBOutlet weak var tensPicker: WKInterfacePicker!
     @IBOutlet weak var onesPicker: WKInterfacePicker!
     
+    var numberList: [Int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         if let selectedWorkout = context as? Int{
             workoutSelected(selectdType: selectedWorkout)
         }
+        let numItems: [WKPickerItem] = numberList.map{
+            let pickerItem = WKPickerItem()
+            pickerItem.title = "\($0)"
+            return pickerItem
+        }
+        tenThousPicker.setItems(numItems)
+        oneThousPicker.setItems(numItems)
+        hundredsPicker.setItems(numItems)
+        tensPicker.setItems(numItems)
+        onesPicker.setItems(numItems)
+        
     }
  
     
