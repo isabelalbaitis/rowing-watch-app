@@ -18,25 +18,32 @@ class WOInterfaceController: WKInterfaceController {
     @IBOutlet weak var strokeRate: WKInterfaceLabel!
     
 
-    // PRESENT THIS MODALLY
+    // PRESENT THIS MODALLY?
     override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
         
         CurrentWorkout = context as! Workout?
         
+        super.awake(withContext: context)
+                        
         if CurrentWorkout?.type == Workout.SINGLE_TIME{
+            print("Single Time")
             workoutTitle.setText("Single Time")
         }
         else if CurrentWorkout?.type == Workout.SINGLE_DISTANCE{
+            print("Single Distance")
             workoutTitle.setText("Single Distance")
         }
         else if CurrentWorkout?.type == Workout.TIME_INTERVAL{
+            print("Time Intervals")
             workoutTitle.setText("Time Interval")
         }
         else if CurrentWorkout?.type == Workout.DISTANCE_INTERVAL{
+            print("Distance Interval")
             workoutTitle.setText("Distance Interval")
         }
-        
+        else {
+            print("Piss baby")
+        }
         
     }
     

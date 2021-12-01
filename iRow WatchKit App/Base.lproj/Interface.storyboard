@@ -215,7 +215,7 @@
                         <button width="1" alignment="left" verticalAlignment="bottom" hidden="YES" title="Row" id="s4a-vs-sdC">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="qA4-R3-5IF" kind="push" identifier="Config to WO Interface" id="BcN-m4-Zkv"/>
+                                <segue destination="qA4-R3-5IF" kind="modal" identifier="Config to WO Interface" id="BcN-m4-Zkv"/>
                             </connections>
                         </button>
                     </items>
@@ -465,7 +465,7 @@
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="buttonPushed" destination="Enr-Tn-YiS" id="PNd-4N-s8r"/>
-                                <segue destination="qA4-R3-5IF" kind="push" identifier="Rest to WO Interface" id="NcF-OW-97E"/>
+                                <segue destination="qA4-R3-5IF" kind="modal" identifier="Rest to WO Interface" id="NcF-OW-97E"/>
                             </connections>
                         </button>
                     </items>
@@ -486,6 +486,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NcF-OW-97E"/>
+        <segue reference="BcN-m4-Zkv"/>
     </inferredMetricsTieBreakers>
 </document>
