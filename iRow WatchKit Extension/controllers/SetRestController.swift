@@ -54,10 +54,10 @@ class SetRestController: WKInterfaceController {
         
         rowButton.setBackgroundColor(BRIGHT_GREEN)
         
-        if workout!.isDistance == true{
+        if workout?.isDistance == true{
             workLengthLabel.setText(String(format: "%d m", workout!.pieceDistanceMeters!))
         }
-        else if workout!.isDistance == false{
+        else if workout?.isDistance == false{
             workLengthLabel.setText(String(format: "%d:%02d", Int(workout!.pieceTotalSeconds! / 60), Int(workout!.pieceTotalSeconds!) % 60))
         }
         
