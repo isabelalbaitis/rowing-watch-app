@@ -35,6 +35,8 @@ struct Workout {
     var pieceDistanceMeters: Int?
     
     var restTotalSeconds: TimeInterval?
+    
+    var description: String?
 
     
     init(isInterval: Bool, isDistance: Bool) {
@@ -72,36 +74,40 @@ struct Workout {
         }
     }
     
-    /*
-    init(TYPE_CONSTANT: Int){
-        self.type = TYPE_CONSTANT
-        
-        switch self.type{
-        case Workout.SINGLE_TIME:
-            isInterval = false
-            isDistance = false
-            break
-        case Workout.SINGLE_DISTANCE:
-            isInterval = false
-            isDistance = true
-            break
-        case Workout.TIME_INTERVAL:
-            isInterval = true
-            isDistance = false
-            break
-        case Workout.DISTANCE_INTERVAL:
-            isInterval = true
-            isDistance = false
-            break
-        default:
-            break
+    mutating func formatDescription(){
+        if isInterval == false {
+            if isDistance == false {
+                let m = Int(pieceTotalSeconds! as Double) / 60
+                let s = Int(pieceTotalSeconds! as Double) % 60
+                if s > 0 {
+                    description = String(format: "%d min., %d sec.", m, s)
+                }
+                else{
+                    description = String(format: "%d minute", m)
+                }
+            }
+            if isDistance == true {
+                description = String(format: "%d meters", pieceDistanceMeters!)
+            }
         }
-        
+        if isInterval == true {
+            if isDistance == false {
+                let r = restTotalSeconds! as Double / 60
+                let m = Int(pieceTotalSeconds! as Double) / 60
+                let s = Int(pieceTotalSeconds! as Double) % 60
+                if s > 0 {
+                    description = String(format: "%d min., %d sec.; %d' r", m, s, r)
+                }
+                else{
+                    description = String(format: "%d minute; %d' r", m, r)
+                }
+            }
+            if isDistance == true {
+                let r = restTotalSeconds! as Double / 60
+                description = String(format: "%d meters; %d' r", pieceDistanceMeters!, r)
+            }
+        }
     }
-    */
-    
-    
-    
     
     
 }

@@ -36,6 +36,9 @@
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="backgroundColor" red="0.088603489100000002" green="0.8590475917" blue="0.63700461389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="font" type="system" pointSize="14"/>
+                                            <connections>
+                                                <segue destination="5eC-2X-29Q" kind="push" id="tu1-cA-yAn"/>
+                                            </connections>
                                         </button>
                                         <button width="0.5" height="1" alignment="left" title="Rerow" backgroundImage="arrow.counterclockwise.circle.fill" catalog="system" id="f1d-Md-Oer">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -87,7 +90,67 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="241.7777777777778" y="-44.256198347107436"/>
+            <point key="canvasLocation" x="266" y="1"/>
+        </scene>
+        <!--History Controller-->
+        <scene sceneID="BxL-Z1-tru">
+            <objects>
+                <controller id="5eC-2X-29Q" customClass="HistoryController" customModule="iRow_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="njB-xK-rmH">
+                            <items>
+                                <tableRow identifier="history row" selectable="NO" id="KV1-6d-r71" customClass="HistoryRowController" customModule="iRow_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="126" alignment="left" layout="vertical" id="V1P-TU-a01">
+                                        <items>
+                                            <label width="1" alignment="left" text="10000 meters" numberOfLines="2" id="Fu5-C1-0Ri">
+                                                <fontDescription key="font" type="system" weight="semibold" pointSize="18"/>
+                                            </label>
+                                            <separator alignment="left" id="1nW-RE-KXc"/>
+                                            <group width="1" alignment="left" id="djU-3G-N0J">
+                                                <items>
+                                                    <label width="0.5" alignment="left" text="Split:" id="DTV-Tf-qHB"/>
+                                                    <label width="0.5" alignment="left" text="01:59.6" textAlignment="right" id="3H0-l1-5Qu"/>
+                                                </items>
+                                            </group>
+                                            <group width="1" alignment="left" id="oZu-ys-nK8">
+                                                <items>
+                                                    <label width="0.5" alignment="left" text="SPM:" id="01f-ka-Dj0"/>
+                                                    <label width="0.5" alignment="left" text="26" textAlignment="right" id="mvI-Jb-Xst"/>
+                                                </items>
+                                            </group>
+                                            <group width="1" alignment="left" id="YYP-vL-IqV">
+                                                <items>
+                                                    <label width="0.5" alignment="left" text="Total Time:" id="uaC-Go-Twu"/>
+                                                    <label width="0.5" alignment="left" text="39:42" textAlignment="right" id="Xds-1H-Wsq"/>
+                                                </items>
+                                            </group>
+                                            <group width="1" alignment="left" id="NZJ-cP-saj">
+                                                <items>
+                                                    <label width="0.59999999999999998" alignment="left" text="Total Meters:" id="ggq-M4-rwd"/>
+                                                    <label width="0.40000000000000002" alignment="left" text="10000" textAlignment="right" id="U7l-8y-BXS"/>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="descriptionLabel" destination="Fu5-C1-0Ri" id="hyo-2X-6ux"/>
+                                        <outlet property="distanceTotalGroup" destination="NZJ-cP-saj" id="cYe-0j-4yT"/>
+                                        <outlet property="splitLabel" destination="3H0-l1-5Qu" id="GkE-FY-kZp"/>
+                                        <outlet property="strokeRateLabel" destination="mvI-Jb-Xst" id="Ip8-ci-ksc"/>
+                                        <outlet property="timeTotalGroup" destination="YYP-vL-IqV" id="c6e-K4-6iT"/>
+                                        <outlet property="totalMetersLabel" destination="U7l-8y-BXS" id="LMY-TV-KJV"/>
+                                        <outlet property="totalTimeLabel" destination="Xds-1H-Wsq" id="LFI-gv-F2c"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="historyTable" destination="njB-xK-rmH" id="DiB-Y4-Ef7"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="265.81818181818181" y="369.50413223140492"/>
         </scene>
         <!--WO Controls-->
         <scene sceneID="pF7-Rv-0QO">
