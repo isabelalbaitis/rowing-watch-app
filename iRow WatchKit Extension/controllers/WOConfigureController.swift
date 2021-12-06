@@ -65,8 +65,15 @@ class WOConfigureController: WKInterfaceController {
     
     
     override func awake(withContext context: Any?) {
+        
+        print("From WOConfigureController, context:")
+        print(String(describing: context))
 
         NewWorkout = (context as! Workout)
+        
+        print("From WOConfigureController, NewWorkout:")
+        print(String(describing: NewWorkout))
+
         super.awake(withContext: context)
         
         let numItems: [WKPickerItem] = numberList.map{
@@ -150,21 +157,6 @@ class WOConfigureController: WKInterfaceController {
         
     }
     
-    /*
-    override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
-        if segueIdentifier == "configToSetRest" {
-            print("Config to Set Rest. Returning NewWorkout as context.\nNewWorkout:")
-            print(String(describing: NewWorkout))
-            return NewWorkout
-        }
-        else if segueIdentifier == "Config to WO Interface" {
-            return NewWorkout
-        }
-    
-        return nil
-    }
-     */
-    
  
     // MARK: - Functions
     
@@ -216,10 +208,7 @@ class WOConfigureController: WKInterfaceController {
         print(totalTimeInSeconds!)
 
         NewWorkout?.pieceTotalSeconds! = Double(totalTimeInSeconds!) as TimeInterval
-       // let min:Int = Int(NewWorkout?.pieceTotalSeconds!) / 60
-       // let sec:Int = Int(NewWorkout!.pieceTotalSeconds!) % 60
-        
-      //  workSetLabel.setText(String(format: "%d:%02d", min, sec))
+
     }
 
     
@@ -291,7 +280,7 @@ class WOConfigureController: WKInterfaceController {
     
     
     @IBAction func setRestButtonPushed() {
-        
+       
         pushController(withName: "Set Rest", context: NewWorkout)
         
     }

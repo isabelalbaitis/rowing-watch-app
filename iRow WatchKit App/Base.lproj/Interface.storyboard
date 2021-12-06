@@ -123,7 +123,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1043" y="-530"/>
+            <point key="canvasLocation" x="830" y="-754"/>
         </scene>
         <!--New Workout-->
         <scene sceneID="6MR-Jn-apd">
@@ -138,7 +138,7 @@
                                 <label width="0.5" alignment="left" text="Set Work:" id="9Yj-Rp-eZz">
                                     <fontDescription key="font" type="system" pointSize="18"/>
                                 </label>
-                                <label width="0.5" alignment="left" text=" work" id="5yd-BD-Kkr"/>
+                                <label width="0.5" alignment="left" text=" " id="5yd-BD-Kkr"/>
                             </items>
                         </group>
                         <group width="1" alignment="left" verticalAlignment="center" hidden="YES" id="2r0-Lv-ErS" userLabel="time picker">
@@ -209,7 +209,6 @@
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="setRestButtonPushed" destination="ix7-wm-Yrm" id="jwl-wJ-XMr"/>
-                                <segue destination="Enr-Tn-YiS" kind="push" identifier="configToSetRest" id="G3A-TG-eyo"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" verticalAlignment="bottom" hidden="YES" title="Row" id="s4a-vs-sdC">
@@ -240,7 +239,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="537" y="-44"/>
+            <point key="canvasLocation" x="514" y="-370"/>
         </scene>
         <!--WorkoutScreen-->
         <scene sceneID="RNW-FF-peX">
@@ -375,12 +374,12 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="799" y="-510"/>
+            <point key="canvasLocation" x="586" y="-734"/>
         </scene>
-        <!--Workout Interface-->
+        <!--Workout-->
         <scene sceneID="YxA-Y5-Tmj">
             <objects>
-                <controller identifier="WO Interface" title="Workout Interface" id="qA4-R3-5IF" customClass="WOInterfaceController" customModule="iRow_WatchKit_Extension">
+                <controller identifier="WO Interface" title="Workout" id="qA4-R3-5IF" customClass="WOInterfaceController" customModule="iRow_WatchKit_Extension">
                     <items>
                         <label width="1" alignment="center" text="Workout Type" id="HtB-sY-x9g">
                             <fontDescription key="font" type="system" weight="semibold" pointSize="22"/>
@@ -405,7 +404,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1117" y="-164"/>
+            <point key="canvasLocation" x="620" y="22"/>
         </scene>
         <!--Rest-->
         <scene sceneID="WGB-dH-sF3">
@@ -418,15 +417,15 @@
                         <group width="1" alignment="left" radius="0.0" id="xT4-r3-fgq">
                             <items>
                                 <label width="0.5" alignment="left" text="Work:" id="ec7-FH-Ng6"/>
-                                <label width="0.5" alignment="left" text="999 m" id="JaE-QJ-N8S"/>
+                                <label width="0.5" alignment="left" text="work" id="JaE-QJ-N8S"/>
                             </items>
                         </group>
                         <group width="1" alignment="left" id="paq-D2-2Lg">
                             <items>
-                                <label width="0.59999999999999998" alignment="left" text="Set Rest:" id="yeo-vh-ZYE">
+                                <label width="0.5" alignment="left" text="Set Rest:" id="yeo-vh-ZYE">
                                     <fontDescription key="font" type="system" pointSize="18"/>
                                 </label>
-                                <label width="0.40000000000000002" alignment="left" text="rest" id="x4u-SC-fUq"/>
+                                <label width="0.5" alignment="left" text="rest" id="x4u-SC-fUq"/>
                             </items>
                         </group>
                         <group width="1" alignment="left" verticalAlignment="center" id="J5e-oA-reO" userLabel="Timer">
@@ -482,10 +481,10 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="858" y="102"/>
+            <point key="canvasLocation" x="741" y="-370"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BcN-m4-Zkv"/>
+        <segue reference="NcF-OW-97E"/>
     </inferredMetricsTieBreakers>
 </document>
