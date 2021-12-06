@@ -7,19 +7,21 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19454"/>
     </dependencies>
     <scenes>
-        <!--Home Controller-->
+        <!--Home-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="HomeController" customModule="iRow_WatchKit_App" customModuleProvider="target">
+                <controller identifier="HomeController" title="Home" id="AgC-eL-Hgc" customClass="HomeController" customModule="iRow_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group width="1" height="1" alignment="left" layout="vertical" id="qF3-PN-yG5">
+                        <group width="136" height="205" alignment="center" verticalAlignment="center" layout="vertical" spacing="4" id="qF3-PN-yG5">
                             <items>
-                                <group width="1" height="0.5" alignment="left" id="TFE-wX-6Bb">
+                                <group width="1" height="0.5" alignment="center" id="TFE-wX-6Bb">
                                     <items>
-                                        <button width="0.5" height="1" alignment="left" title="Just Row" id="3C6-Z3-we1">
+                                        <button width="0.5" height="1" alignment="left" title="Just Row" backgroundImage="bolt.horizontal.circle.fill" catalog="system" id="3C6-Z3-we1">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="backgroundColor" red="0.95224434140000003" green="0.40791964530000002" blue="0.5334054828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </button>
-                                        <button width="0.5" height="1" alignment="left" title="New Workout" id="CvK-iL-CdF">
+                                        <button width="0.5" height="1" alignment="left" title="New Workout" backgroundImage="plus.circle.fill" catalog="system" id="CvK-iL-CdF">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="backgroundColor" red="0.99729770419999997" green="0.82012230159999999" blue="0.39803296329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="font" type="system" pointSize="13"/>
                                             <connections>
@@ -30,16 +32,24 @@
                                 </group>
                                 <group width="1" height="0.5" alignment="left" id="XRe-Qy-Q5l">
                                     <items>
-                                        <button width="0.5" height="1" alignment="left" title="History" id="soX-LE-ch1">
+                                        <button width="0.5" height="1" alignment="left" title="History" backgroundImage="book.circle.fill" catalog="system" id="soX-LE-ch1">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="backgroundColor" red="0.088603489100000002" green="0.8590475917" blue="0.63700461389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="font" type="system" pointSize="14"/>
                                         </button>
-                                        <button width="0.5" height="1" alignment="left" title="Rerow" id="f1d-Md-Oer">
-                                            <color key="backgroundColor" red="0.072652703489156992" green="0.65828251234006274" blue="0.84696881795666878" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <button width="0.5" height="1" alignment="left" title="Rerow" backgroundImage="arrow.counterclockwise.circle.fill" catalog="system" id="f1d-Md-Oer">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.30372798439999998" green="0.64845401049999996" blue="0.82747483249999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </button>
                                     </items>
                                 </group>
                             </items>
+                            <variation key="device=watch38mm" height="175" spacing="45" width="136"/>
+                            <variation key="device=watch40mm" height="175" spacing="45" width="160"/>
+                            <variation key="device=watch41mm" height="175" spacing="4" width="175"/>
+                            <variation key="device=watch42mm" height="190" spacing="60" width="155"/>
+                            <variation key="device=watch44mm" height="190" spacing="2" width="185"/>
+                            <variation key="device=watch45mm" height="200" spacing="4" width="200"/>
                         </group>
                     </items>
                     <connections>
@@ -50,7 +60,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-71" y="11"/>
+            <point key="canvasLocation" x="-73.173913043478251" y="8.3482142857142865"/>
         </scene>
         <!--NewWorkoutSelection-->
         <scene sceneID="Gsx-W2-oFK">
@@ -341,4 +351,10 @@
     <inferredMetricsTieBreakers>
         <segue reference="RXa-7w-5l8"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="arrow.counterclockwise.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="bolt.horizontal.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="book.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
 </document>
