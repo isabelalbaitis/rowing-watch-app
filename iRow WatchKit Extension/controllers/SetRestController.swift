@@ -81,14 +81,14 @@ class SetRestController: WKInterfaceController {
         
         
         minutesHundPicker.setSelectedItemIndex(0)
-        minutesTensPicker.setSelectedItemIndex(3)
-        minutesOnesPicker.setSelectedItemIndex(0)
+        minutesTensPicker.setSelectedItemIndex(0)
+        minutesOnesPicker.setSelectedItemIndex(1)
         secondsTensPicker.setSelectedItemIndex(0)
         secondsOnesPicker.setSelectedItemIndex(0)
         
         MinutesHundDigit = 0
-        MinutesTensDigit = 3
-        MinutesOnesDigit = 0
+        MinutesTensDigit = 0
+        MinutesOnesDigit = 1
         SecondsTensDigit = 0
         SecondsOnesDigit = 0
         
@@ -106,28 +106,6 @@ class SetRestController: WKInterfaceController {
     
 
     // MARK: - Functions
-    /*
-    func getWorkoutType(from workLength: Int) {
-        if workLength < 0 {
-            // This is a timed interval workout
-            // workLength is the total number of seconds
-            intervalWorkLength = workLength * -1
-            let displaySeconds = intervalWorkLength! % 60
-            let displayMinutes = (intervalWorkLength! - displaySeconds) / 60
-            
-            workLengthLabel.setText(String(format: "%d:%02d", displayMinutes, displaySeconds))
-        }
-        else{
-            if workLength > 1000{
-                let workDistInKM: Double = Double(workLength) / 1000
-                workLengthLabel.setText(String(format: "%.3d km", workDistInKM))
-            }
-            else{
-                workLengthLabel.setText(String(format: "%d m", workLength))
-            }
-        }
-    }
-     */
     
     func configureTime(){
         minutes = (MinutesHundDigit * 100) + (MinutesTensDigit * 10) + MinutesOnesDigit
@@ -169,9 +147,10 @@ class SetRestController: WKInterfaceController {
         SecondsOnesDigit = value
         configureTime()
     }
-
     
- 
+    override func contextsForSegue(withIdentifier segueIdentifier: String) -> [Any]? {
+        return [workout!, workout!]
+    }
 
 
 }

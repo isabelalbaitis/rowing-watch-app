@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8107F7762757D51E00058DA6 /* OnWaterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8107F7752757D51E00058DA6 /* OnWaterRow.swift */; };
 		811C4AF62757A916002B4AA4 /* WOInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811C4AF52757A916002B4AA4 /* WOInterfaceController.swift */; };
+		81AB95CA275DDF5200C10578 /* WOControlsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB95C9275DDF5200C10578 /* WOControlsController.swift */; };
 		81EA1BFD27570A76001330AB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA1BFC27570A76001330AB /* HomeController.swift */; };
 		81EA1BFF27570CB5001330AB /* SetRestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA1BFE27570CB5001330AB /* SetRestController.swift */; };
 		81EA1C0327575710001330AB /* WOConfigureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA1C0227575710001330AB /* WOConfigureController.swift */; };
@@ -29,11 +30,8 @@
 		C85E91C1272C9032007FEA9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85E91C0272C9032007FEA9C /* Assets.xcassets */; };
 		C85E91CC272C9032007FEA9C /* iRow_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E91CB272C9032007FEA9C /* iRow_WatchKit_AppTests.swift */; };
 		C85E91D7272C9032007FEA9C /* iRow_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E91D6272C9032007FEA9C /* iRow_WatchKit_AppUITests.swift */; };
-		C864AC3B273CD2F5006194D6 /* TimeWOController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C864AC3A273CD2F5006194D6 /* TimeWOController.swift */; };
-		C864AC3D273D8CE8006194D6 /* DistanceWOController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C864AC3C273D8CE8006194D6 /* DistanceWOController.swift */; };
 		C86C566F2731A4D80012FC4D /* NewWORowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C566E2731A4D80012FC4D /* NewWORowController.swift */; };
 		C86C56712731A5C90012FC4D /* WOSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C56702731A5C90012FC4D /* WOSelectController.swift */; };
-		C86C56732731ADE80012FC4D /* WODisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C56722731ADE80012FC4D /* WODisplayController.swift */; };
 		C86C56752731CFBD0012FC4D /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C56742731CFBD0012FC4D /* Workout.swift */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +108,7 @@
 /* Begin PBXFileReference section */
 		8107F7752757D51E00058DA6 /* OnWaterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnWaterRow.swift; sourceTree = "<group>"; };
 		811C4AF52757A916002B4AA4 /* WOInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOInterfaceController.swift; sourceTree = "<group>"; };
+		81AB95C9275DDF5200C10578 /* WOControlsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOControlsController.swift; sourceTree = "<group>"; };
 		81EA1BFC27570A76001330AB /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		81EA1BFE27570CB5001330AB /* SetRestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRestController.swift; sourceTree = "<group>"; };
 		81EA1C0227575710001330AB /* WOConfigureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOConfigureController.swift; sourceTree = "<group>"; };
@@ -142,11 +141,8 @@
 		C85E91D2272C9032007FEA9C /* iRow WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iRow WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C85E91D6272C9032007FEA9C /* iRow_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRow_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
 		C85E91D8272C9032007FEA9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C864AC3A273CD2F5006194D6 /* TimeWOController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeWOController.swift; sourceTree = "<group>"; };
-		C864AC3C273D8CE8006194D6 /* DistanceWOController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceWOController.swift; sourceTree = "<group>"; };
 		C86C566E2731A4D80012FC4D /* NewWORowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWORowController.swift; sourceTree = "<group>"; };
 		C86C56702731A5C90012FC4D /* WOSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOSelectController.swift; sourceTree = "<group>"; };
-		C86C56722731ADE80012FC4D /* WODisplayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WODisplayController.swift; sourceTree = "<group>"; };
 		C86C56742731CFBD0012FC4D /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,12 +215,10 @@
 				C85E91BE272C902D007FEA9C /* ComplicationController.swift */,
 				C86C566E2731A4D80012FC4D /* NewWORowController.swift */,
 				C86C56702731A5C90012FC4D /* WOSelectController.swift */,
-				C86C56722731ADE80012FC4D /* WODisplayController.swift */,
-				C864AC3A273CD2F5006194D6 /* TimeWOController.swift */,
-				C864AC3C273D8CE8006194D6 /* DistanceWOController.swift */,
 				81EA1BFE27570CB5001330AB /* SetRestController.swift */,
 				81EA1C0227575710001330AB /* WOConfigureController.swift */,
 				811C4AF52757A916002B4AA4 /* WOInterfaceController.swift */,
+				81AB95C9275DDF5200C10578 /* WOControlsController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -614,10 +608,8 @@
 				C86C56712731A5C90012FC4D /* WOSelectController.swift in Sources */,
 				8107F7762757D51E00058DA6 /* OnWaterRow.swift in Sources */,
 				81EA1BFD27570A76001330AB /* HomeController.swift in Sources */,
-				C864AC3D273D8CE8006194D6 /* DistanceWOController.swift in Sources */,
+				81AB95CA275DDF5200C10578 /* WOControlsController.swift in Sources */,
 				81EA1BFF27570CB5001330AB /* SetRestController.swift in Sources */,
-				C86C56732731ADE80012FC4D /* WODisplayController.swift in Sources */,
-				C864AC3B273CD2F5006194D6 /* TimeWOController.swift in Sources */,
 				81EA1C0327575710001330AB /* WOConfigureController.swift in Sources */,
 				C85E91BF272C902D007FEA9C /* ComplicationController.swift in Sources */,
 			);

@@ -18,9 +18,6 @@
                                     <items>
                                         <button width="0.5" height="1" alignment="left" title="Just Row" id="3C6-Z3-we1">
                                             <color key="backgroundColor" red="0.95224434140000003" green="0.40791964530000002" blue="0.5334054828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <connections>
-                                                <segue destination="JwQ-4E-wo4" kind="push" identifier="WorkoutScreenFromJustRow" id="owh-yE-sW4"/>
-                                            </connections>
                                         </button>
                                         <button width="0.5" height="1" alignment="left" title="New Workout" id="CvK-iL-CdF">
                                             <color key="backgroundColor" red="0.99729770419999997" green="0.82012230159999999" blue="0.39803296329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -65,7 +62,7 @@
                                 <tableRow identifier="New Workout Row Controller" id="lxV-mx-Up2" customClass="NewWORowController" customModule="iRow_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="opV-JE-P9h">
                                         <items>
-                                            <label width="1" height="1" alignment="left" text="Workout Type" id="gXu-JG-PZV"/>
+                                            <label width="136" height="1" alignment="left" text="Workout Type" id="gXu-JG-PZV"/>
                                         </items>
                                     </group>
                                     <connections>
@@ -80,50 +77,37 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="242" y="-44"/>
+            <point key="canvasLocation" x="241.7777777777778" y="-44.256198347107436"/>
         </scene>
-        <!--Distance-->
-        <scene sceneID="gHf-ji-9QU">
+        <!--WO Controls-->
+        <scene sceneID="pF7-Rv-0QO">
             <objects>
-                <controller identifier="Set Distance" title="Distance" id="h1i-33-2tm" customClass="DistanceWOController" customModule="iRow_WatchKit_Extension">
+                <controller identifier="WO Controls" id="AlT-Ic-w5f" customClass="WOControlsController" customModule="iRow_WatchKit_Extension">
                     <items>
-                        <label width="1" alignment="left" text="Distance Workout" numberOfLines="2" id="QhH-vD-uNE">
-                            <fontDescription key="font" type="system" weight="semibold" pointSize="18"/>
-                        </label>
-                        <label width="1" alignment="left" text="Set Distance (m):" id="G5T-zg-Dis">
-                            <fontDescription key="font" type="system" pointSize="18"/>
-                            <variation key="device=watch38mm">
-                                <fontDescription key="font" type="system" pointSize="17"/>
-                            </variation>
-                        </label>
-                        <group width="1" height="35" alignment="left" verticalAlignment="center" id="pof-md-bdV" userLabel="meter picker">
+                        <group width="1" alignment="left" layout="vertical" id="i3o-yj-2CV">
                             <items>
-                                <picker width="0.17000000000000001" height="1" alignment="center" focusStyle="stack" id="0s6-OY-uCi"/>
-                                <picker width="0.17000000000000001" height="1" alignment="center" focusStyle="stack" id="pKa-NV-3Oa"/>
-                                <label width="0.050000000000000003" height="1" alignment="center" text="," id="jWS-Ho-eh8">
-                                    <fontDescription key="font" type="system" pointSize="23"/>
-                                </label>
-                                <picker width="0.17000000000000001" height="1" alignment="center" focusStyle="stack" id="FW6-sU-zBo"/>
-                                <picker width="0.17000000000000001" height="1" alignment="center" focusStyle="stack" id="Gqg-AP-Xtz"/>
-                                <picker width="0.17000000000000001" height="1" alignment="center" focusStyle="stack" id="FMg-Oz-AsI"/>
+                                <group width="1" alignment="left" id="UAt-Qe-UNa">
+                                    <items>
+                                        <button width="0.5" height="1" alignment="left" title="Restart" id="mEa-o5-9zk"/>
+                                        <button width="0.5" height="1" alignment="left" title="End" id="SkH-f7-HaQ">
+                                            <connections>
+                                                <action selector="endButtonPushed" destination="AlT-Ic-w5f" id="8q3-JV-aRd"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <button width="1" height="0.5" alignment="left" title="Pause" id="Isj-9U-vxL"/>
                             </items>
                         </group>
-                        <button width="1" alignment="left" verticalAlignment="bottom" title="Row / Set Rest" id="2nT-oU-vMa">
-                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="backgroundColor" red="0.95224434140000003" green="0.40791964530000002" blue="0.5334054828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </button>
                     </items>
                     <connections>
-                        <outlet property="hundredsPicker" destination="FW6-sU-zBo" id="F4J-VA-hPo"/>
-                        <outlet property="oneThousPicker" destination="pKa-NV-3Oa" id="DoD-Zk-kB4"/>
-                        <outlet property="onesPicker" destination="FMg-Oz-AsI" id="y2f-Gm-9mY"/>
-                        <outlet property="rowOrSetRestButton" destination="2nT-oU-vMa" id="QBM-kb-1dL"/>
-                        <outlet property="tenThousPicker" destination="0s6-OY-uCi" id="tsa-BH-S2v"/>
-                        <outlet property="tensPicker" destination="Gqg-AP-Xtz" id="xVW-oN-dOo"/>
+                        <outlet property="endButton" destination="SkH-f7-HaQ" id="kcf-n0-BA5"/>
+                        <outlet property="pauseButton" destination="Isj-9U-vxL" id="upE-P4-eGs"/>
+                        <outlet property="restartButton" destination="mEa-o5-9zk" id="6n7-xQ-8MW"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="830" y="-754"/>
+            <point key="canvasLocation" x="905" y="11"/>
         </scene>
         <!--New Workout-->
         <scene sceneID="6MR-Jn-apd">
@@ -214,7 +198,7 @@
                         <button width="1" alignment="left" verticalAlignment="bottom" hidden="YES" title="Row" id="s4a-vs-sdC">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="qA4-R3-5IF" kind="modal" identifier="Config to WO Interface" id="BcN-m4-Zkv"/>
+                                <segue destination="qA4-R3-5IF" kind="modal" identifier="Config to WO" id="RXa-7w-5l8"/>
                             </connections>
                         </button>
                     </items>
@@ -241,141 +225,6 @@
             </objects>
             <point key="canvasLocation" x="514" y="-370"/>
         </scene>
-        <!--WorkoutScreen-->
-        <scene sceneID="RNW-FF-peX">
-            <objects>
-                <controller identifier="WorkoutScreen" id="JwQ-4E-wo4" customClass="WODisplayController" customModule="iRow_WatchKit_Extension">
-                    <items>
-                        <group width="1" height="0.28000000000000003" alignment="left" radius="0.0" id="PPx-pU-1Zg">
-                            <items>
-                                <group width="0.5" height="1" alignment="left" contentMode="scaleAspectFill" layout="vertical" id="Oor-nF-FdB" userLabel="SplitTime">
-                                    <items>
-                                        <label width="1" height="0.5" alignment="left" text="Split:" id="GaX-ja-Dvu"/>
-                                        <timer width="1" height="0.5" alignment="left" textAlignment="right" id="qf8-e4-TSL">
-                                            <fontDescription key="font" type="system" weight="semibold" pointSize="24"/>
-                                            <calendarUnit key="units" minute="YES" second="YES"/>
-                                        </timer>
-                                    </items>
-                                </group>
-                                <group width="0.5" height="1" alignment="left" contentMode="scaleAspectFill" layout="vertical" id="3Z3-Cd-Vod" userLabel="ElapsedTime">
-                                    <items>
-                                        <label width="1" height="0.5" alignment="left" text="Time:" id="pc9-md-DmZ"/>
-                                        <timer width="1" height="0.5" alignment="left" textAlignment="right" previewedSeconds="6603" id="X0o-fw-5JA">
-                                            <fontDescription key="font" type="system" pointSize="20"/>
-                                            <calendarUnit key="units" minute="YES" second="YES"/>
-                                        </timer>
-                                    </items>
-                                </group>
-                            </items>
-                        </group>
-                        <separator alignment="left" id="grW-DD-RAK"/>
-                        <group width="1" height="0.22" alignment="center" layout="vertical" radius="0.0" id="NK1-zb-JTu">
-                            <items>
-                                <group width="1" height="0.5" alignment="center" verticalAlignment="center" id="lM3-Ls-ezK" userLabel="IntervalCount">
-                                    <items>
-                                        <label width="0.5" height="1" alignment="left" text="Interval:" id="ArC-80-q9f"/>
-                                        <label width="0.5" height="1" alignment="left" text="0" textAlignment="right" id="gHI-A2-J2R"/>
-                                    </items>
-                                </group>
-                                <group width="1" height="0.5" alignment="center" verticalAlignment="center" id="8a7-5D-S4U" userLabel="DistanceTotal">
-                                    <items>
-                                        <label width="0.5" height="1" alignment="left" text="Meters:" id="X5O-BH-gJx"/>
-                                        <label width="0.5" height="1" alignment="left" text="99,999" textAlignment="right" id="hRc-ri-r7P"/>
-                                    </items>
-                                </group>
-                            </items>
-                        </group>
-                        <separator alignment="left" id="JUT-1u-Uyh"/>
-                        <group width="1" height="0.5" alignment="left" id="T4j-bq-ESa" userLabel="StrokeRate">
-                            <items>
-                                <label width="0.75" height="1" alignment="left" text="99" textAlignment="right" id="Rdf-sa-6Zh">
-                                    <fontDescription key="font" type="system" pointSize="85"/>
-                                </label>
-                                <label width="0.25" height="1" alignment="left" verticalAlignment="bottom" text="spm" id="BsP-UX-h03"/>
-                            </items>
-                        </group>
-                    </items>
-                    <connections>
-                        <outlet property="intervalCounter" destination="gHI-A2-J2R" id="u8U-hp-MhW"/>
-                        <outlet property="splitDisplay" destination="qf8-e4-TSL" id="AZk-Y9-eyo"/>
-                        <outlet property="strokeRate" destination="Rdf-sa-6Zh" id="nZk-qh-C0o"/>
-                        <outlet property="timerDisplay" destination="X0o-fw-5JA" id="jqv-yC-bIU"/>
-                        <outlet property="totalMeters" destination="hRc-ri-r7P" id="olq-wU-pcH"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="256" y="-368"/>
-        </scene>
-        <!--Time-->
-        <scene sceneID="Dza-DV-sZ3">
-            <objects>
-                <controller identifier="Set Time" title="Time" id="hcr-iX-OG9" customClass="TimeWOController" customModule="iRow_WatchKit_Extension">
-                    <items>
-                        <label width="1" alignment="left" text="Timed Workout" id="HoN-kg-bVs">
-                            <fontDescription key="font" type="system" weight="semibold" pointSize="18"/>
-                        </label>
-                        <group width="1" alignment="left" id="ZBX-Rz-Wux">
-                            <items>
-                                <label width="0.5" alignment="left" text="Set Time:" id="fB3-Wr-NoX">
-                                    <fontDescription key="font" type="system" pointSize="18"/>
-                                </label>
-                                <label width="0.5" alignment="left" text=" " id="ofe-V1-y7a"/>
-                            </items>
-                        </group>
-                        <group width="1" alignment="left" verticalAlignment="center" id="2zH-NX-MjL" userLabel="Timer">
-                            <items>
-                                <picker width="0.17999999999999999" height="1" alignment="center" focusStyle="stack" id="CTJ-9o-oFL" userLabel="Minutes Hundreds">
-                                    <connections>
-                                        <action selector="minHundrChanged:" destination="hcr-iX-OG9" id="UUH-G4-48I"/>
-                                    </connections>
-                                </picker>
-                                <picker width="0.17999999999999999" height="1" alignment="center" focusStyle="stack" id="C4I-8m-7Ao" userLabel="Minutes Tens">
-                                    <connections>
-                                        <action selector="minTensChanged:" destination="hcr-iX-OG9" id="JJd-sr-IFq"/>
-                                    </connections>
-                                </picker>
-                                <picker width="0.17999999999999999" height="1" alignment="center" focusStyle="stack" id="96s-tp-2dM" userLabel="Minutes Ones">
-                                    <connections>
-                                        <action selector="minOnesChanged:" destination="hcr-iX-OG9" id="FRx-XD-Xx6"/>
-                                    </connections>
-                                </picker>
-                                <label width="0.070000000000000007" alignment="center" verticalAlignment="center" text=":" textAlignment="center" baselineAdjustment="alignCenters" id="TEJ-2I-cd1">
-                                    <fontDescription key="font" type="system" weight="medium" pointSize="30"/>
-                                </label>
-                                <picker width="0.17999999999999999" height="1" alignment="center" focusStyle="stack" id="eC9-uj-sXK" userLabel="Seconds Tens">
-                                    <connections>
-                                        <action selector="secTensChanged:" destination="hcr-iX-OG9" id="lVV-E7-epg"/>
-                                    </connections>
-                                </picker>
-                                <picker width="0.17999999999999999" height="1" alignment="center" focusStyle="stack" id="1aP-ip-40b" userLabel="Seconds Ones">
-                                    <connections>
-                                        <action selector="secOnesChanged:" destination="hcr-iX-OG9" id="ycb-Rw-qqq"/>
-                                    </connections>
-                                </picker>
-                            </items>
-                        </group>
-                        <button width="1" alignment="left" verticalAlignment="bottom" title="Row / Set Rest" id="GZx-da-oWo">
-                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="backgroundColor" red="0.95224434140000003" green="0.40791964530000002" blue="0.5334054828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="buttonPushed" destination="hcr-iX-OG9" id="2rw-Dv-MJv"/>
-                            </connections>
-                        </button>
-                    </items>
-                    <connections>
-                        <outlet property="minutesHundPicker" destination="CTJ-9o-oFL" id="5rm-bY-tao"/>
-                        <outlet property="minutesOnesPicker" destination="96s-tp-2dM" id="d4N-oH-rTQ"/>
-                        <outlet property="minutesTensPicker" destination="C4I-8m-7Ao" id="psR-mb-H3n"/>
-                        <outlet property="rowOrSetRestButton" destination="GZx-da-oWo" id="vTg-pO-gZe"/>
-                        <outlet property="secondsOnesPicker" destination="1aP-ip-40b" id="hjV-k3-HTs"/>
-                        <outlet property="secondsTensPicker" destination="eC9-uj-sXK" id="N5i-CE-xLl"/>
-                        <outlet property="timeSetLabel" destination="ofe-V1-y7a" id="U1z-RP-Afb"/>
-                        <outlet property="workoutTitle" destination="HoN-kg-bVs" id="mdb-6h-wKQ"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="586" y="-734"/>
-        </scene>
         <!--Workout-->
         <scene sceneID="YxA-Y5-Tmj">
             <objects>
@@ -384,8 +233,12 @@
                         <label width="1" alignment="center" text="Workout Type" id="HtB-sY-x9g">
                             <fontDescription key="font" type="system" weight="semibold" pointSize="22"/>
                         </label>
+                        <label width="1" height="0.20000000000000001" alignment="left" text="0 m" id="GPm-Wm-tpn">
+                            <fontDescription key="font" type="system" weight="medium" pointSize="22"/>
+                        </label>
                         <timer width="1" height="0.20000000000000001" alignment="left" textAlignment="right" id="QB3-Lo-ghM">
-                            <fontDescription key="font" type="system" pointSize="20"/>
+                            <fontDescription key="font" type="system" weight="medium" pointSize="22"/>
+                            <calendarUnit key="units" minute="YES" second="YES"/>
                         </timer>
                         <dateLabel width="1" alignment="left" id="D81-uU-Twp">
                             <dateFormatterStyle key="dateStyle" short="YES"/>
@@ -398,13 +251,15 @@
                     </items>
                     <connections>
                         <outlet property="date" destination="D81-uU-Twp" id="RG7-MU-4hO"/>
+                        <outlet property="meters" destination="GPm-Wm-tpn" id="yB4-fZ-dU7"/>
                         <outlet property="strokeRate" destination="zOV-0R-I5a" id="gHu-ny-mcL"/>
                         <outlet property="timer" destination="QB3-Lo-ghM" id="eLo-0h-ctc"/>
                         <outlet property="workoutTitle" destination="HtB-sY-x9g" id="1co-GW-E3i"/>
+                        <segue destination="AlT-Ic-w5f" kind="relationship" relationship="nextPage" id="AvS-1U-B1R"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="620" y="22"/>
+            <point key="canvasLocation" x="637" y="11"/>
         </scene>
         <!--Rest-->
         <scene sceneID="WGB-dH-sF3">
@@ -463,8 +318,7 @@
                         <button width="1" alignment="left" verticalAlignment="bottom" title="Row" id="tDM-YI-ykX">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="buttonPushed" destination="Enr-Tn-YiS" id="PNd-4N-s8r"/>
-                                <segue destination="qA4-R3-5IF" kind="modal" identifier="Rest to WO Interface" id="NcF-OW-97E"/>
+                                <segue destination="qA4-R3-5IF" kind="modal" identifier="Rest to WO" id="OOV-If-um2"/>
                             </connections>
                         </button>
                     </items>
@@ -485,6 +339,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NcF-OW-97E"/>
+        <segue reference="RXa-7w-5l8"/>
     </inferredMetricsTieBreakers>
 </document>

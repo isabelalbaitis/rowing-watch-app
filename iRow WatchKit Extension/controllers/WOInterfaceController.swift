@@ -16,35 +16,53 @@ class WOInterfaceController: WKInterfaceController {
     @IBOutlet weak var timer: WKInterfaceTimer!
     @IBOutlet weak var date: WKInterfaceDate!
     @IBOutlet weak var strokeRate: WKInterfaceLabel!
+    @IBOutlet weak var meters: WKInterfaceLabel!
     
-
-    // PRESENT THIS MODALLY?
     override func awake(withContext context: Any?) {
         
         CurrentWorkout = context as! Workout?
+        var seconds: Double = -2
+        var dist: Int = -2
         
         super.awake(withContext: context)
                         
         if CurrentWorkout?.type == Workout.SINGLE_TIME{
-            print("Single Time")
             workoutTitle.setText("Single Time")
+            seconds = (CurrentWorkout?.pieceTotalSeconds)!
+            setUpTimedWorkout(seconds: seconds)
         }
         else if CurrentWorkout?.type == Workout.SINGLE_DISTANCE{
-            print("Single Distance")
             workoutTitle.setText("Single Distance")
+            dist = (CurrentWorkout?.pieceDistanceMeters)!
+            setUpDistanceWorkout(distance: dist)
         }
         else if CurrentWorkout?.type == Workout.TIME_INTERVAL{
-            print("Time Intervals")
+            print((CurrentWorkout?.pieceTotalSeconds!)! as Double)
             workoutTitle.setText("Time Interval")
+            seconds = (CurrentWorkout?.pieceTotalSeconds)!
+            setUpTimedWorkout(seconds: seconds)
         }
         else if CurrentWorkout?.type == Workout.DISTANCE_INTERVAL{
-            print("Distance Interval")
+            print(Double((CurrentWorkout?.pieceDistanceMeters)!))
             workoutTitle.setText("Distance Interval")
-        }
-        else {
-            print("Piss baby")
+            dist = (CurrentWorkout?.pieceDistanceMeters)!
+            setUpDistanceWorkout(distance: dist)
         }
         
+        print(seconds)
+        print(dist)
+        
+    }
+    
+    func setUpTimedWorkout(seconds: Double){
+        meters.setHidden(true)
+        timer.setDate(NSDate(timeIntervalSinceNow: seconds) as Date)
+        timer.start()
+    }
+    
+    func setUpDistanceWorkout(distance: Int){
+        timer.setHidden(true)
+        meters.setText(String(format: "%d m", distance))
     }
     
     

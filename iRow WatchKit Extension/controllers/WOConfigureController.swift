@@ -280,12 +280,18 @@ class WOConfigureController: WKInterfaceController {
     
     
     @IBAction func setRestButtonPushed() {
-       
         pushController(withName: "Set Rest", context: NewWorkout)
-        
     }
     
     
+    override func contextsForSegue(withIdentifier segueIdentifier: String) -> [Any]? {
+        if segueIdentifier == "Config to WO"{
+            return [NewWorkout!, NewWorkout!]
+        }
+        
+        return nil
+    }
     
+   
 }
 

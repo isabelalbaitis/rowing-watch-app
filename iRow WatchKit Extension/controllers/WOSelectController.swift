@@ -58,13 +58,8 @@ class WOSelectController: WKInterfaceController {
             workout = Workout(isInterval: true, isDistance: true)
             pushController(withName: "Configure Workout", context: workout)
         }
-                
-        print(String(describing: workout.isInterval))
-        print(String(describing: workout.isDistance))
-        
-        
-        
         
     }
+
     
 }
