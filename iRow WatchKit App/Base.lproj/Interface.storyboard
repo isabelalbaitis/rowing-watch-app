@@ -16,7 +16,7 @@
                             <items>
                                 <group width="1" height="0.5" alignment="center" id="TFE-wX-6Bb">
                                     <items>
-                                        <button width="0.5" height="1" alignment="left" title="Just Row" backgroundImage="bolt.horizontal.circle.fill" catalog="system" id="3C6-Z3-we1">
+                                        <button width="0.5" height="1" alignment="left" title="Just Row" backgroundImage="arrow.forward.circle.fill" catalog="system" id="3C6-Z3-we1">
                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="backgroundColor" red="0.95224434140000003" green="0.40791964530000002" blue="0.5334054828" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </button>
@@ -90,7 +90,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="266" y="1"/>
+            <point key="canvasLocation" x="196" y="-77"/>
         </scene>
         <!--History Controller-->
         <scene sceneID="BxL-Z1-tru">
@@ -150,29 +150,35 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="265.81818181818181" y="369.50413223140492"/>
+            <point key="canvasLocation" x="-166" y="412"/>
         </scene>
         <!--WO Controls-->
         <scene sceneID="pF7-Rv-0QO">
             <objects>
-                <controller identifier="WO Controls" id="AlT-Ic-w5f" customClass="WOControlsController" customModule="iRow_WatchKit_Extension">
+                <controller identifier="WO Controls" contentMode="scaleAspectFit" id="AlT-Ic-w5f" customClass="WOControlsController" customModule="iRow_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" layout="vertical" id="i3o-yj-2CV">
+                        <group width="1" height="1" alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" layout="vertical" id="i3o-yj-2CV">
                             <items>
-                                <group width="1" alignment="left" id="UAt-Qe-UNa">
+                                <group width="1" height="0.5" alignment="center" id="UAt-Qe-UNa">
                                     <items>
-                                        <button width="0.5" height="1" alignment="left" title="Restart" id="mEa-o5-9zk"/>
-                                        <button width="0.5" height="1" alignment="left" title="End" id="SkH-f7-HaQ">
+                                        <button width="0.5" height="1" alignment="left" verticalAlignment="center" title="Restart" backgroundImage="arrow.uturn.left.circle.fill" catalog="system" id="mEa-o5-9zk">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </button>
+                                        <button width="0.5" height="1" alignment="right" verticalAlignment="center" title="End" backgroundImage="stop.circle.fill" catalog="system" id="SkH-f7-HaQ">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="endButtonPushed" destination="AlT-Ic-w5f" id="8q3-JV-aRd"/>
                                             </connections>
                                         </button>
                                     </items>
                                 </group>
-                                <button width="1" height="0.5" alignment="left" title="Pause" id="Isj-9U-vxL"/>
+                                <button width="0.5" height="0.5" alignment="center" verticalAlignment="bottom" title="Pause" backgroundImage="pause.circle.fill" catalog="system" id="Isj-9U-vxL">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </button>
                             </items>
                         </group>
                     </items>
+                    <edgeInsets key="margins" left="3" right="3" top="0.0" bottom="0.0"/>
                     <connections>
                         <outlet property="endButton" destination="SkH-f7-HaQ" id="kcf-n0-BA5"/>
                         <outlet property="pauseButton" destination="Isj-9U-vxL" id="upE-P4-eGs"/>
@@ -180,7 +186,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="905" y="11"/>
+            <point key="canvasLocation" x="904.60606060606062" y="10.537190082644628"/>
         </scene>
         <!--New Workout-->
         <scene sceneID="6MR-Jn-apd">
@@ -416,8 +422,11 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.counterclockwise.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="bolt.horizontal.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="arrow.forward.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="arrow.uturn.left.circle.fill" catalog="system" width="128" height="121"/>
         <image name="book.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="pause.circle.fill" catalog="system" width="128" height="121"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="stop.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>
