@@ -37,6 +37,9 @@
 		C86C56752731CFBD0012FC4D /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C56742731CFBD0012FC4D /* Workout.swift */; };
 		CB4BF394275FDF2100071477 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BF393275FDF2100071477 /* LogInViewController.swift */; };
 		CB4BF398275FE96500071477 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BF397275FE96500071477 /* SignUpViewController.swift */; };
+		CB4BF3A027615FDE00071477 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BF39F27615FDE00071477 /* Workout.swift */; };
+		CB4BF3A227615FF600071477 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BF3A127615FF600071477 /* WorkoutModel.swift */; };
+		CB4BF3A52761B02600071477 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BF3A42761B02600071477 /* WorkoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +155,9 @@
 		C86C56742731CFBD0012FC4D /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		CB4BF393275FDF2100071477 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		CB4BF397275FE96500071477 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CB4BF39F27615FDE00071477 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		CB4BF3A127615FF600071477 /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
+		CB4BF3A42761B02600071477 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,12 +272,9 @@
 			children = (
 				C85E917F272C901F007FEA9C /* AppDelegate.swift */,
 				C85E9181272C901F007FEA9C /* SceneDelegate.swift */,
-				C85E9183272C901F007FEA9C /* ViewController.swift */,
-				CB4BF393275FDF2100071477 /* LogInViewController.swift */,
-				CB4BF397275FE96500071477 /* SignUpViewController.swift */,
-				C85E9185272C901F007FEA9C /* Main.storyboard */,
-				C85E9188272C9027007FEA9C /* Assets.xcassets */,
-				C85E918A272C9027007FEA9C /* LaunchScreen.storyboard */,
+				CB4BF3A327615FFC00071477 /* Models */,
+				CB4BF39E27613E5500071477 /* Views */,
+				CB4BF39D27613E4600071477 /* Controllers */,
 				C85E918D272C9027007FEA9C /* Info.plist */,
 			);
 			path = iRow;
@@ -334,6 +337,36 @@
 				C85E91D8272C9032007FEA9C /* Info.plist */,
 			);
 			path = "iRow WatchKit AppUITests";
+			sourceTree = "<group>";
+		};
+		CB4BF39D27613E4600071477 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C85E9183272C901F007FEA9C /* ViewController.swift */,
+				CB4BF393275FDF2100071477 /* LogInViewController.swift */,
+				CB4BF397275FE96500071477 /* SignUpViewController.swift */,
+				CB4BF3A42761B02600071477 /* WorkoutViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CB4BF39E27613E5500071477 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C85E9185272C901F007FEA9C /* Main.storyboard */,
+				C85E9188272C9027007FEA9C /* Assets.xcassets */,
+				C85E918A272C9027007FEA9C /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CB4BF3A327615FFC00071477 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB4BF39F27615FDE00071477 /* Workout.swift */,
+				CB4BF3A127615FF600071477 /* WorkoutModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -587,8 +620,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB4BF3A52761B02600071477 /* WorkoutViewController.swift in Sources */,
 				CB4BF394275FDF2100071477 /* LogInViewController.swift in Sources */,
+				CB4BF3A227615FF600071477 /* WorkoutModel.swift in Sources */,
 				C85E9184272C901F007FEA9C /* ViewController.swift in Sources */,
+				CB4BF3A027615FDE00071477 /* Workout.swift in Sources */,
 				C85E9180272C901F007FEA9C /* AppDelegate.swift in Sources */,
 				C85E9182272C901F007FEA9C /* SceneDelegate.swift in Sources */,
 				CB4BF398275FE96500071477 /* SignUpViewController.swift in Sources */,
