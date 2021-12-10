@@ -31,6 +31,32 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
         // Do any additional setup after loading the view.
     }
     
+    func sortIntoSections(workouts: [Workout]) {
+        
+        // We assume the model already provides them ascending date order.
+        var SingleDistSection  = [Workout]()
+        var SingleTimeSection = [Workout]()
+        var IntervalDistSection = [Workout]()
+        var IntervalTimeSection = [Workout]()
+        
+        let types = [
+            "Single Time",
+            "Single Distance",
+            "Time Intervals",
+            "Distance Intervals"
+        ]
+        
+        for typ in workouts {
+            if typ.type == "Single Time" {
+                SingleTimeSection.append(typ)
+            }
+            else if typ.type == "Single Distance" {
+                SingleDistSection.append(j)
+            } else {
+                pastSection.append(j)
+            }
+        }
+    
     // MARK: - UITableViewDataSource
     func numberOfSections(in WorkoutTable: UITableView) -> Int {
         return 1
@@ -39,6 +65,13 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
     // MARK: - AddWorkoutDelegate
     func save(recent: Workout) {
         self.workouts?.append(recent)
+    }
+    
+    
+    // MARK: - TableViewDelegate
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    {
+        return self.tableViewData?[section].sectionHeader
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,8 +87,8 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
             return cell
         }
         
-        cell.name?.text = workoot.type
-        cell.subName?.text = workoot.location
+        cell.name?.text = workoot.type // i know its spelled wrong
+        cell.subName?.text = workoot.location // i did it on purpose
         cell.coverImage?.image = UIImage(named: "Quad")
         
         return cell
@@ -65,14 +98,6 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
         return 200.0
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView,
-                   forSection section: Int)
-    {
-        let header = view as! UITableViewHeaderFooterView
-        header.textLabel?.textColor = THEME_COLOR2
-        header.contentView.backgroundColor = THEME_COLOR3
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView,
