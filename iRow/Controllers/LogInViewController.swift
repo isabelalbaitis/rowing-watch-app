@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LogInViewController: UIViewController, UITextFieldDelegate {
+class LogInViewController: ViewController {
     
     @IBOutlet weak var EmailField: UITextField!
     @IBOutlet weak var PassField: UITextField!
@@ -32,7 +32,24 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
       self.view.endEditing(true)
     }
     
+    func validateFields() -> Bool {
+    let pwOk = self.isValidPassword(password: self.PassField.text)
+    if !pwOk {
+        print(NSLocalizedString("Invalid password",comment: ""))
+    }
+    
+    let emailOk = self.isValidEmail(emailStr: self.EmailField.text)
+    if !emailOk {
+        print(NSLocalizedString("Invalid email address", comment: ""))
+    }
+    
+    return emailOk && pwOk
+}
 
+    @IBAction func signInPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "LogInToMain", sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -43,4 +60,17 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     }
     */
 
+}
+
+extension LogInViewController : UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    if textField == self.EmailField {
+      self.PassField.becomeFirstResponder()
+    } else {
+      if self.validateFields() {
+        print(NSLocalizedString("Congratulations!  You entered correct values.", comment: ""))
+      }
+    }
+    return true
+  }
 }
