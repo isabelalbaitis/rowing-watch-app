@@ -1,0 +1,6 @@
+framework module Pods_iRow_WatchKit_App_iRow_WatchKit_AppUITests {
+  umbrella header "Pods-iRow WatchKit App-iRow WatchKit AppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

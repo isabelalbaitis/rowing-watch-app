@@ -1,0 +1,6 @@
+framework module Pods_iRow {
+  umbrella header "Pods-iRow-umbrella.h"
+
+  export *
+  module * { export * }
+}

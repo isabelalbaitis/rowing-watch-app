@@ -1,0 +1,4 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AntMessageProtocol.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DataDecoder.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FitDataProtocol.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FitnessUnits.framework

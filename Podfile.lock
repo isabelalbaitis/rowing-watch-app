@@ -1,0 +1,30 @@
+PODS:
+  - AntMessageProtocol (1.1.0):
+    - DataDecoder
+    - FitnessUnits
+  - DataDecoder (5.0.0)
+  - FitDataProtocol (2.1.0):
+    - AntMessageProtocol (>= 1.1.0)
+    - DataDecoder (>= 5.0.0)
+    - FitnessUnits (>= 3.1.0)
+  - FitnessUnits (3.1.0)
+
+DEPENDENCIES:
+  - FitDataProtocol (~> 2.1)
+
+SPEC REPOS:
+  trunk:
+    - AntMessageProtocol
+    - DataDecoder
+    - FitDataProtocol
+    - FitnessUnits
+
+SPEC CHECKSUMS:
+  AntMessageProtocol: 8e0908f435044ab7d0f6d576dc958f8374440e5a
+  DataDecoder: 450bbf3a850ba113fc04f28de4f43c227e2f8b00
+  FitDataProtocol: cdca3cff0005f55afc98185e7d63b7803aa111a4
+  FitnessUnits: c7c8a829b51a544350d2a5bd861be10d3225fc90
+
+PODFILE CHECKSUM: 38438067d9e5a703315bbb388876a3bbeb9468ac
+
+COCOAPODS: 1.10.2
