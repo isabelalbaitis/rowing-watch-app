@@ -10,7 +10,7 @@ import WatchKit
 
 class SetRestController: WKInterfaceController {
     
-    var workout : Workout?
+    var workout : PracticePlan?
     
     var minutes: Int?
     var seconds: Int?
@@ -45,7 +45,7 @@ class SetRestController: WKInterfaceController {
         print ("\nFrom SetRestController, context:")
         print (String(describing: context))
         
-        workout = context as! Workout?
+        workout = context as! PracticePlan?
         
         print ("\nFrom SetRestController, workout:")
         print (String(describing: workout))

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import WatchConnectivity
 
 class WorkoutModel {
     fileprivate var items: [Workout] = [Workout]()

@@ -18,7 +18,7 @@ import Foundation
             + pieceTotalSeconds: Duration of each piece in seconds (time), -1 on error
     - restTotalSeconds: Number of seconds between pieces, nil if piece is singular
  */
-struct Workout {
+struct PracticePlan {
     
     // Only types of Workouts allowed
     static let SINGLE_TIME: Int = 0
@@ -47,13 +47,13 @@ struct Workout {
             restTotalSeconds = nil
             
             if self.isDistance == false {
-                type = Workout.SINGLE_TIME
+                type = PracticePlan.SINGLE_TIME
                 pieceTotalSeconds = 0
                 pieceDistanceMeters = nil
                 
             }
             else {
-                type = Workout.SINGLE_DISTANCE
+                type = PracticePlan.SINGLE_DISTANCE
                 pieceTotalSeconds = nil
                 pieceDistanceMeters = 0
             }
@@ -62,12 +62,12 @@ struct Workout {
             restTotalSeconds = 0
             
             if self.isDistance == false {
-                type = Workout.TIME_INTERVAL
+                type = PracticePlan.TIME_INTERVAL
                 pieceTotalSeconds = 0
                 pieceDistanceMeters = nil
             }
             else {
-                type = Workout.DISTANCE_INTERVAL
+                type = PracticePlan.DISTANCE_INTERVAL
                 pieceTotalSeconds = nil
                 pieceDistanceMeters = 0
             }
