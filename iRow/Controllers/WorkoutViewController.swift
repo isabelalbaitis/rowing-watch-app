@@ -9,9 +9,11 @@ import UIKit
 
 class WorkoutViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    
     @IBOutlet weak var WorkoutTable: UITableView!
     
     var workouts: [Workout]?
+    
     
     var tableViewData: [(sectionHeader: String, workouts: [Workout])]? {
         didSet {
@@ -24,9 +26,8 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         let model = WorkoutModel()
-        self.WorkoutTable.delegate = self
-        self.WorkoutTable.dataSource = self
         self.workouts = model.getWorkouts()
+        self.sortIntoSections(workouts: self.workouts!)
         
         // Do any additional setup after loading the view.
     }
@@ -71,21 +72,14 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
         self.tableViewData = tmpData
     }
     
+    // MARK: - AddWorkoutDelegate
+    //func save(recent: Workout) {
+    //    self.workouts?.append(recent)
+    //}
+    
     // MARK: - UITableViewDataSource
     func numberOfSections(in WorkoutTable: UITableView) -> Int {
         return self.tableViewData?.count ?? 0
-    }
-    
-    // MARK: - AddWorkoutDelegate
-    func save(recent: Workout) {
-        self.workouts?.append(recent)
-    }
-    
-    
-    // MARK: - TableViewDelegate
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
-    {
-        return self.tableViewData?[section].sectionHeader
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -101,8 +95,8 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
             return cell
         }
         
-        cell.name?.text = workoot.type // i know its spelled wrong
-        cell.subName?.text = workoot.location // i did it on purpose
+        cell.subName?.text = workoot.type // i know its spelled wrong
+        cell.name?.text = workoot.location // i did it on purpose
         cell.coverImage?.image = UIImage(named: "Quad")
         
         return cell
@@ -112,6 +106,11 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
         return 200.0
+    }
+   
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    {
+        return self.tableViewData?[section].sectionHeader
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView,
