@@ -7,7 +7,6 @@
 
 import UIKit
 import WatchKit
-import HealthKit
 
 class WOInterfaceController: WKInterfaceController {
     
@@ -27,7 +26,6 @@ class WOInterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         
-        var storeWO: HKWorkout?
         CurrentWorkout = context as! PracticePlan?
         var seconds: Double = -2
         var dist: Int = -2

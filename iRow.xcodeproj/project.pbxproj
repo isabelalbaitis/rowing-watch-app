@@ -11,6 +11,8 @@
 		74025596F1CB674A343C4C30 /* Pods_iRow_WatchKit_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF620419AF3778817DFE1DAD /* Pods_iRow_WatchKit_AppTests.framework */; };
 		8107F7762757D51E00058DA6 /* OnWaterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8107F7752757D51E00058DA6 /* OnWaterRow.swift */; };
 		811C4AF62757A916002B4AA4 /* WOInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811C4AF52757A916002B4AA4 /* WOInterfaceController.swift */; };
+		817DDE972763F605000A02A2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817DDE962763F605000A02A2 /* HealthKit.framework */; };
+		817DDE9A2763F6A8000A02A2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817DDE992763F6A8000A02A2 /* HealthKit.framework */; };
 		81AB95CA275DDF5200C10578 /* WOControlsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB95C9275DDF5200C10578 /* WOControlsController.swift */; };
 		81AB95CC275E19AB00C10578 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB95CB275E19AB00C10578 /* HistoryController.swift */; };
 		81AB95CE275E1A7000C10578 /* HistoryRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB95CD275E1A7000C10578 /* HistoryRowController.swift */; };
@@ -129,6 +131,10 @@
 		723839E5DF6FD2E72333A476 /* Pods-iRow WatchKit AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRow WatchKit AppTests.release.xcconfig"; path = "Target Support Files/Pods-iRow WatchKit AppTests/Pods-iRow WatchKit AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		8107F7752757D51E00058DA6 /* OnWaterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnWaterRow.swift; sourceTree = "<group>"; };
 		811C4AF52757A916002B4AA4 /* WOInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOInterfaceController.swift; sourceTree = "<group>"; };
+		817DDE952763F605000A02A2 /* iRow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iRow.entitlements; sourceTree = "<group>"; };
+		817DDE962763F605000A02A2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		817DDE982763F6A8000A02A2 /* iRow WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iRow WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		817DDE992763F6A8000A02A2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		81AB95C9275DDF5200C10578 /* WOControlsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOControlsController.swift; sourceTree = "<group>"; };
 		81AB95CB275E19AB00C10578 /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
 		81AB95CD275E1A7000C10578 /* HistoryRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRowController.swift; sourceTree = "<group>"; };
@@ -198,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				191382DEB0FE5FEACB6E729E /* Pods_iRow.framework in Frameworks */,
+				817DDE972763F605000A02A2 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDDEFB7A306BD098BFA7112E /* Pods_iRow_WatchKit_Extension.framework in Frameworks */,
+				817DDE9A2763F6A8000A02A2 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +253,8 @@
 		4446AB0EE86369ECC6975BDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				817DDE992763F6A8000A02A2 /* HealthKit.framework */,
+				817DDE962763F605000A02A2 /* HealthKit.framework */,
 				BFB4A762AC8D99A4A44C8E8E /* Pods_iRow.framework */,
 				D1DCB40F7D7D53D97C65BDEF /* Pods_iRow_WatchKit_App.framework */,
 				FA227770293A341F148911EA /* Pods_iRow_WatchKit_App_iRow_WatchKit_AppUITests.framework */,
@@ -322,6 +332,7 @@
 		C85E917E272C901F007FEA9C /* iRow */ = {
 			isa = PBXGroup;
 			children = (
+				817DDE952763F605000A02A2 /* iRow.entitlements */,
 				C85E917F272C901F007FEA9C /* AppDelegate.swift */,
 				C85E9181272C901F007FEA9C /* SceneDelegate.swift */,
 				CB4BF3A327615FFC00071477 /* Models */,
@@ -363,6 +374,7 @@
 		C85E91B9272C902D007FEA9C /* iRow WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				817DDE982763F6A8000A02A2 /* iRow WatchKit Extension.entitlements */,
 				C85E91BC272C902D007FEA9C /* ExtensionDelegate.swift */,
 				81EA1BFB275708E8001330AB /* controllers */,
 				8124E27C275700A5001941E9 /* models */,
@@ -1088,6 +1100,7 @@
 			baseConfigurationReference = C7EE8B4610B2CC382BF40D21 /* Pods-iRow WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "iRow WatchKit Extension/iRow WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YWRVML48KX;
 				INFOPLIST_FILE = "iRow WatchKit Extension/Info.plist";
@@ -1111,6 +1124,7 @@
 			baseConfigurationReference = 26FB76883AEF21A2D6061BFB /* Pods-iRow WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "iRow WatchKit Extension/iRow WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YWRVML48KX;
 				INFOPLIST_FILE = "iRow WatchKit Extension/Info.plist";
@@ -1138,7 +1152,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = YWRVML48KX;
 				IBSC_MODULE = iRow_WatchKit_Extension;
 				INFOPLIST_FILE = "iRow WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1163,7 +1177,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = YWRVML48KX;
 				IBSC_MODULE = iRow_WatchKit_Extension;
 				INFOPLIST_FILE = "iRow WatchKit App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1187,6 +1201,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iRow/iRow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YWRVML48KX;
 				INFOPLIST_FILE = iRow/Info.plist;
@@ -1209,6 +1224,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iRow/iRow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YWRVML48KX;
 				INFOPLIST_FILE = iRow/Info.plist;
