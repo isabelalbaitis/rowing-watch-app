@@ -33,7 +33,7 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func sortIntoSections(workouts: [Workout]) {
         
-        // We assume the model already provides them ascending date order.
+        // This function sorts the data into the workout type to better fit the table View
         var SingleDistSection  = [Workout]()
         var SingleTimeSection = [Workout]()
         var IntervalDistSection = [Workout]()
@@ -64,14 +64,16 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
         if IntervalTimeSection.count > 0 {
             tmpData.append((sectionHeader: "INTERVAL TIME", workouts: IntervalTimeSection))
         }
-        if 
+        if IntervalDistSection.count > 0 {
+            tmpData.append((sectionHeader: "INTERVAL DISTANCE", workouts: IntervalDistSection))
+        }
         
         self.tableViewData = tmpData
     }
     
     // MARK: - UITableViewDataSource
     func numberOfSections(in WorkoutTable: UITableView) -> Int {
-        return 1
+        return self.tableViewData?.count ?? 0
     }
     
     // MARK: - AddWorkoutDelegate
