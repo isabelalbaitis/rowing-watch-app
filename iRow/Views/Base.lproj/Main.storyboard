@@ -189,32 +189,8 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="WorkoutCell" textLabel="Bhc-a2-sYI" detailTextLabel="aww-ZJ-eR0" style="IBUITableViewCellStyleSubtitle" id="0Wm-DT-YWe">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Wm-DT-YWe" id="gbT-Yn-LcB">
-                                            <rect key="frame" x="0.0" y="0.0" width="351" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Workout Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bhc-a2-sYI">
-                                                    <rect key="frame" x="20" y="6" width="78.5" height="14.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aww-ZJ-eR0">
-                                                    <rect key="frame" x="20" y="22.5" width="30.5" height="13.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="145" id="oDz-dG-vFJ" customClass="WorkoutMainTableViewCell" customModule="iRow" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="93.5" width="414" height="145"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="145"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oDz-dG-vFJ" id="jyP-QD-fAD">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
@@ -259,11 +235,17 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="coverImage" destination="bRf-hv-TUb" id="F8M-pa-yAr"/>
                                             <outlet property="name" destination="ndP-uL-DNr" id="nMy-8t-sVL"/>
                                             <outlet property="subName" destination="ymf-tx-iyh" id="Zan-w1-4Ai"/>
+                                            <outlet property="translucentView" destination="JGa-sU-8nn" id="Vp5-pj-hlz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="faw-do-EHI" id="vg3-LM-Eme"/>
+                                    <outlet property="delegate" destination="faw-do-EHI" id="Mwl-lL-2a2"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="864-Yx-S3V"/>
@@ -277,7 +259,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="PLd-Vd-cMW"/>
                     <connections>
-                        <outlet property="Workout" destination="toC-Tf-c7g" id="EOL-dR-N5n"/>
+                        <outlet property="WorkoutTable" destination="toC-Tf-c7g" id="Rzg-ZA-b3V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yeq-RP-bGa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

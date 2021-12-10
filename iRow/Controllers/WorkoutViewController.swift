@@ -9,6 +9,7 @@ import UIKit
 
 class WorkoutViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    
     @IBOutlet weak var WorkoutTable: UITableView!
     
     var workouts: [Workout]?
