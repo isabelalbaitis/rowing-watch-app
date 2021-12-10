@@ -39,23 +39,35 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
         var IntervalDistSection = [Workout]()
         var IntervalTimeSection = [Workout]()
         
-        let types = [
-            "Single Time",
-            "Single Distance",
-            "Time Intervals",
-            "Distance Intervals"
-        ]
-        
         for typ in workouts {
             if typ.type == "Single Time" {
                 SingleTimeSection.append(typ)
             }
             else if typ.type == "Single Distance" {
-                SingleDistSection.append(j)
-            } else {
-                pastSection.append(j)
+                SingleDistSection.append(typ)
+            }
+            else if typ.type == "Time Intervals"{
+                IntervalTimeSection.append(typ)
+            }
+            else{ // for "Distance Intervals"
+                IntervalDistSection.append(typ)
             }
         }
+        
+        var tmpData: [(sectionHeader: String, workouts: [Workout])] = []
+        if SingleDistSection.count > 0 {
+            tmpData.append((sectionHeader: "SINGLE DISTANCE", workouts: SingleDistSection))
+        }
+        if SingleTimeSection.count > 0 {
+            tmpData.append((sectionHeader: "SINGLE TIME", workouts: SingleTimeSection))
+        }
+        if IntervalTimeSection.count > 0 {
+            tmpData.append((sectionHeader: "INTERVAL TIME", workouts: IntervalTimeSection))
+        }
+        if 
+        
+        self.tableViewData = tmpData
+    }
     
     // MARK: - UITableViewDataSource
     func numberOfSections(in WorkoutTable: UITableView) -> Int {
