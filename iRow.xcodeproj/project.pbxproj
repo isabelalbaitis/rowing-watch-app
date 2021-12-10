@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -268,6 +268,17 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		816A6C4A2763260D00247A51 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C85E91CA272C9032007FEA9C /* iRow WatchKit AppTests */,
+				C85E91D5272C9032007FEA9C /* iRow WatchKit AppUITests */,
+				C85E9195272C9027007FEA9C /* iRowTests */,
+				C85E91A0272C9027007FEA9C /* iRowUITests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		81EA1BFB275708E8001330AB /* controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,13 +299,10 @@
 		C85E9173272C901F007FEA9C = {
 			isa = PBXGroup;
 			children = (
+				816A6C4A2763260D00247A51 /* Tests */,
 				C85E917E272C901F007FEA9C /* iRow */,
-				C85E9195272C9027007FEA9C /* iRowTests */,
-				C85E91A0272C9027007FEA9C /* iRowUITests */,
 				C85E91AA272C9027007FEA9C /* iRow WatchKit App */,
 				C85E91B9272C902D007FEA9C /* iRow WatchKit Extension */,
-				C85E91CA272C9032007FEA9C /* iRow WatchKit AppTests */,
-				C85E91D5272C9032007FEA9C /* iRow WatchKit AppUITests */,
 				C85E917D272C901F007FEA9C /* Products */,
 				F278A3980C82AB2D3B0CFDDA /* Pods */,
 				4446AB0EE86369ECC6975BDB /* Frameworks */,
@@ -432,7 +440,6 @@
 				C7EE8B4610B2CC382BF40D21 /* Pods-iRow WatchKit Extension.debug.xcconfig */,
 				26FB76883AEF21A2D6061BFB /* Pods-iRow WatchKit Extension.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
