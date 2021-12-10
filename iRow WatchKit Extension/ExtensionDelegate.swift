@@ -5,6 +5,7 @@
 //  Created by Isabel Albaitis and Jacob Stone on 10/29/21.
 //
 
+import FitDataProtocol
 import WatchKit
 
 let BRIGHT_GREEN = UIColor.init(red: 0.1333, green: 0.8431, blue: 0.5647, alpha: 1.0)
