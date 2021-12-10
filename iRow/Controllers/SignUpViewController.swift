@@ -40,22 +40,22 @@ class SignUpViewController: ViewController {
     }
     */
     func validateFields() -> Bool {
-        
+
         let pwOk = self.isEmptyOrNil(password: self.PasswordField.text)
         if !pwOk {
-            print(NSLocalizedString("Invalid password", comment: ""))
+            self.validationErrors += "Password cannot be blank."
         }
-        
+
         let pwMatch = self.PasswordField.text == self.VerifyField.text
         if !pwMatch {
-            print(NSLocalizedString("Passwords do not match.", comment: ""))
+            self.validationErrors += "Passwords do not match."
         }
-        
+
         let emailOk = self.isValidEmail(emailStr: self.EmailField.text)
         if !emailOk {
-            print(NSLocalizedString("Invalid email address", comment: ""))
+            self.validationErrors += "Invalid email address."
         }
-        
+
         return emailOk && pwOk && pwMatch
     }
       

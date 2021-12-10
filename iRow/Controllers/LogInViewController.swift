@@ -33,21 +33,39 @@ class LogInViewController: ViewController {
     }
     
     func validateFields() -> Bool {
-    let pwOk = self.isValidPassword(password: self.PassField.text)
-    if !pwOk {
-        print(NSLocalizedString("Invalid password",comment: ""))
+        let pwOk = self.isEmptyOrNil(password: self.PassField.text)
+        if !pwOk {
+            self.validationErrors += "Password cannot be blank."
+        }
+
+        let emailOk = self.isValidEmail(emailStr: self.EmailField.text)
+        if !emailOk {
+            self.validationErrors += "Invalid email address."
+        }
+
+        return emailOk && pwOk
     }
-    
-    let emailOk = self.isValidEmail(emailStr: self.EmailField.text)
-    if !emailOk {
-        print(NSLocalizedString("Invalid email address", comment: ""))
-    }
-    
-    return emailOk && pwOk
-}
+
 
     @IBAction func signInPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "LogInToMain", sender: self)
+        if self.validateFields() {
+            print("Congratulations!  You entered correct values.")
+            let repo = iRowRepo.getInstance()
+            repo.signIn(email: self.EmailField.text!, password: self.PassField.text!) {(success, errorMesg) in
+                if success {
+                    self.performSegue(withIdentifier: "LogInToMain", sender: self)
+                }
+                else {
+                    if let msg = errorMesg {
+                        self.reportError(msg: msg)
+                    }
+                    self.PassField.text = ""
+                    self.PassField.becomeFirstResponder()
+                }
+            }
+        } else {
+            self.reportError(msg: self.validationErrors)
+        }
     }
     
     /*
