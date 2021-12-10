@@ -28,8 +28,26 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
         return 1
     }
     
-    
+    // MARK: - AddWorkoutDelegate
+    func save(recent: Workout) {
+        self.workouts?.append(recent)
+    }
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
+        -> UITableViewCell
+    {
+        let cell = self.tableView.dequeueReusableCell
+        
+        guard let journal = tableViewData?[indexPath.section].journals[indexPath.row] else {
+            return cell
+        }
+        
+        cell.name?.text = journal.name
+        cell.subName?.text = journal.location
+        cell.coverImage?.image = UIImage(named: "landscape")
+        
+        return cell
+    }
     /*
     // MARK: - Navigation
 
