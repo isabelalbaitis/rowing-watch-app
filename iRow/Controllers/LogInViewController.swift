@@ -50,7 +50,7 @@ class LogInViewController: ViewController {
     @IBAction func signInPressed(_ sender: Any) {
         if self.validateFields() {
             print("Congratulations!  You entered correct values.")
-            let repo = iRowRepo.getInstance()
+            let repo = iRowRepository.getInstance()
             repo.signIn(email: self.EmailField.text!, password: self.PassField.text!) {(success, errorMesg) in
                 if success {
                     self.performSegue(withIdentifier: "LogInToMain", sender: self)

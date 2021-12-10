@@ -1,14 +1,12 @@
-
-def shared_pods
-	pod 'FitDataProtocol', '~> 2.1'
-end
-
 target 'iRow' do
 	use_frameworks!
 	platform :ios, '11.0'
 
-	# Pods for iRow
-	shared_pods
+  # Pods for iRow
+	pod 'Firebase/Analytics'
+	pod 'Firebase/Firestore'
+	pod 'Firebase/Auth'
+
 end
 
 target 'iRow WatchKit App' do
@@ -32,5 +30,5 @@ target 'iRow WatchKit Extension' do
 	platform :watchos, '7.4'
 	
 	# Pods for iRow WatchKit Extension
-	shared_pods
 end
+
