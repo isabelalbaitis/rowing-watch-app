@@ -5,8 +5,11 @@
 //  Created by Isabel L. Albaitis on 12/1/21.
 //
 
+import FitnessUnits
+import FitDataProtocol
 import Foundation
 
+/*
 struct OnWaterRow {
     
     var workout: Workout
@@ -55,3 +58,11 @@ struct OnWaterRow {
     
     
 }
+ */
+
+struct OnWaterRow{
+    
+    
+    
+}
+
