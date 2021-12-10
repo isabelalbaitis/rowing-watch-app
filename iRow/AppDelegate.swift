@@ -10,7 +10,8 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    let THEME_COLOR1 = UIColor.init(red:0.000, green:0.157, blue:0.216,
+                                    alpha:1.00)  // DARK BLUE
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

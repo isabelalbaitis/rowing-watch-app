@@ -35,6 +35,7 @@
 		C86C566F2731A4D80012FC4D /* NewWORowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C566E2731A4D80012FC4D /* NewWORowController.swift */; };
 		C86C56712731A5C90012FC4D /* WOSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C56702731A5C90012FC4D /* WOSelectController.swift */; };
 		C86C56752731CFBD0012FC4D /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C56742731CFBD0012FC4D /* Workout.swift */; };
+		CB39E0182762FEB300DD00F7 /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39E0172762FEB300DD00F7 /* WorkoutCell.swift */; };
 		CB4BF394275FDF2100071477 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BF393275FDF2100071477 /* LogInViewController.swift */; };
 		CB4BF398275FE96500071477 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BF397275FE96500071477 /* SignUpViewController.swift */; };
 		CB4BF3A027615FDE00071477 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BF39F27615FDE00071477 /* Workout.swift */; };
@@ -153,6 +154,7 @@
 		C86C566E2731A4D80012FC4D /* NewWORowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWORowController.swift; sourceTree = "<group>"; };
 		C86C56702731A5C90012FC4D /* WOSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOSelectController.swift; sourceTree = "<group>"; };
 		C86C56742731CFBD0012FC4D /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		CB39E0172762FEB300DD00F7 /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 		CB4BF393275FDF2100071477 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		CB4BF397275FE96500071477 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CB4BF39F27615FDE00071477 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 				C85E9185272C901F007FEA9C /* Main.storyboard */,
 				C85E9188272C9027007FEA9C /* Assets.xcassets */,
 				C85E918A272C9027007FEA9C /* LaunchScreen.storyboard */,
+				CB39E0172762FEB300DD00F7 /* WorkoutCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -620,6 +623,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB39E0182762FEB300DD00F7 /* WorkoutCell.swift in Sources */,
 				CB4BF3A52761B02600071477 /* WorkoutViewController.swift in Sources */,
 				CB4BF394275FDF2100071477 /* LogInViewController.swift in Sources */,
 				CB4BF3A227615FF600071477 /* WorkoutModel.swift in Sources */,
