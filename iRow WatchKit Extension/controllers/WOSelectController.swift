@@ -35,27 +35,27 @@ class WOSelectController: WKInterfaceController {
         
         print(rowIndex)
         
-        var workout: Workout
+        var workout: PracticePlan
         
         if rowIndex == 0 {
             // Single Time
-            workout = Workout(isInterval: false, isDistance: false)
+            workout = PracticePlan(isInterval: false, isDistance: false)
             pushController(withName: "Configure Workout", context: workout)
         }
         else if rowIndex == 1 {
             // Single Distance
-            workout = Workout(isInterval: false, isDistance: true)
+            workout = PracticePlan(isInterval: false, isDistance: true)
             pushController(withName: "Configure Workout", context: workout)
         }
         else if rowIndex == 2 {
             // Time Intervals
-            workout = Workout(isInterval: true, isDistance: false)
+            workout = PracticePlan(isInterval: true, isDistance: false)
             pushController(withName: "Configure Workout", context: workout)
         }
         else {
         //else if rowIndex == 3 {
             // Distance Intervals
-            workout = Workout(isInterval: true, isDistance: true)
+            workout = PracticePlan(isInterval: true, isDistance: true)
             pushController(withName: "Configure Workout", context: workout)
         }
         

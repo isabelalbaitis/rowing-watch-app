@@ -7,10 +7,11 @@
 
 import UIKit
 import WatchKit
+import HealthKit
 
 class WOInterfaceController: WKInterfaceController {
     
-    var CurrentWorkout : Workout?
+    var CurrentWorkout : PracticePlan?
     
    // var backgroundTimer = Timer()
     
@@ -22,31 +23,34 @@ class WOInterfaceController: WKInterfaceController {
     @IBOutlet weak var strokeRate: WKInterfaceLabel!
     @IBOutlet weak var meters: WKInterfaceLabel!
     
+    
+    
     override func awake(withContext context: Any?) {
         
-        CurrentWorkout = context as! Workout?
+        var storeWO: HKWorkout?
+        CurrentWorkout = context as! PracticePlan?
         var seconds: Double = -2
         var dist: Int = -2
         
         super.awake(withContext: context)
         
         switch(CurrentWorkout?.type){
-        case Workout.SINGLE_TIME:
+        case PracticePlan.SINGLE_TIME:
             workoutTitle.setText("Single Time")
             seconds = (CurrentWorkout?.pieceTotalSeconds)!
             setUpTimedWorkout(seconds: seconds)
             break
-        case Workout.SINGLE_DISTANCE:
+        case PracticePlan.SINGLE_DISTANCE:
             workoutTitle.setText("Single Distance")
             dist = (CurrentWorkout?.pieceDistanceMeters)!
             setUpDistanceWorkout(distance: dist)
             break
-        case Workout.TIME_INTERVAL:
+        case PracticePlan.TIME_INTERVAL:
             workoutTitle.setText("Time Interval")
             seconds = (CurrentWorkout?.pieceTotalSeconds)!
             setUpTimedWorkout(seconds: seconds)
             break
-        case Workout.DISTANCE_INTERVAL:
+        case PracticePlan.DISTANCE_INTERVAL:
             workoutTitle.setText("Distance Interval")
             dist = (CurrentWorkout?.pieceDistanceMeters)!
             setUpDistanceWorkout(distance: dist)

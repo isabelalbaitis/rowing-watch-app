@@ -21,7 +21,7 @@ class HistoryController: WKInterfaceController {
         historyTable.setNumberOfRows(10, withRowType: "history row")
     }
     
-    func addToTable(completedWorkout: Workout){
+    func addToTable(completedWorkout: PracticePlan){
         historyTable.insertRows(at: IndexSet(integer: 0), withRowType: "history row")
         historyTable.removeRows(at: IndexSet(integer: 10))
     }

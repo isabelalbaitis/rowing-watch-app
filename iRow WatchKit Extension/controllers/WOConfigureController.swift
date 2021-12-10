@@ -10,7 +10,7 @@ import WatchKit
 
 class WOConfigureController: WKInterfaceController {
     
-    var NewWorkout: Workout?
+    var NewWorkout: PracticePlan?
         
     var minutes: Int?
     var seconds: Int?
@@ -69,7 +69,7 @@ class WOConfigureController: WKInterfaceController {
         print("From WOConfigureController, context:")
         print(String(describing: context))
 
-        NewWorkout = (context as! Workout)
+        NewWorkout = (context as! PracticePlan)
         
         print("From WOConfigureController, NewWorkout:")
         print(String(describing: NewWorkout))
@@ -165,13 +165,13 @@ class WOConfigureController: WKInterfaceController {
     // Shows relevant pickers and buttons
     func configForSelection() {
         // Single Time
-        if NewWorkout?.type == Workout.SINGLE_TIME {
+        if NewWorkout?.type == PracticePlan.SINGLE_TIME {
             workoutTitle.setText("Single Time")
             setLabel.setText("Set Time:")
         }
         
         // Single Distance
-        if NewWorkout?.type == Workout.SINGLE_DISTANCE {
+        if NewWorkout?.type == PracticePlan.SINGLE_DISTANCE {
             workoutTitle.setText("Single Distance")
             setLabel.setText("Set Meters:")
             
@@ -180,7 +180,7 @@ class WOConfigureController: WKInterfaceController {
         }
         
         // Intervals Time
-        if NewWorkout?.type == Workout.TIME_INTERVAL {
+        if NewWorkout?.type == PracticePlan.TIME_INTERVAL {
             workoutTitle.setText("Timed Intervals")
             setLabel.setText("Set Time:")
             
@@ -189,7 +189,7 @@ class WOConfigureController: WKInterfaceController {
         }
         
         // Intervals Distance
-        if NewWorkout?.type == Workout.DISTANCE_INTERVAL {
+        if NewWorkout?.type == PracticePlan.DISTANCE_INTERVAL {
             workoutTitle.setText("Distance Intervals")
             setLabel.setText("Set Meters:")
             
