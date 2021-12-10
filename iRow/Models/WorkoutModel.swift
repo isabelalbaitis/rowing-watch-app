@@ -2,15 +2,16 @@
 //  WorkoutModel.swift
 //  iRow
 //
-//  Created by Jake Stone on 12/8/21.
+//  Created by Jake Stone on 12/1/21.
 //
 
 import Foundation
 
 class WorkoutModel {
-    fileprivate var items : [Workout] = [Workout]()
+    fileprivate var items: [Workout] = [Workout]()
     
-    init() {
+    init()
+    {
         createList()
     }
     
@@ -21,5 +22,15 @@ class WorkoutModel {
     
     fileprivate func createList()
     {
-        items.append(Workout(type: "Single Distnace", location: "Allendale, MI", date: "12/12/21", timeOfDay: 9, meters: 10000, split: 1.59, totalTime: 39.9))
+        items.append(
+                Workout(
+                    type: "Single Distance",
+                    location: "Allendale, MI",
+                    date: Date.distantPast,
+                    timeOfDay: 900,
+                    meters: 10500,
+                    split: 1.59,
+                    totalTime: 39.8)
+            )
     }
+}

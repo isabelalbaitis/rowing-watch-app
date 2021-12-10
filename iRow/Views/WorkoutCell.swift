@@ -14,6 +14,8 @@ class WorkoutMainTableViewCell: UITableViewCell {
     @IBOutlet weak var translucentView: UIView!
     @IBOutlet weak var coverImage: UIImageView!
     
+    let THEME_COLOR1 = UIColor.init(red:0.000, green:0.157, blue:0.216,
+                                    alpha:1.00)  // DARK BLUE
     override func awakeFromNib() {
         super.awakeFromNib()
         self.coverImage.backgroundColor = THEME_COLOR1

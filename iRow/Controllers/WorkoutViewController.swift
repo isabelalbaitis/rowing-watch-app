@@ -8,18 +8,26 @@
 import UIKit
 
 class WorkoutViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var WorkoutTable: UITableView!
     
     var workouts: [Workout]?
     
+    var tableViewData: [(sectionHeader: String, workouts: [Workout])]? {
+        didSet {
+            DispatchQueue.main.async {
+                self.WorkoutTable.reloadData()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let model = WorkoutModel()
         self.WorkoutTable.delegate = self
         self.WorkoutTable.dataSource = self
-        let model = WorkoutModel()
         self.workouts = model.getWorkouts()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -33,21 +41,55 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
         self.workouts?.append(recent)
     }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.tableViewData?[section].workouts.count ?? 0
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
         -> UITableViewCell
     {
-        let cell = self.tableView.dequeueReusableCell
+        let cell = self.WorkoutTable.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as! WorkoutMainTableViewCell
         
-        guard let journal = tableViewData?[indexPath.section].journals[indexPath.row] else {
+        guard let workoot = tableViewData?[indexPath.section].workouts[indexPath.row] else {
             return cell
         }
         
-        cell.name?.text = journal.name
-        cell.subName?.text = journal.location
-        cell.coverImage?.image = UIImage(named: "landscape")
+        cell.name?.text = workoot.type
+        cell.subName?.text = workoot.location
+        cell.coverImage?.image = UIImage(named: "Quad")
         
         return cell
     }
+    
+    // MARK: - UITableViewDelegate
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 200.0
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView,
+                   forSection section: Int)
+    {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = THEME_COLOR2
+        header.contentView.backgroundColor = THEME_COLOR3
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView,
+                   forSection section: Int)
+    {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = THEME_COLOR2
+        header.contentView.backgroundColor = THEME_COLOR3
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let myWorkout = tableViewData?[indexPath.section].workouts[indexPath.row] else {
+            return
+        }
+        print("Selected\(String(describing: myWorkout.type))")
+    }
+
     /*
     // MARK: - Navigation
 
