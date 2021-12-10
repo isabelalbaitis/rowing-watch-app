@@ -90,7 +90,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="196" y="-77"/>
+            <point key="canvasLocation" x="147" y="-93"/>
         </scene>
         <!--History Controller-->
         <scene sceneID="BxL-Z1-tru">
@@ -150,7 +150,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-166" y="412"/>
+            <point key="canvasLocation" x="-133" y="313"/>
         </scene>
         <!--WO Controls-->
         <scene sceneID="pF7-Rv-0QO">
