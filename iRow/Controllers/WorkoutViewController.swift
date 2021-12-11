@@ -6,14 +6,21 @@
 //
 
 import UIKit
+import Foundation
 
+var formatter = DateComponentsFormatter()
+
+@available(iOS 15.0, *)
 class WorkoutViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     @IBOutlet weak var WorkoutTable: UITableView!
+    static let SINGLE_TIME: Int = 0
+    static let SINGLE_DISTANCE: Int = 1
+    static let TIME_INTERVAL: Int = 2
+    static let DISTANCE_INTERVAL: Int = 3
     
     var workouts: [Workout]?
-    
     
     var tableViewData: [(sectionHeader: String, workouts: [Workout])]? {
         didSet {
@@ -41,16 +48,16 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
         var IntervalTimeSection = [Workout]()
         
         for typ in workouts {
-            if typ.type == "Single Time" {
+            if typ.type == 0 {
                 SingleTimeSection.append(typ)
             }
-            else if typ.type == "Single Distance" {
+            else if typ.type == 1 {
                 SingleDistSection.append(typ)
             }
-            else if typ.type == "Time Intervals"{
+            else if typ.type == 2{
                 IntervalTimeSection.append(typ)
             }
-            else{ // for "Distance Intervals"
+            else{ // for "Distance Intervals" a.k.a 3
                 IntervalDistSection.append(typ)
             }
         }
@@ -86,6 +93,7 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
         return self.tableViewData?[section].workouts.count ?? 0
     }
     
+    @available(iOS 15.0, *)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
         -> UITableViewCell
     {
@@ -95,9 +103,31 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
             return cell
         }
         
-        cell.subName?.text = workoot.type // i know its spelled wrong
-        cell.name?.text = workoot.location // i did it on purpose
+        cell.Date?.text = workoot.date?.formatted(date: Date.FormatStyle.DateStyle.long, time: Date.FormatStyle.TimeStyle.omitted)
         cell.coverImage?.image = UIImage(named: "Quad")
+        
+        if(workoot.type == 0){// single time
+            cell.Measure?.text = formatter.string(from: (workoot.totalTime ?? 0)!) // prints in MM:SS format
+            cell.Units?.text = "Minutes"
+        }
+        
+        else if(workoot.type == 1){ // Single Distance
+            cell.Measure?.text = String(workoot.meters!)
+            cell.Units?.text = "Meters"
+        }
+        
+        else if(workoot.type == 2){ // interval Time
+            let timeString = formatter.string(from: (workoot.totalTime)!)
+            let restString = formatter.string(from: (workoot.rest)!)
+            cell.Measure?.text = timeString! + " minutes"
+            cell.Units?.text = restString! + " minutes"
+        }
+        
+        else{ // interval Distance
+            let restyString = formatter.string(from: (workoot.rest)!)
+            cell.Measure?.text = String(workoot.meters!) + " meters"
+            cell.Units?.text = restyString! + " minutes"
+        }
         
         return cell
     }
@@ -128,6 +158,7 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
         print("Selected\(String(describing: myWorkout.type))")
     }
 
+
     /*
     // MARK: - Navigation
 
@@ -140,22 +171,3 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
 
 }
 
-extension Date {
-    struct Formatter {
-        static let short: DateFormatter = {
-            let formatter = DateFormatter()
-            formatter.dateFormat = "MM-dd-yyyy"
-            return formatter
-        }()
-    }
-    
-    var short: String {
-        return Formatter.short.string(from: self)
-    }
-}
-
-extension String {
-    var dateFromShort: Date? {
-        return Date.Formatter.short.date(from: self)
-    }
-}
