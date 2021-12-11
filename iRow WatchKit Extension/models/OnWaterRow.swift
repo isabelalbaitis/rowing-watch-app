@@ -8,7 +8,7 @@ import HealthKit
 import FitnessUnits
 import FitDataProtocol
 import Foundation
-import WatchConnectivity
+//import WatchConnectivity
 
 class OnWaterRow{
     
