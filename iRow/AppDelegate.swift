@@ -4,7 +4,7 @@
 //
 //  Created by Isabel Albaitis and Jacob Stone on 10/29/21.
 //
-
+import Firebase
 import UIKit
 
 let THEME_COLOR1 = UIColor.init(red:0.000, green:0.157, blue:0.216,
@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
         return true
     }
 

@@ -28,10 +28,7 @@ class LogInViewController: UIViewController {
       self.view.endEditing(true)
     }
     
-    
 
-    @IBAction func ViewWorkoutsPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "LogInToMain", sender: self)
     }
     
     /*

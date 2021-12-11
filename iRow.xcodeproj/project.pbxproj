@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,6 +42,10 @@
 		C86C56752731CFBD0012FC4D /* PracticePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C56742731CFBD0012FC4D /* PracticePlan.swift */; };
 		CB39E0182762FEB300DD00F7 /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39E0172762FEB300DD00F7 /* WorkoutCell.swift */; };
 		CB39E01C276386E100DD00F7 /* Pods_iRow_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1DCB40F7D7D53D97C65BDEF /* Pods_iRow_WatchKit_App.framework */; };
+		CB39E0202763A8BE00DD00F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB39E01F2763A8BE00DD00F7 /* GoogleService-Info.plist */; };
+		CB39E0232763A9E800DD00F7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CB39E0222763A9E800DD00F7 /* FirebaseAnalytics */; };
+		CB39E0252763A9E800DD00F7 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = CB39E0242763A9E800DD00F7 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		CB39E0292763C7BC00DD00F7 /* iRowRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB39E0282763C7BC00DD00F7 /* iRowRepo.swift */; };
 		CB4BF394275FDF2100071477 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BF393275FDF2100071477 /* LogInViewController.swift */; };
 		CB4BF3A027615FDE00071477 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BF39F27615FDE00071477 /* Workout.swift */; };
 		CB4BF3A227615FF600071477 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BF3A127615FF600071477 /* WorkoutModel.swift */; };
@@ -177,6 +181,8 @@
 		C86C56702731A5C90012FC4D /* WOSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOSelectController.swift; sourceTree = "<group>"; };
 		C86C56742731CFBD0012FC4D /* PracticePlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticePlan.swift; sourceTree = "<group>"; };
 		CB39E0172762FEB300DD00F7 /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
+		CB39E01F2763A8BE00DD00F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CB39E0282763C7BC00DD00F7 /* iRowRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iRowRepo.swift; sourceTree = "<group>"; };
 		CB4BF393275FDF2100071477 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		CB4BF39F27615FDE00071477 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		CB4BF3A127615FF600071477 /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
@@ -199,6 +205,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB39E0232763A9E800DD00F7 /* FirebaseAnalytics in Frameworks */,
+				CB39E0252763A9E800DD00F7 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				191382DEB0FE5FEACB6E729E /* Pods_iRow.framework in Frameworks */,
 				817DDE972763F605000A02A2 /* HealthKit.framework in Frameworks */,
 			);
@@ -335,6 +343,7 @@
 				CB4BF39E27613E5500071477 /* Views */,
 				CB4BF39D27613E4600071477 /* Controllers */,
 				C85E918D272C9027007FEA9C /* Info.plist */,
+				CB39E01F2763A8BE00DD00F7 /* GoogleService-Info.plist */,
 			);
 			path = iRow;
 			sourceTree = "<group>";
@@ -423,6 +432,7 @@
 			children = (
 				CB4BF39F27615FDE00071477 /* Workout.swift */,
 				CB4BF3A127615FF600071477 /* WorkoutModel.swift */,
+				CB39E0282763C7BC00DD00F7 /* iRowRepo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -464,6 +474,10 @@
 				C85E91A9272C9027007FEA9C /* PBXTargetDependency */,
 			);
 			name = iRow;
+			packageProductDependencies = (
+				CB39E0222763A9E800DD00F7 /* FirebaseAnalytics */,
+				CB39E0242763A9E800DD00F7 /* FirebaseAnalyticsWithoutAdIdSupport */,
+			);
 			productName = iRow;
 			productReference = C85E917C272C901F007FEA9C /* iRow.app */;
 			productType = "com.apple.product-type.application";
@@ -531,7 +545,6 @@
 				C85E91B1272C902D007FEA9C /* Sources */,
 				C85E91B2272C902D007FEA9C /* Frameworks */,
 				C85E91B3272C902D007FEA9C /* Resources */,
-				175319033D41B942B605286D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -625,6 +638,9 @@
 				Base,
 			);
 			mainGroup = C85E9173272C901F007FEA9C;
+			packageReferences = (
+				CB39E0212763A9E800DD00F7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = C85E917D272C901F007FEA9C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -646,6 +662,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C85E918C272C9027007FEA9C /* LaunchScreen.storyboard in Resources */,
+				CB39E0202763A8BE00DD00F7 /* GoogleService-Info.plist in Resources */,
 				C85E9189272C9027007FEA9C /* Assets.xcassets in Resources */,
 				C85E9187272C901F007FEA9C /* Main.storyboard in Resources */,
 			);
@@ -719,23 +736,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		175319033D41B942B605286D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iRow WatchKit Extension/Pods-iRow WatchKit Extension-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iRow WatchKit Extension/Pods-iRow WatchKit Extension-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iRow WatchKit Extension/Pods-iRow WatchKit Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3E6439243DD3D8727C9906BD /* [CP] Check Pods Manifest.lock */ = {
@@ -857,6 +857,7 @@
 				CB4BF3A027615FDE00071477 /* Workout.swift in Sources */,
 				C85E9180272C901F007FEA9C /* AppDelegate.swift in Sources */,
 				C85E9182272C901F007FEA9C /* SceneDelegate.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1496,6 +1497,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB39E0212763A9E800DD00F7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB39E0222763A9E800DD00F7 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB39E0212763A9E800DD00F7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		CB39E0242763A9E800DD00F7 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB39E0212763A9E800DD00F7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C85E9174272C901F007FEA9C /* Project object */;
 }

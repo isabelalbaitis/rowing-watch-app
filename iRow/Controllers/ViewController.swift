@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var validationErrors = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,12 @@ class ViewController: UIViewController {
             emailOk = emailPredicate.evaluate(with: email)
         }
         return emailOk
+    }
+    
+    func reportError(msg: String) {
+        let alert = UIAlertController(title: "Failed", message: msg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
