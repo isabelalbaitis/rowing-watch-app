@@ -12,7 +12,7 @@ import WatchConnectivity
 var formatter = DateComponentsFormatter()
 
 @available(iOS 15.0, *)
-class WorkoutViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class WorkoutViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, WCSessionDelegate {
     
     
     @IBOutlet weak var WorkoutTable: UITableView!
@@ -22,29 +22,6 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
     static let DISTANCE_INTERVAL: Int = 3
     
     var workouts: [Workout]?
-    var command: Command!
-    
-    // Outstanding transfers can change in the background so make a copy (cache) to
-    // make sure the data doesn't change during the table view loading cycle.
-    // Subclasses can override the computed property to provide the right transfers.
-    //
-    var transfersStore: [SessionTransfer]?
-    var transfers: [SessionTransfer] {
-
-        guard transfersStore == nil else { return transfersStore! }
-        
-        if command == .transferUserInfo {
-            transfersStore = WCSession.default.outstandingUserInfoTransfers.filter {
-                $0.isCurrentComplicationInfo == false
-            }
-            
-        } else if command == .transferCurrentComplicationUserInfo {
-            transfersStore = WCSession.default.outstandingUserInfoTransfers.filter {
-                $0.isCurrentComplicationInfo == true
-            }
-        }
-        return transfersStore!
-    }
     
     var tableViewData: [(sectionHeader: String, workouts: [Workout])]? {
         didSet {
@@ -59,15 +36,37 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
         let model = WorkoutModel()
         self.workouts = model.getWorkouts()
         self.sortIntoSections(workouts: self.workouts!)
-        
-        // Do any additional setup after loading the view.
-        NotificationCenter.default.addObserver(
-            self, selector: #selector(type(of: self).dataDidFlow(_:)),
-            name: .dataDidFlow, object: nil
-        )
-    deinit {
-            NotificationCenter.default.removeObserver(self)
+        if (WCSession.isSupported()) {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
         }
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+
+    }
+
+    func sessionDidBecomeInactive(_ session: WCSession) {
+
+    }
+
+    func sessionDidDeactivate(_ session: WCSession) {
+
+    }
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+        //var newWorkout: [Workout]?
+        //init(newWorkout)
+        //newWorkout!.type = userInfo["Type"]
+        //newWorkout!.date = Date.now
+        //newWorkout!.meters = userInfo["Distance"]
+        //newWorkout!.rest = userInfo["Rest Seconds"]
+        print(userInfo)
+            
+        } else {
+        // None
+        }
+    }
         
     }
     

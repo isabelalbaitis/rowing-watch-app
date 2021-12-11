@@ -30,7 +30,6 @@
 		C85E91A2272C9027007FEA9C /* iRowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E91A1272C9027007FEA9C /* iRowUITests.swift */; };
 		C85E91A7272C9027007FEA9C /* iRow WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C85E91A6272C9027007FEA9C /* iRow WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C85E91AD272C9027007FEA9C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C85E91AB272C9027007FEA9C /* Interface.storyboard */; };
-		C85E91AF272C902C007FEA9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C85E91AE272C902C007FEA9C /* Assets.xcassets */; };
 		C85E91B6272C902D007FEA9C /* iRow WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C85E91B5272C902D007FEA9C /* iRow WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C85E91BD272C902D007FEA9C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E91BC272C902D007FEA9C /* ExtensionDelegate.swift */; };
 		C85E91BF272C902D007FEA9C /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85E91BE272C902D007FEA9C /* ComplicationController.swift */; };
@@ -46,6 +45,8 @@
 		CB4BF3A027615FDE00071477 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BF39F27615FDE00071477 /* Workout.swift */; };
 		CB4BF3A227615FF600071477 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BF3A127615FF600071477 /* WorkoutModel.swift */; };
 		CB4BF3A52761B02600071477 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BF3A42761B02600071477 /* WorkoutViewController.swift */; };
+		CBD602B527652B8A000C96CF /* iRow WatchKit Extension (Isabel's Version) in Resources */ = {isa = PBXBuildFile; fileRef = CBD602B327652B8A000C96CF /* iRow WatchKit Extension (Isabel's Version) */; };
+		CBD602B627652B8A000C96CF /* iRow WatchKit App (Isabel's Version) in Resources */ = {isa = PBXBuildFile; fileRef = CBD602B427652B8A000C96CF /* iRow WatchKit App (Isabel's Version) */; };
 		DDDEFB7A306BD098BFA7112E /* Pods_iRow_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACA4A66822CE5558E3F87C5 /* Pods_iRow_WatchKit_Extension.framework */; };
 /* End PBXBuildFile section */
 
@@ -160,8 +161,6 @@
 		C85E91A3272C9027007FEA9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C85E91A6272C9027007FEA9C /* iRow WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iRow WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C85E91AC272C9027007FEA9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		C85E91AE272C902C007FEA9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C85E91B0272C902C007FEA9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C85E91B5272C902D007FEA9C /* iRow WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iRow WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C85E91BC272C902D007FEA9C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		C85E91BE272C902D007FEA9C /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -181,6 +180,8 @@
 		CB4BF39F27615FDE00071477 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		CB4BF3A127615FF600071477 /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
 		CB4BF3A42761B02600071477 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
+		CBD602B327652B8A000C96CF /* iRow WatchKit Extension (Isabel's Version) */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "iRow WatchKit Extension (Isabel's Version)"; sourceTree = SOURCE_ROOT; };
+		CBD602B427652B8A000C96CF /* iRow WatchKit App (Isabel's Version) */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = "iRow WatchKit App (Isabel's Version)"; path = "iRow WatchKit App/iRow WatchKit App (Isabel's Version)"; sourceTree = SOURCE_ROOT; };
 		D1DCB40F7D7D53D97C65BDEF /* Pods_iRow_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iRow_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA227770293A341F148911EA /* Pods_iRow_WatchKit_App_iRow_WatchKit_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iRow_WatchKit_App_iRow_WatchKit_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF620419AF3778817DFE1DAD /* Pods_iRow_WatchKit_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iRow_WatchKit_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -360,9 +361,8 @@
 		C85E91AA272C9027007FEA9C /* iRow WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				CBD602B427652B8A000C96CF /* iRow WatchKit App (Isabel's Version) */,
 				C85E91AB272C9027007FEA9C /* Interface.storyboard */,
-				C85E91AE272C902C007FEA9C /* Assets.xcassets */,
-				C85E91B0272C902C007FEA9C /* Info.plist */,
 			);
 			path = "iRow WatchKit App";
 			sourceTree = "<group>";
@@ -370,6 +370,7 @@
 		C85E91B9272C902D007FEA9C /* iRow WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CBD602B327652B8A000C96CF /* iRow WatchKit Extension (Isabel's Version) */,
 				817DDE982763F6A8000A02A2 /* iRow WatchKit Extension.entitlements */,
 				C85E91BC272C902D007FEA9C /* ExtensionDelegate.swift */,
 				81EA1BFB275708E8001330AB /* controllers */,
@@ -645,6 +646,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBD602B627652B8A000C96CF /* iRow WatchKit App (Isabel's Version) in Resources */,
+				CBD602B527652B8A000C96CF /* iRow WatchKit Extension (Isabel's Version) in Resources */,
 				C85E918C272C9027007FEA9C /* LaunchScreen.storyboard in Resources */,
 				C85E9189272C9027007FEA9C /* Assets.xcassets in Resources */,
 				C85E9187272C901F007FEA9C /* Main.storyboard in Resources */,
@@ -669,7 +672,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C85E91AF272C902C007FEA9C /* Assets.xcassets in Resources */,
 				C85E91AD272C9027007FEA9C /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
