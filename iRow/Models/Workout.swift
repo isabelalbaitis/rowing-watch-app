@@ -7,39 +7,35 @@
 
 import Foundation
 
+
 struct Workout {
     var key : String?
-    var type : String? // single or interval, time or distance
-    var location : String? // city, ST
+    var type : Int? // single or interval, time or distance
     var date : Date? // MM/DD/YY format
-    var timeOfDay : Double? // time of day
-    var meters : Double? // total meters rowed
-    var split : Double? // avg 500m split
-    var totalTime : Double? //
+    var meters : Int? // total meters rowed
+    var rest : TimeInterval? // avg 500m split
+    var totalTime : TimeInterval? //
 
-    init(key: String?, type: String?, location: String?, date: Date?,
-         timeOfDay : Double?, meters: Double?, split: Double?, totalTime: Double?)
+    init(key: String?, type: Int?, date: Date?, meters: Int?, rest: Double?, totalTime: Double?)
     {
         self.key = key
         self.type = type
-        self.location = location
         self.date = date
-        self.timeOfDay = timeOfDay
         self.meters = meters
-        self.split = split
+        self.rest = rest
         self.totalTime = totalTime
     }
     
-    init(type: String?, location: String?, date: Date?, timeOfDay : Double?,
-         meters: Double?, split: Double?, totalTime: Double?)
+    init(type: Int?, date: Date?,
+         meters: Int?, rest: Double?, totalTime: Double?)
     {
-        self.init(key: nil, type: type, location: location, date: date,
-                  timeOfDay: timeOfDay, meters: meters, split: split, totalTime: totalTime)
+        self.init(key: nil, type: type,  date: date,
+                   meters: meters, rest: rest, totalTime: totalTime)
     }
     
     init() {
-        self.init(key: nil, type: nil, location: nil, date: nil, timeOfDay: nil,
-                  meters: nil, split: nil, totalTime: nil)
+        self.init(key: nil, type: nil, date: nil,
+                  meters: nil, rest: nil, totalTime: nil)
     }
     
 }

@@ -9,8 +9,9 @@
 import UIKit
 
 class WorkoutMainTableViewCell: UITableViewCell {
-    @IBOutlet weak var subName: UILabel!
-    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var Units: UILabel!
+    @IBOutlet weak var Date: UILabel!
+    @IBOutlet weak var Measure: UILabel!
     @IBOutlet weak var translucentView: UIView!
     @IBOutlet weak var coverImage: UIImageView!
     
