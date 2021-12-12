@@ -13,7 +13,7 @@ var formatter = DateComponentsFormatter()
 
 @available(iOS 15.0, *)
 class WorkoutViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, WCSessionDelegate {
-    
+ 
     var session: WCSession?
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
@@ -47,18 +47,21 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let model = WorkoutModel()
         self.workouts = model.getWorkouts()
-        self.sortIntoSections(workouts: self.workouts!)
+        
         if WCSession.isSupported() {
             let session = WCSession.default
             session.delegate = self
             session.activate()
         }
+        self.sortIntoSections(workouts: self.workouts!)
     }
     
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
-        workouts?.append(
+        
+            self.workouts?.append(
             Workout( // from user
                 type: Int(userInfo["Type"] as! String),
                 date: Date.now, // since it is right after user finishes workout. Date will always be today
@@ -67,7 +70,6 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
                 totalTime: (userInfo["Work Seconds"] as? Double)
                 )
         )
-        
     }
     
     func sortIntoSections(workouts: [Workout]) {
