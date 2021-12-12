@@ -9,10 +9,17 @@ import UIKit
 import WatchKit
 import WatchConnectivity
 
-class WOControlsController: WKInterfaceController {
+class WOControlsController: WKInterfaceController, WCSessionDelegate {
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
 
     @IBOutlet weak var restartButton: WKInterfaceButton!
     @IBOutlet weak var endButton: WKInterfaceButton!
+    
+    let session = WCSession.default
     
     var workout : PracticePlan?
     var SentWOData: [String:Any?] = ["Type": nil,
@@ -24,6 +31,9 @@ class WOControlsController: WKInterfaceController {
         super.awake(withContext: context)
         
         workout = context as! PracticePlan?
+        
+        session.delegate = self
+        session.activate()
         
         endButton.setBackgroundColor(SUPER_RED)
         restartButton.setBackgroundColor(PERFECT_YELLOW)
