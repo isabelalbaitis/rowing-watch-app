@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-iRow/Pods-iRow-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AntMessageProtocol-iOS/AntMessageProtocol.framework
+${BUILT_PRODUCTS_DIR}/DataDecoder-iOS/DataDecoder.framework
+${BUILT_PRODUCTS_DIR}/FitDataProtocol-iOS/FitDataProtocol.framework
+${BUILT_PRODUCTS_DIR}/FitnessUnits-iOS/FitnessUnits.framework

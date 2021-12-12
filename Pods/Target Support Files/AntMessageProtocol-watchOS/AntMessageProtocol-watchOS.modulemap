@@ -1,0 +1,6 @@
+framework module AntMessageProtocol {
+  umbrella header "AntMessageProtocol-watchOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-iRow WatchKit Extension/Pods-iRow WatchKit Extension-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AntMessageProtocol-watchOS/AntMessageProtocol.framework
+${BUILT_PRODUCTS_DIR}/DataDecoder-watchOS/DataDecoder.framework
+${BUILT_PRODUCTS_DIR}/FitDataProtocol-watchOS/FitDataProtocol.framework
+${BUILT_PRODUCTS_DIR}/FitnessUnits-watchOS/FitnessUnits.framework
