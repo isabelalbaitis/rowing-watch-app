@@ -50,7 +50,8 @@ class WOControlsController: WKInterfaceController, WCSessionDelegate {
                       "Distance": workout!.pieceDistanceMeters,
                       "Rest Seconds": workout!.restTotalSeconds]
         
-        WCSession.default.transferUserInfo(SentWOData as [String : Any])
+        session.sendMessage(SentWOData as [String : Any], replyHandler: nil, errorHandler: { (error) in print("Error sending message: %@", error)
+        })
         print (String(describing: workout))
         dismiss()
     }

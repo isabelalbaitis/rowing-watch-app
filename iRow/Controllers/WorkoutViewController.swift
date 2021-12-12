@@ -16,38 +16,12 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
  
     var session: WCSession?
     
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        
-    }
-    
-    func sessionDidBecomeInactive(_ session: WCSession) {
-        
-    }
-    
-    func sessionDidDeactivate(_ session: WCSession) {
-        
-    }
-    
-    
     @IBOutlet weak var WorkoutTable: UITableView!
-    static let SINGLE_TIME: Int = 0
-    static let SINGLE_DISTANCE: Int = 1
-    static let TIME_INTERVAL: Int = 2
-    static let DISTANCE_INTERVAL: Int = 3
     
     var workouts: [Workout]?
-  
-    var tableViewData: [(sectionHeader: String, workouts: [Workout])]? {
-        didSet {
-            DispatchQueue.main.async {
-                self.WorkoutTable.reloadData()
-            }
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let model = WorkoutModel()
         self.workouts = model.getWorkouts()
         
@@ -59,17 +33,26 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
         self.sortIntoSections(workouts: self.workouts!)
     }
     
-    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+    func session(_ session: WCSession, didReceiveMessage userInfo: [String : Any] = [:]) {
         
             self.workouts?.append(
             Workout( // from user
-                type: Int(userInfo["Type"] as! String),
+                type: (userInfo["Type"] as! Int),
                 date: Date.now, // since it is right after user finishes workout. Date will always be today
                 meters: ((userInfo["Distance"]) as! Int),
                 rest: (userInfo["Rest Seconds"] as? Double),
                 totalTime: (userInfo["Work Seconds"] as? Double)
                 )
         )
+        self.sortIntoSections(workouts: self.workouts!)
+    }
+    
+    var tableViewData: [(sectionHeader: String, workouts: [Workout])]? {
+        didSet {
+            DispatchQueue.main.async {
+                self.WorkoutTable.reloadData()
+            }
+        }
     }
     
     func sortIntoSections(workouts: [Workout]) {
@@ -112,11 +95,6 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
         self.tableViewData = tmpData
     }
     
-    // MARK: - AddWorkoutDelegate
-    //func save(recent: Workout) {
-    //    self.workouts?.append(recent)
-    //}
-    
     // MARK: - UITableViewDataSource
     func numberOfSections(in WorkoutTable: UITableView) -> Int {
         return self.tableViewData?.count ?? 0
@@ -130,6 +108,8 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
         -> UITableViewCell
     {
+       
+        
         let cell = self.WorkoutTable.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as! WorkoutMainTableViewCell
         
         guard let workoot = tableViewData?[indexPath.section].workouts[indexPath.row] else {
@@ -202,5 +182,17 @@ class WorkoutViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     */
 
+    // MARK: - Watch Connectivity
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        self.session?.activate()
+    }
 }
 

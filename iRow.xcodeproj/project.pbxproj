@@ -10,7 +10,6 @@
 		191382DEB0FE5FEACB6E729E /* Pods_iRow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB4A762AC8D99A4A44C8E8E /* Pods_iRow.framework */; };
 		74025596F1CB674A343C4C30 /* Pods_iRow_WatchKit_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF620419AF3778817DFE1DAD /* Pods_iRow_WatchKit_AppTests.framework */; };
 		811C4AF62757A916002B4AA4 /* WOInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811C4AF52757A916002B4AA4 /* WOInterfaceController.swift */; };
-		817DDE972763F605000A02A2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817DDE962763F605000A02A2 /* HealthKit.framework */; };
 		817DDE9A2763F6A8000A02A2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817DDE992763F6A8000A02A2 /* HealthKit.framework */; };
 		81AB95CA275DDF5200C10578 /* WOControlsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB95C9275DDF5200C10578 /* WOControlsController.swift */; };
 		81AB95CC275E19AB00C10578 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AB95CB275E19AB00C10578 /* HistoryController.swift */; };
@@ -45,6 +44,7 @@
 		CB4BF3A027615FDE00071477 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BF39F27615FDE00071477 /* Workout.swift */; };
 		CB4BF3A227615FF600071477 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BF3A127615FF600071477 /* WorkoutModel.swift */; };
 		CB4BF3A52761B02600071477 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4BF3A42761B02600071477 /* WorkoutViewController.swift */; };
+		CBD602DE27659831000C96CF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817DDE962763F605000A02A2 /* HealthKit.framework */; };
 		DDDEFB7A306BD098BFA7112E /* Pods_iRow_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACA4A66822CE5558E3F87C5 /* Pods_iRow_WatchKit_Extension.framework */; };
 /* End PBXBuildFile section */
 
@@ -198,7 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				191382DEB0FE5FEACB6E729E /* Pods_iRow.framework in Frameworks */,
-				817DDE972763F605000A02A2 /* HealthKit.framework in Frameworks */,
+				CBD602DE27659831000C96CF /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1191,7 +1191,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = iRow/iRow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YWRVML48KX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iRow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1214,7 +1214,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = iRow/iRow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YWRVML48KX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iRow/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (

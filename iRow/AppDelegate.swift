@@ -23,6 +23,7 @@ let THEME_COLOR5 = UIColor.init(red:0.251, green:0.286, blue:0.141,
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
 
+    var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
